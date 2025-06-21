@@ -16,14 +16,14 @@ Contenu ici
 
             <h2>📄 Balises principales</h2>
             <ul>
-                <li><code>&lt;h1&gt; à &lt;h6&gt;</code> : Titres</li>
-                <li><code>&lt;p&gt;</code> : Paragraphe</li>
-                <li><code>&lt;a href=""&gt;</code> : Lien</li>
-                <li><code>&lt;img src="" alt=""&gt;</code> : Image</li>
-                <li><code>&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt;</code> : Listes</li>
-                <li><code>&lt;table&gt;</code> : Tableau</li>
+                <li>Titres:<code>&lt;h1&gt; à &lt;h6&gt;</code> </li>
+                <li>Paragraphe:<code>&lt;p&gt;</code> </li>
+                <li>Lien<code>&lt;a href=""&gt;</code> </li>
+                <li> Image<code>&lt;img src="" alt=""&gt;</code> </li>
+                <li>Listes<code>&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt;</code> </li>
+                <li>Tableau<code>&lt;table&gt;</code> </li>
                 <li>
-                    <code>&lt;div&gt;</code><code>&lt;span&gt;</code> : Conteneurs
+                    Conteneurs:<code>&lt;div&gt;</code><code>&lt;span&gt;</code>
                 </li>
             </ul>
 
@@ -42,11 +42,10 @@ Contenu ici
 &lt;/form&gt;</code></pre>
             <ul>
                 <li>
-                    <code>&lt;input&gt;</code><code>&lt;textarea&gt;</code>,
+                    <code>&lt;input&gt;</code><code>&lt;textarea&gt;</code>
                     <code>&lt;select&gt;</code>
-                </li>
-                <li>
-                    Types : <code>text</code><code>email</code>,
+
+                    Types : <code>text</code><code>email</code>
                     <code>checkbox</code><code>radio</code><code>password</code>
                 </li>
             </ul>
@@ -62,21 +61,15 @@ Contenu ici
             <h2>📊 Sémantique</h2>
             <ul>
                 <li>
-                    <code>&lt;header&gt;</code><code>&lt;footer&gt;</code>,
+                    <code>&lt;header&gt;</code><code>&lt;footer&gt;</code>
                     <code>&lt;main&gt;</code>
-                </li>
-                <li>
-                    <code>&lt;article&gt;</code><code>&lt;section&gt;</code>,
+
+                    <code>&lt;article&gt;</code><code>&lt;section&gt;</code>
                     <code>&lt;aside&gt;</code><code>&lt;nav&gt;</code>
                 </li>
             </ul>
 
-            <h2>✨ Médias</h2>
-            <ul>
-                <li><code>&lt;img&gt;</code> : image</li>
-                <li><code>&lt;audio&gt;</code><code>&lt;video&gt;</code></li>
-                <li><code>&lt;source&gt;</code> pour formats multiples</li>
-            </ul>
+
 
             <h2>⏩ Meta & SEO</h2>
             <pre><code>&lt;meta name="description" content="..."&gt;
@@ -84,9 +77,9 @@ Contenu ici
 
             <h2>🚀 Accessibilité</h2>
             <ul>
-                <li><code>alt</code> sur les images</li>
+                <pre><code>  <li>alt sur les images</li>
                 <li>Structure claire des titres</li>
-                <li>Utilisation d'ARIA si nécessaire</li>
+                <li>Utilisation d'ARIA si nécessaire </li></code></pre>
             </ul>
 
             <h2>📅 Bonnes pratiques</h2>

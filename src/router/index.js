@@ -21,6 +21,7 @@ const routes = [
   { path: '/amscss', name: 'Amscss', component: AmScss },
   { path: '/amvue', name: 'Amvue', component: AmVue },
   { path: '/amgithub', name: 'Amgithub', component: AmGitHub },
+  { path: '/:pathMatch(.*)*', redirect: '/' },
 ]
 
 const router = createRouter({

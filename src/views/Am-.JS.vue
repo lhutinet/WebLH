@@ -110,32 +110,8 @@ btn.addEventListener('click', () => alert('clic !'));</code></pre>
         <li>Commenter clairement</li>
       </ul>
 
-      <h2>📁 Exemple : composant Navigation</h2>
-      <pre><code>// navigation.js
-export function createNav(links) {
-  const nav = document.createElement('nav');
-  nav.style.display = 'flex';
-  nav.style.gap = '1rem';
 
-  links.forEach(link => {
-    const a = document.createElement('a');
-    a.href = link.href;
-    a.textContent = link.label;
-    nav.appendChild(a);
-  });
 
-  return nav;
-}
-
-// main.js
-import { createNav } from './navigation.js';
-
-const navComponent = createNav([
-  { label: 'Accueil', href: '#home' },
-  { label: 'Contact', href: '#contact' },
-]);
-
-document.body.prepend(navComponent);</code></pre>
       <ul>
         <li>Modulaire : export/import ES6</li>
         <li>Création dynamique du DOM</li>
