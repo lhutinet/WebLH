@@ -5,18 +5,22 @@ import Contact from '../views/Contact.vue'
 import AmHTML from '../views/AmHTML.vue'
 import AmJS from '@/views/Am-.JS.vue'
 import AmCss from '@/views/Am-css.vue'
+import AmReact from '@/views/Am-react.vue'
+import AmScss from '@/views/Am-scss.vue'
+import AmVue from '@/views/Am-vue.vue'
+import AmGitHub from '@/views/AmGitHub.vue'
 
 const routes = [
   { path: '/', name: 'Accueil', component: Accueil },
   { path: '/apropos', name: 'APropos', component: APropos },
   { path: '/contact', name: 'Contact', component: Contact },
-  { path: '/AmHTML', name: 'AmHTML', component: AmHTML },
-  { path: '/Am-JS', name: 'AmHTML', component: AmJS },
-  { path: '/Am-css', name: 'AmHTML', component: AmCss },
-  { path: '/AmHTML', name: 'AmHTML', component: AmHTML },
-  { path: '/AmHTML', name: 'AmHTML', component: AmHTML },
-  { path: '/AmHTML', name: 'AmHTML', component: AmHTML },
-  { path: '/AmHTML', name: 'AmHTML', component: AmHTML },
+  { path: '/amHTML', name: 'AmHTML', component: AmHTML },
+  { path: '/amJS', name: 'amjs', component: AmJS },
+  { path: '/amcss', name: 'Amcss', component: AmCss },
+  { path: '/amreact', name: 'Amreact', component: AmReact },
+  { path: '/amscss', name: 'Amscss', component: AmScss },
+  { path: '/amvue', name: 'Amvue', component: AmVue },
+  { path: '/amgithub', name: 'Amgithub', component: AmGitHub },
 ]
 
 const router = createRouter({
