@@ -187,6 +187,66 @@ watch(nom, (nouv, anc) => {
           <li><strong>Pinia</strong> : store réactif moderne</li>
           <li><strong>Vue Router</strong> : navigation SPA</li>
         </ul>
+
+        <h2>🚀 Utilisation dans App.vue</h2>
+        <pre><code>
+          npm run serve npm
+         install vue-router
+        </code></pre>
+
+        <pre><code>&lt;!-- App.vue --&gt;
+      &lt;template&gt;
+        &lt;Navigation :links="navLinks" /&gt;
+      &lt;/template&gt;
+      
+      &lt;script&gt;
+      import Navigation from './Navigation.vue';
+      
+      export default {
+        name: 'App',
+        components: {
+          Navigation
+        },
+        data() {
+          return {
+            navLinks: [
+              { label: 'Accueil', href: '#home' },
+              { label: 'Contact', href: '#contact' },
+              { label: 'À propos', href: '#about' }
+            ]
+          }
+        }
+      }
+      &lt;/script&gt;</code></pre>
+
+        <h2>🌟 Exemple de navigation complète</h2>
+        <pre><code>&lt;!-- MainLayout.vue --&gt;
+      &lt;template&gt;
+        &lt;div&gt;
+          &lt;Navigation :links="navLinks" /&gt;
+          &lt;router-view /&gt;
+        &lt;/div&gt;
+      &lt;/template&gt;
+      
+      &lt;script&gt;
+      import Navigation from './Navigation.vue';
+      
+      export default {
+        name: 'MainLayout',
+        components: {
+          Navigation
+        },
+        data() {
+          return {
+            navLinks: [
+              { label: 'Home', href: '/' },
+              { label: 'About', href: '/about' },
+              { label: 'Contact', href: '/contact' }
+            ]
+          }
+        }
+      }
+      &lt;/script&gt;</code></pre>
       </div>
     </div>
   </body>

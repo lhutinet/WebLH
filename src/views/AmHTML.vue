@@ -1,0 +1,102 @@
+<template>
+    <h1>📄 Aide-mémoire HTML</h1>
+    <div class="columns">
+        <div class="column">
+            <h2>⚖️ Structure de base</h2>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="fr"&gt;
+&lt;head&gt;
+&lt;meta charset="UTF-8"&gt;
+&lt;title&gt;Titre&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+Contenu ici
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <h2>📄 Balises principales</h2>
+            <ul>
+                <li><code>&lt;h1&gt; à &lt;h6&gt;</code> : Titres</li>
+                <li><code>&lt;p&gt;</code> : Paragraphe</li>
+                <li><code>&lt;a href=""&gt;</code> : Lien</li>
+                <li><code>&lt;img src="" alt=""&gt;</code> : Image</li>
+                <li><code>&lt;ul&gt;/&lt;ol&gt;/&lt;li&gt;</code> : Listes</li>
+                <li><code>&lt;table&gt;</code> : Tableau</li>
+                <li>
+                    <code>&lt;div&gt;</code><code>&lt;span&gt;</code> : Conteneurs
+                </li>
+            </ul>
+
+            <h2>🎨 Attributs essentiels</h2>
+            <ul>
+                <li><code>class</code><code>id</code></li>
+                <li><code>href</code><code>src</code><code>alt</code></li>
+                <li><code>title</code><code>target</code><code>rel</code></li>
+                <li><code>type</code><code>value</code><code>placeholder</code></li>
+            </ul>
+
+            <h2>🔢 Formulaires</h2>
+            <pre><code>&lt;form action="#" method="post"&gt;
+&lt;input type="text" name="nom" /&gt;
+&lt;input type="submit" value="Envoyer" /&gt;
+&lt;/form&gt;</code></pre>
+            <ul>
+                <li>
+                    <code>&lt;input&gt;</code><code>&lt;textarea&gt;</code>,
+                    <code>&lt;select&gt;</code>
+                </li>
+                <li>
+                    Types : <code>text</code><code>email</code>,
+                    <code>checkbox</code><code>radio</code><code>password</code>
+                </li>
+            </ul>
+        </div>
+
+        <div class="column">
+            <h2>🗃️ Tableaux</h2>
+            <pre><code>&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;&lt;th&gt;Nom&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;Alice&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+
+            <h2>📊 Sémantique</h2>
+            <ul>
+                <li>
+                    <code>&lt;header&gt;</code><code>&lt;footer&gt;</code>,
+                    <code>&lt;main&gt;</code>
+                </li>
+                <li>
+                    <code>&lt;article&gt;</code><code>&lt;section&gt;</code>,
+                    <code>&lt;aside&gt;</code><code>&lt;nav&gt;</code>
+                </li>
+            </ul>
+
+            <h2>✨ Médias</h2>
+            <ul>
+                <li><code>&lt;img&gt;</code> : image</li>
+                <li><code>&lt;audio&gt;</code><code>&lt;video&gt;</code></li>
+                <li><code>&lt;source&gt;</code> pour formats multiples</li>
+            </ul>
+
+            <h2>⏩ Meta & SEO</h2>
+            <pre><code>&lt;meta name="description" content="..."&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+
+            <h2>🚀 Accessibilité</h2>
+            <ul>
+                <li><code>alt</code> sur les images</li>
+                <li>Structure claire des titres</li>
+                <li>Utilisation d'ARIA si nécessaire</li>
+            </ul>
+
+            <h2>📅 Bonnes pratiques</h2>
+            <ul>
+                <li>Valider le HTML (W3C)</li>
+                <li>Respecter la structure sémantique</li>
+                <li>
+                    Optimiser les balises <code>img</code> (taille, <code>alt</code>)
+                </li>
+            </ul>
+        </div>
+    </div>
+</template>

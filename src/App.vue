@@ -1,10 +1,22 @@
 <template>
-    <h1>voila deja</h1>
 
+    <div>
+        <MenuNav />
+        <router-view />
+    </div>
 </template>
 <!-- --------------------------------------------------- -->
 <script setup>
 import { computed, ref } from "vue"
+import MenuNav from './components/MenuNav.vue'
+
+
+
+
+
+
+
+
 
 </script>
 
