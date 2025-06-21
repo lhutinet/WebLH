@@ -7,11 +7,12 @@
 npm create vite@latest mon-projet -- --template vue
 cd mon-projet
 npm install
-npm run dev</code></pre>
+npm run dev
+npm run build </code></pre>
 
       <h2>📆 Structure de base</h2>
       <pre><code>&lt;template&gt;
-  &lt;div&gt;{{ message }}&lt;/div&gt;
+  &lt;div&gt;&#123;&#123; message &#125;&#125;&lt;/div&gt;
 &lt;/template&gt;
 
 &lt;script setup&gt;
