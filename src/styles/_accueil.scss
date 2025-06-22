@@ -1,3 +1,5 @@
+@use './settings' as *;
+
 .acccontent {
 
     min-width: 100%;
@@ -24,8 +26,11 @@
 
 #accTitre {
     font-size: 5rem;
-    color: #161616;
+    background: linear-gradient(90deg, #7198bf 0%, #090909 90%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     z-index: 2;
+    font-family: $fontTitre;
 
 }
 
@@ -33,5 +38,6 @@
     font-size: 2.5rem;
     color: #292929;
     z-index: 10;
+    font-family: $fontSoustitre;
 
 }

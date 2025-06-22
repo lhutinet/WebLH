@@ -1,5 +1,5 @@
 <template>
-    <nav>
+    <nav :class="{ hidden: hidden }">
         <ul class="menu">
             <li>
                 <router-link to="/">
@@ -28,5 +28,14 @@
                 <router-link to="/apropos">À propos</router-link>
             </li>
         </ul>
+        <slot />
     </nav>
 </template>
+
+<script setup>
+import { defineProps } from 'vue'
+
+defineProps({
+    hidden: Boolean
+})
+</script>
