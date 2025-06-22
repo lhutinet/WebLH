@@ -47,8 +47,8 @@ flex-direction: row;</code></pre>
 
 			<h2>🔲 Grid</h2>
 			<pre><code>display: grid;
-grid-template-columns: 1fr 2fr;
-gap: 10px;</code></pre>
+grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+gap: 1rem;</code></pre>
 			<ul>
 				<li><code>grid-template-rows/columns</code></li>
 				<li><code>grid-area</code><code>grid-column</code></li>
