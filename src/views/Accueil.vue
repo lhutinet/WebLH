@@ -6,53 +6,139 @@
     </section>
     <!-- fin presentation ------------------ -->
 
-    <section class="propositionContent">
-        <div class="prositionCard">
-            <div class="propositionLogo"><img src="/public/logo.png" alt="logo graphique"></div>
-            <h3>Création graphique sur mesure</h3>
-            <p>Je conçois des visuels uniques et personnalisés : logos, flyers, affiches, brochures ou encore chartes
-                graphiques complètes. Chaque projet est pensé pour refléter votre identité avec soin et créativité.</p>
-        </div>
+    <section class="propositionContainer">
+        <h2>Je vous propose</h2>
 
-        <div class="prositionCard">
-            <div class="propositionLogo"><img src="/public/internet.png" alt="logo graphique"></div>
-            <h3>Sites web & boutiques en ligne</h3>
-            <p>Je développe des sites web clairs, esthétiques et faciles à administrer — que ce soit pour présenter une
-                activité, vendre en ligne ou simplement se démarquer sur le web..</p>
-        </div>
-        <div class="prositionCard">
-            <div class="propositionLogo"><img src="/public/seo.png" alt="logo graphique"></div>
-            <h3>Visibilité & référencement (SEO)</h3>
-            <p>Je vous aide à mieux apparaître sur Google et les moteurs de recherche grâce à une optimisation naturelle
-                de vos contenus et une structure technique bien pensée.
-            </p>
-        </div>
-        <div class="prositionCard">
-            <div class="propositionLogo"><img src="/public/qualitative-research.png" alt="logo graphique"></div>
-            <h3>Réactivité & qualité</h3>
-            <p>Une fois le projet lancé, je travaille rapidement tout en gardant une attention particulière à la
-                qualité. L’objectif : un rendu professionnel, dans les délais
-            </p>
-        </div>
-        <div class="prositionCard">
-            <div class="propositionLogo"><img src="/public/distance-mentoring.png" alt="logo graphique"></div>
-            <h3>Travail à distance, en toute simplicité</h3>
-            <p>La distance ne freine pas la collaboration : je m’appuie sur des outils efficaces pour des échanges
-                fluides, même à distance.
-            </p>
-        </div>
+        <div class="propositionContent">
+            <div class="prositionCard">
+                <div class="propositionLogo"><img src="/public/logo.png" alt="logo graphique"></div>
+                <h3>Création graphique sur mesure</h3>
+                <p>Je conçois des visuels uniques et personnalisés : logos, flyers, affiches, brochures ou encore
+                    chartes
+                    graphiques complètes. Chaque projet est pensé pour refléter votre identité avec soin et créativité.
+                </p>
+            </div>
+
+            <div class="prositionCard">
+                <div class="propositionLogo"><img src="/public/internet.png" alt="logo graphique"></div>
+                <h3>Sites web & boutiques en ligne</h3>
+                <p>Je développe des sites web clairs, esthétiques et faciles à administrer — que ce soit pour présenter
+                    une
+                    activité, vendre en ligne ou simplement se démarquer sur le web..</p>
+            </div>
+            <div class="prositionCard">
+                <div class="propositionLogo"><img src="/public/seo.png" alt="logo graphique"></div>
+                <h3>Visibilité & référencement (SEO)</h3>
+                <p>Je vous aide à mieux apparaître sur Google et les moteurs de recherche grâce à une optimisation
+                    naturelle
+                    de vos contenus et une structure technique bien pensée.
+                </p>
+            </div>
+            <div class="prositionCard">
+                <div class="propositionLogo"><img src="/public/qualitative-research.png" alt="logo graphique"></div>
+                <h3>Réactivité & qualité</h3>
+                <p>Une fois le projet lancé, je travaille rapidement tout en gardant une attention particulière à la
+                    qualité. L’objectif : un rendu professionnel, dans les délais
+                </p>
+            </div>
+            <div class="prositionCard">
+                <div class="propositionLogo"><img src="/public/distance-mentoring.png" alt="logo graphique"></div>
+                <h3>Travail à distance, en toute simplicité</h3>
+                <p>La distance ne freine pas la collaboration : je m’appuie sur des outils efficaces pour des échanges
+                    fluides, même à distance.
+                </p>
 
 
 
+            </div>
+
+
+        </div>
 
 
     </section>
     <!-- fin proposition content ----------- -->
-    <section class="tarifContent">
-        <div class="TarifCard">
-            <div class="titre"></div>
+
+    <section class="tarifContainer">
+        <h2>TARIF</h2>
+        <div class="tarifContent">
+
+            <div class="TarifCard">
+                <div class="titre">
+                    <h3>Site sur-mesure (Code pur) </h3>
+                    <p>Un site unique, entièrement développé selon vos besoins..</p>
+                </div>
+                <div class="tarif">
+                    900€
+                </div>
+                <ul>
+                    <li>Design personnalisé</li>
+                    <li>Site responsive (mobile / tablette / ordinateur)</li>
+                    <li>Pages principales (ex : Accueil + 4 pages)</li>
+                    <li>Formulaire de contact</li>
+                    <li>SEO de base</li>
+                    <li>Formation à la prise en main WordPress</li>
+                    <li>Code propre, optimisé, évolutif)</li>
+                    <li>Assistance technique (3 mois)</li>
+
+                </ul>
+                <button>plus ...</button>
+            </div>
+
+
+            <div class="TarifCard">
+                <div class="titre">
+                    <h3>Site Wordpress </h3>
+                    <p>un site puissant et évolutif, facile à gérer au quotidien.</p>
+                </div>
+                <div class="tarif">
+                    600€
+                </div>
+                <ul>
+                    <li>Design personnalisé</li>
+                    <li>Site responsive (mobile / tablette / ordinateur)</li>
+                    <li>Pages principales (ex : Accueil + 4 pages)</li>
+                    <li>Formulaire de contact</li>
+                    <li>SEO de base</li>
+                    <li>Formation à la prise en main WordPress</li>
+                    <li>Assistance technique (3 mois)</li>
+                </ul>
+                <button>plus ...</button>
+            </div>
+
+
+            <div class="TarifCard">
+                <div class="titre">
+                    <h3>Site Wix </h3>
+                    <p> une solution simple et rapide pour être présent en ligne.</p>
+                </div>
+                <div class="tarif">
+                    400€
+                </div>
+                <ul>
+                    <li>Design personnalisé</li>
+                    <li>Site responsive (mobile / tablette / ordinateur)</li>
+                    <li>Pages principales (ex : Accueil + 4 pages)</li>
+                    <li>Formulaire de contact</li>
+                    <li>SEO de base</li>
+                    <li>Formation à la prise en main wix</li>
+                    <li>Assistance technique (3 mois)</li>
+                </ul>
+                <button>plus ...</button>
+            </div>
+
+
+
         </div>
+
+
+
+
+
+
+
     </section>
+    <!-- fin tarif ------------------------- -->
 
 
 </template>
