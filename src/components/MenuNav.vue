@@ -6,9 +6,15 @@
                     <img src="/logo-LH-ss-f.png" alt="logoWeblh" style="width: 40px;">
                 </router-link>
             </li>
+            <li>
+                <router-link to="/contact">Contact</router-link>
+            </li>
 
+            <li>
+                <router-link to="/apropos">À propos</router-link>
+            </li>
             <li class="dropdown">
-                <span class="dropdown-toggle">Aide</span>
+                <span class="dropdown-toggle">tech</span>
                 <ul class="dropdown-content">
                     <li><router-link to="/AmHTML">Aide HTML</router-link></li>
                     <li><router-link to="/AmCss">Aide CSS</router-link></li>
@@ -20,13 +26,10 @@
                 </ul>
             </li>
 
-            <li>
-                <router-link to="/contact">Contact</router-link>
-            </li>
 
-            <li>
-                <router-link to="/apropos">À propos</router-link>
-            </li>
+
+
+
         </ul>
         <slot />
     </nav>
