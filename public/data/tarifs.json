@@ -1,0 +1,45 @@
+[
+    {
+        "title": "Site sur-mesure (Code pur)",
+        "subtitle": "Un site unique, entièrement développé selon vos besoins..",
+        "price": 900,
+        "features": [
+            "Design personnalisé",
+            "Site responsive (mobile / tablette / ordinateur)",
+            "Pages principales (ex : Accueil + 4 pages)",
+            "Formulaire de contact",
+            "SEO de base",
+            "Formation à la prise en main WordPress",
+            "Code propre, optimisé, évolutif",
+            "Assistance technique (3 mois)"
+        ]
+    },
+    {
+        "title": "Site Wordpress",
+        "subtitle": "un site puissant et évolutif, facile à gérer au quotidien.",
+        "price": 600,
+        "features": [
+            "Design personnalisé",
+            "Site responsive (mobile / tablette / ordinateur)",
+            "Pages principales (ex : Accueil + 4 pages)",
+            "Formulaire de contact",
+            "SEO de base",
+            "Formation à la prise en main WordPress",
+            "Assistance technique (3 mois)"
+        ]
+    },
+    {
+        "title": "Site Wix",
+        "subtitle": "une solution simple et rapide pour être présent en ligne.",
+        "price": 400,
+        "features": [
+            "Design personnalisé",
+            "Site responsive (mobile / tablette / ordinateur)",
+            "Pages principales (ex : Accueil + 4 pages)",
+            "Formulaire de contact",
+            "SEO de base",
+            "Formation à la prise en main wix",
+            "Assistance technique (3 mois)"
+        ]
+    }
+]

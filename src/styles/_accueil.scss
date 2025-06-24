@@ -241,16 +241,16 @@
 
             &:nth-child(1) {
                 .titre {
-                    background: rgb(243, 186, 186);
+                    background: $tarif1;
                 }
 
                 .tarif {
-                    color: rgb(243, 186, 186);
+                    color: $tarif1;
                 }
 
                 ul li {
                     &:nth-child(odd) {
-                        background: rgba(243, 186, 186, 0.3);
+                        background: $tarif1-tra;
                     }
 
                     &:nth-child(even) {
@@ -259,23 +259,23 @@
                 }
 
                 button {
-                    background: rgb(243, 186, 186);
+                    background: $tarif1;
                 }
 
             }
 
             &:nth-child(2) {
                 .titre {
-                    background: rgb(188, 184, 253);
+                    background: $tarif2;
                 }
 
                 .tarif {
-                    color: rgb(188, 184, 253);
+                    color: $tarif2;
                 }
 
                 ul li {
                     &:nth-child(odd) {
-                        background: rgba(188, 184, 253, 0.3);
+                        background: $tarif2-tran;
                     }
 
                     &:nth-child(even) {
@@ -284,22 +284,22 @@
                 }
 
                 button {
-                    background: rgb(188, 184, 253);
+                    background: $tarif2;
                 }
             }
 
             &:nth-child(3) {
                 .titre {
-                    background: rgb(237, 190, 255);
+                    background: $tarif3;
                 }
 
                 .tarif {
-                    color: rgb(237, 190, 255);
+                    color: $tarif3;
                 }
 
                 ul li {
                     &:nth-child(odd) {
-                        background: rgba(237, 190, 255, 0.3);
+                        background: $tarif3-tran;
                     }
 
                     &:nth-child(even) {
@@ -308,7 +308,7 @@
                 }
 
                 button {
-                    background: rgb(237, 190, 255);
+                    background: $tarif3;
                 }
 
             }
@@ -335,5 +335,15 @@
             }
 
         }
+    }
+}
+
+@media (max-width: 400px) {
+    #accTitre {
+        font-size: 3rem;
+    }
+
+    #accText {
+        font-size: 2rem;
     }
 }

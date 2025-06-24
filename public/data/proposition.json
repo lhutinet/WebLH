@@ -1,0 +1,32 @@
+[
+    {
+        "logo": "@/assets/logo.png",
+        "alt": "logo graphique",
+        "title": "Création graphique sur mesure",
+        "text": "Je conçois des visuels uniques et personnalisés : logos, flyers, affiches, brochures ou encore chartes graphiques complètes. Chaque projet est pensé pour refléter votre identité avec soin et créativité."
+    },
+    {
+        "logo": "@/assets/internet.png",
+        "alt": "logo graphique",
+        "title": "Sites web & boutiques en ligne",
+        "text": "Je développe des sites web clairs, esthétiques et faciles à administrer — que ce soit pour présenter une activité, vendre en ligne ou simplement se démarquer sur le web."
+    },
+    {
+        "logo": "@/assets/seo.png",
+        "alt": "logo graphique",
+        "title": "Visibilité & référencement (SEO)",
+        "text": "Je vous aide à mieux apparaître sur Google et les moteurs de recherche grâce à une optimisation naturelle de vos contenus et une structure technique bien pensée."
+    },
+    {
+        "logo": "@/assets/qualitative-research.png",
+        "alt": "logo graphique",
+        "title": "Réactivité & qualité",
+        "text": "Une fois le projet lancé, je travaille rapidement tout en gardant une attention particulière à la qualité. L’objectif : un rendu professionnel, dans les délais."
+    },
+    {
+        "logo": "@/assets/distance-mentoring.png",
+        "alt": "logo graphique",
+        "title": "Travail à distance, en toute simplicité",
+        "text": "La distance ne freine pas la collaboration : je m’appuie sur des outils efficaces pour des échanges fluides, même à distance."
+    }
+]
