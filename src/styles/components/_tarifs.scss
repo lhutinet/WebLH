@@ -1,0 +1,221 @@
+@use '../settings' as *;
+
+.tarifContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+
+
+
+
+    .tarifContent {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        margin: 1.2rem;
+
+        .TarifCard {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            border-radius: 1rem;
+            padding: 1rem;
+            min-height: 550px;
+            text-align: center;
+            border: 5px solid #fff;
+            box-shadow: inset 0 0 0 1px $black, 5px 5px 15px 5px rgba(0, 0, 0, 0.2);
+            background: rgb(245, 245, 245);
+
+
+            .titre {
+                min-height: 100px;
+                width: 100%;
+                padding: 0.5rem;
+                border-radius: 0 1rem 0 1rem;
+
+
+            }
+
+            button {
+                width: 150px;
+                height: 30px;
+                margin: 0.3rem;
+                border-radius: 0.3rem;
+
+                &:hover {
+                    transform: scale(1.1);
+                    cursor: pointer;
+
+                }
+            }
+
+            &:nth-child(1) {
+                .titre {
+                    background: $tarif1;
+                }
+
+                .tarif {
+                    color: $tarif1;
+                }
+
+                ul li {
+                    &:nth-child(odd) {
+                        background: $tarif1-tra;
+                    }
+
+                    &:nth-child(even) {
+                        background: #ffffff;
+                    }
+                }
+
+                button {
+                    background: $tarif1;
+                }
+
+
+
+
+
+            }
+
+            &:nth-child(2) {
+                .titre {
+                    background: $tarif2;
+                }
+
+                .tarif {
+                    color: $tarif2;
+                }
+
+                ul li {
+                    &:nth-child(odd) {
+                        background: $tarif2-tran;
+                    }
+
+                    &:nth-child(even) {
+                        background: #ffffff;
+                    }
+                }
+
+                button {
+                    background: $tarif2;
+                }
+            }
+
+            &:nth-child(3) {
+                .titre {
+                    background: $tarif3;
+                }
+
+                .tarif {
+                    color: $tarif3;
+                }
+
+                ul li {
+                    &:nth-child(odd) {
+                        background: $tarif3-tran;
+                    }
+
+                    &:nth-child(even) {
+                        background: #ffffff;
+                    }
+                }
+
+                button {
+                    background: $tarif3;
+                }
+
+            }
+
+            .tarif {
+                font-family: $fontTitre;
+                font-size: 2.5rem;
+                font-weight: 500;
+            }
+
+            ul {
+                text-align: left;
+                padding-left: 0px;
+
+                li {
+                    width: 100%;
+                    padding: 0.5em 0 0.5em 0.4rem;
+
+
+
+
+                }
+            }
+
+        }
+    }
+}
+
+/* Modal styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+
+
+.modal-content {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+    margin-top: 0;
+}
+
+button {
+    margin-top: 1rem;
+}
+
+
+
+.modal-tarif1 {
+    border-top: 10px solid $tarif1;
+    border-bottom: 10px solid $tarif1;
+
+    button {
+        background: $tarif1;
+    }
+}
+
+.modal-tarif2 {
+    border-top: 10px solid $tarif2;
+    border-bottom: 10px solid $tarif2;
+
+    button {
+        background: $tarif2;
+    }
+
+}
+
+.modal-tarif3 {
+    border-top: 10px solid $tarif3;
+    border-bottom: 10px solid $tarif3;
+
+    button {
+        background: $tarif3;
+    }
+}

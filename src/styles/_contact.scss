@@ -1,0 +1,23 @@
+.contactContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+        margin-top: 50px;
+    }
+
+    .contactContent {
+        display: flex;
+
+        form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+
+    }
+}

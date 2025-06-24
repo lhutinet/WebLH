@@ -10,22 +10,21 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import MenuNav from './components/MenuNav.vue'
 
 const isNavHidden = ref(false)
-let lastScrollY = window.scrollY
+let lastScrollY = 0
 
 const handleScroll = () => {
-    const currentScrollY = window.scrollY
+    const currentScrollY = window.scrollY || document.documentElement.scrollTop
     if (currentScrollY > lastScrollY && currentScrollY > 50) {
-        // Scroll vers le bas
         isNavHidden.value = true
     } else {
-        // Scroll vers le haut
         isNavHidden.value = false
     }
     lastScrollY = currentScrollY
 }
 
 onMounted(() => {
-    window.addEventListener('scroll', handleScroll)
+    lastScrollY = window.scrollY || 0
+    window.addEventListener('scroll', handleScroll, { passive: true })
 })
 
 onUnmounted(() => {
