@@ -2,7 +2,7 @@
 	<h1>🎨 Aide-mémoire CSS</h1>
 	<div class="columns">
 		<div class="column">
-			<h2>🔤 Sélecteurs de base</h2>
+			<h3>🔤 Sélecteurs de base</h3>
 			<ul>
 				<li>Sélecteur universel:<code>*</code></li>
 				<li>Balise spécifique:<code>p</code></li>
@@ -14,7 +14,7 @@
 				<li>Frères généraux:<code>p ~ span</code></li>
 			</ul>
 
-			<h2>🎯 Propriétés essentielles</h2>
+			<h3>🎯 Propriétés essentielles</h3>
 			<ul>
 				<li><code>color</code><code>background</code></li>
 				<li><code>font-size</code><code>font-weight</code></li>
@@ -26,7 +26,7 @@
 				</li>
 			</ul>
 
-			<h2>🧱 Box model</h2>
+			<h3>🧱 Box model</h3>
 			<pre><code>div {
   padding: 10px;
   border: 2px solid black;
@@ -34,7 +34,7 @@
   box-sizing: border-box;
 }</code></pre>
 
-			<h2>📦 Flexbox</h2>
+			<h3>📦 Flexbox</h3>
 			<pre><code>display: flex;
 justify-content: space-between;
 align-items: center;
@@ -45,7 +45,7 @@ flex-direction: row;</code></pre>
 				<li><code>flex-wrap</code><code>gap</code></li>
 			</ul>
 
-			<h2>🔲 Grid</h2>
+			<h3>🔲 Grid</h3>
 			<pre><code>display: grid;
 grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
 gap: 1rem;</code></pre>
@@ -56,13 +56,13 @@ gap: 1rem;</code></pre>
 		</div>
 
 		<div class="column">
-			<h2>🖼️ Positionnement</h2>
+			<h3>🖼️ Positionnement</h3>
 			<pre><code>position: relative;
 position: absolute;
 top: 10px;
 left: 50px;</code></pre>
 
-			<h2>🌀 Transitions & animations</h2>
+			<h3>🌀 Transitions & animations</h3>
 			<pre><code>transition: all 0.3s ease;
 
 @keyframes glisse {
@@ -70,7 +70,7 @@ left: 50px;</code></pre>
   to { left: 100px; }
 }</code></pre>
 
-			<h2>🔧 Responsive Design</h2>
+			<h3>🔧 Responsive Design</h3>
 			<pre><code>@media (max-width: 768px) {
   body {
     font-size: 14px;
@@ -84,7 +84,7 @@ left: 50px;</code></pre>
 				<li>Grilles fluides + <code>media queries</code></li>
 			</ul>
 
-			<h2>🧩 Pseudo-classes & éléments</h2>
+			<h3>🧩 Pseudo-classes & éléments</h3>
 			<ul>
 				<li>
 					<code>:hover</code><code>:focus</code><code>:nth-child()</code>
@@ -96,14 +96,14 @@ left: 50px;</code></pre>
   color: red;
 }</code></pre>
 
-			<h2>🛠️ Outils utiles</h2>
+			<h3>🛠️ Outils utiles</h3>
 			<ul>
 				<li><strong>CanIUse</strong> : compatibilité navigateurs</li>
 				<li><strong>CSS Tricks</strong> : documentation claire</li>
 				<li><strong>Autoprefixer</strong> : préfixes auto</li>
 			</ul>
 
-			<h2>📋 Bonnes pratiques</h2>
+			<h3>📋 Bonnes pratiques</h3>
 			<ul>
 				<li>Utiliser un reset CSS (<code>normalize.css</code>)</li>
 				<li>Modulariser avec BEM ou utilitaires</li>

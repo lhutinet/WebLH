@@ -2,7 +2,7 @@
   <h1>🧠 Aide-mémoire Vue.js (Vue 3+)</h1>
   <div class="columns">
     <div class="column">
-      <h2>⚙️ Installation</h2>
+      <h3>⚙️ Installation</h3>
       <pre><code>npm install vue
 npm create vite@latest mon-projet -- --template vue
 cd mon-projet
@@ -10,7 +10,7 @@ npm install
 npm run dev
 npm run build </code></pre>
 
-      <h2>📆 Structure de base</h2>
+      <h3>📆 Structure de base</h3>
       <pre><code>&lt;template&gt;
   &lt;div&gt;&#123;&#123; message &#125;&#125;&lt;/div&gt;
 &lt;/template&gt;
@@ -24,14 +24,14 @@ const message = ref('Bonjour Vue!')
 div { color: blue; }
 &lt;/style&gt;</code></pre>
 
-      <h2>🧹 Réactivité</h2>
+      <h3>🧹 Réactivité</h3>
       <pre><code>import { ref, reactive } from 'vue'
 const compteur = ref(0)
 compteur.value++
 const utilisateur = reactive({ nom: 'Marie', age: 30 })
 utilisateur.age++</code></pre>
 
-      <h2>🎯 Directives</h2>
+      <h3>🎯 Directives</h3>
       <ul>
         <li>Liaison d'attribut:<code>v-bind</code> <code>:</code></li>
 
@@ -47,13 +47,13 @@ utilisateur.age++</code></pre>
         <li>Liaison CSS:<code>:class</code> <code>:style</code></li>
       </ul>
 
-      <h2>🔹 Cycle de vie</h2>
+      <h3>🔹 Cycle de vie</h3>
       <pre><code>onMounted(() => console.log('Monté'))
 onUnmounted(() => console.log('Détruit'))</code></pre>
     </div>
 
     <div class="column">
-      <h2>🛠️ Composants</h2>
+      <h3>🛠️ Composants</h3>
       <pre><code>// Parent.vue
 &lt;Enfant :msg="message" @envoyer="recoitMsg" /&gt;
 
@@ -66,7 +66,7 @@ onUnmounted(() => console.log('Détruit'))</code></pre>
 defineProps(['msg'])
 &lt;/script&gt;</code></pre>
 
-      <h2>🔁 Événements</h2>
+      <h3>🔁 Événements</h3>
       <pre><code>&lt;button @click="incrementer"&gt;Cliquez-moi&lt;/button&gt;
 
 &lt;script setup&gt;
@@ -76,14 +76,14 @@ function incrementer() {
 }
 &lt;/script&gt;</code></pre>
 
-      <h2>🧲 Computed & Watch</h2>
+      <h3>🧲 Computed & Watch</h3>
       <pre><code>const nom = ref('Alice')
 const nomMaj = computed(() => nom.value.toUpperCase())
 watch(nom, (nouv, anc) => {
   console.log('Changement :', anc, '->', nouv)
 })</code></pre>
 
-      <h2>🔧 Fonctions utiles</h2>
+      <h3>🔧 Fonctions utiles</h3>
       <table>
         <tr>
           <th>Fonction</th>
@@ -115,7 +115,7 @@ watch(nom, (nouv, anc) => {
         </tr>
       </table>
 
-      <h2>🛠️ Outils utiles</h2>
+      <h3>🛠️ Outils utiles</h3>
       <ul>
         <li><strong>Vue Devtools</strong> : debug navigateur</li>
         <li><strong>Vite</strong> : serveur de dev rapide</li>
@@ -123,7 +123,7 @@ watch(nom, (nouv, anc) => {
         <li><strong>Vue Router</strong> : navigation SPA</li>
       </ul>
 
-      <h2>🚀 Utilisation dans App.vue</h2>
+      <h3>🚀 Utilisation dans App.vue</h3>
       <pre><code>
           npm run serve npm
          install vue-router
@@ -154,7 +154,7 @@ watch(nom, (nouv, anc) => {
       }
       &lt;/script&gt;</code></pre>
 
-      <h2>🌟 Exemple de navigation complète</h2>
+      <h3>🌟 Exemple de navigation complète</h3>
       <pre><code>&lt;!-- MainLayout.vue --&gt;
       &lt;template&gt;
         &lt;div&gt;

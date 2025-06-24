@@ -35,8 +35,48 @@ h1 {
 
 
 h2 {
-    font-size: 1.2rem;
-    margin-top: 1rem;
+    position: relative;
+    font-size: 3rem;
+    text-align: center;
+    margin: 2.5rem;
     color: #336699;
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
 
+
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: calc(50vh - 50px);
+        height: 1px;
+        background: #336699;
+        right: 120%;
+        top: 50%;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: calc(50vh - 50px);
+        height: 1px;
+        background: #336699;
+        left: 120%;
+        top: 50%;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+
+}
+
+@media (max-width: 400px) {
+    h2 {
+
+        &::after,
+        &::before {
+            display: none;
+        }
+    }
 }

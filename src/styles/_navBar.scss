@@ -1,43 +1,57 @@
 @use './settings' as *;
 
-
 nav {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background: white;
-    transition: transform 0.3s ease;
     z-index: 1000;
-
-
-}
-
-nav.hidden {
-    transform: translateY(-100%);
-}
-
-nav ul {
-    list-style: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
     display: flex;
-    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Hamburger bouton */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
     padding: 0;
-    margin: 0;
-    padding-left: 1.2rem;
-    display: flex;
-    justify-content: center
+    flex-direction: column;
+    justify-content: space-around;
+    height: 24px;
+    width: 30px;
+
+    span {
+        display: block;
+        height: 3px;
+        background: #333;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    span.open:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    span.open:nth-child(2) {
+        opacity: 0;
+    }
+
+    span.open:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    @media (max-width: 768px) {
+        display: flex;
+    }
 }
 
-nav a {
-    text-decoration: none;
-    color: #333;
-}
-
-nav a.router-link-exact-active {
-    font-weight: bold;
-    color: #6fd1a5;
-}
-
+/* Menu principal */
 .menu {
     list-style: none;
     display: flex;
@@ -49,15 +63,18 @@ nav a.router-link-exact-active {
     >li {
         position: relative;
 
-        a {
-            text-decoration: none;
-
-        }
-
+        a,
         .dropdown-toggle {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
             cursor: pointer;
+            user-select: none;
+            display: block;
+            padding: 0.5rem 0;
         }
 
+        /* Dropdown */
         &.dropdown {
             .dropdown-content {
                 display: none;
@@ -70,22 +87,67 @@ nav a.router-link-exact-active {
                 margin: 0;
                 border: 1px solid #ccc;
                 min-width: 150px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
                 z-index: 1000;
 
                 li {
-                    padding: 0.5rem;
+                    padding: 0.5rem 1rem;
 
                     &:hover {
                         background: #f0f0f0;
                     }
                 }
-            }
 
-            &:hover {
-                .dropdown-content {
+                &.open {
                     display: block;
                 }
             }
+
+            /* Hover dropdown for desktop */
+            @media (min-width: 769px) {
+                &:hover {
+                    .dropdown-content {
+                        display: block;
+                    }
+                }
+            }
+
+            /* Dropdown style for mobile */
+            @media (max-width: 768px) {
+                .dropdown-content {
+                    position: relative;
+                    border: none;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+}
+
+/* Menu responsive mobile */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        &.open {
+            display: flex;
+        }
+
+        >li {
+            width: 100%;
+            border-bottom: 1px solid #eee;
+            padding-left: 1rem;
+        }
+
+        >li:last-child {
+            border-bottom: none;
         }
     }
 }
