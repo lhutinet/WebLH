@@ -5,7 +5,7 @@
 
 
             <div class="coordonneesContent">
-                <form name="contact" method="POST" data-netlify="true" netlify>
+                <form name="contact" netlify>
                     <input type="hidden" name="form-name" value="contact" />
 
                     <input type="text" name="nom" placeholder="Votre nom" required />
