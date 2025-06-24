@@ -62,80 +62,8 @@
     <section class="tarifContainer">
         <h2>TARIFS</h2>
         <div class="tarifContent">
-
-            <div class="TarifCard">
-                <div class="titre">
-                    <h3>Site sur-mesure (Code pur) </h3>
-                    <p>Un site unique, entièrement développé selon vos besoins..</p>
-                </div>
-                <div class="tarif">
-                    900€
-                </div>
-                <ul>
-                    <li>Design personnalisé</li>
-                    <li>Site responsive (mobile / tablette / ordinateur)</li>
-                    <li>Pages principales (ex : Accueil + 4 pages)</li>
-                    <li>Formulaire de contact</li>
-                    <li>SEO de base</li>
-                    <li>Formation à la prise en main WordPress</li>
-                    <li>Code propre, optimisé, évolutif)</li>
-                    <li>Assistance technique (3 mois)</li>
-
-                </ul>
-                <button>plus ...</button>
-            </div>
-
-
-            <div class="TarifCard">
-                <div class="titre">
-                    <h3>Site Wordpress </h3>
-                    <p>un site puissant et évolutif, facile à gérer au quotidien.</p>
-                </div>
-                <div class="tarif">
-                    600€
-                </div>
-                <ul>
-                    <li>Design personnalisé</li>
-                    <li>Site responsive (mobile / tablette / ordinateur)</li>
-                    <li>Pages principales (ex : Accueil + 4 pages)</li>
-                    <li>Formulaire de contact</li>
-                    <li>SEO de base</li>
-                    <li>Formation à la prise en main WordPress</li>
-                    <li>Assistance technique (3 mois)</li>
-                </ul>
-                <button>plus ...</button>
-            </div>
-
-
-            <div class="TarifCard">
-                <div class="titre">
-                    <h3>Site Wix </h3>
-                    <p> une solution simple et rapide pour être présent en ligne.</p>
-                </div>
-                <div class="tarif">
-                    400€
-                </div>
-                <ul>
-                    <li>Design personnalisé</li>
-                    <li>Site responsive (mobile / tablette / ordinateur)</li>
-                    <li>Pages principales (ex : Accueil + 4 pages)</li>
-                    <li>Formulaire de contact</li>
-                    <li>SEO de base</li>
-                    <li>Formation à la prise en main wix</li>
-                    <li>Assistance technique (3 mois)</li>
-                </ul>
-                <button>plus ...</button>
-            </div>
-
-
-
+            <Tarifs />
         </div>
-
-
-
-
-
-
 
     </section>
     <!-- fin tarif ------------------------- -->
@@ -150,4 +78,5 @@
 </template>
 <script setup>
 import PortfolioCard from "@/components/PortfolioCard.vue";
+import Tarifs from "@/components/Tarifs.vue";
 </script>

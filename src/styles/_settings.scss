@@ -16,6 +16,7 @@ $fontSoustitre : "Playfair Display";
 $fontText : "roboto";
 
 * {
+
     font-family: $fontText;
     list-style: none;
 }
@@ -78,5 +79,9 @@ h2 {
         &::before {
             display: none;
         }
+    }
+
+    body {
+        margin: 0;
     }
 }
