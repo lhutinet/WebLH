@@ -5,7 +5,7 @@
 
 
             <div class="coordonneesContent">
-                <form @submit.prevent="submitForm" name="contact" method="POST" data-netlify="true">
+                <form name="contact" method="POST" data-netlify="true" @submit.prevent="submitForm">
                     <input type="hidden" name="form-name" value="contact" />
                     <input type="text" name="nom" placeholder="Votre nom" required />
                     <input type="text" name="prenom" placeholder="Votre prénom" required />
@@ -46,19 +46,22 @@ const form = ref({
     demande: ''
 })
 
-function submitForm() {
-    const formElement = document.forms['contact']
-    const formData = new FormData(formElement)
+function submitForm(event) {
+    const formEl = event.target;
 
-    fetch('/', {
-        method: 'POST',
-        body: formData
+    // Laisse Netlify soumettre normalement
+    fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(formEl)).toString(),
     })
         .then(() => {
-            alert('Merci pour votre message !')
+            alert("Merci pour votre message !");
+            // Vide le formulaire
+            formEl.reset();
         })
-        .catch((error) => {
-            alert('Une erreur est survenue : ' + error)
-        })
+        .catch(() => alert("Une erreur est survenue."));
+
 }
+
 </script>
