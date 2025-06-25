@@ -55,65 +55,18 @@
                 }
             }
 
-            &:nth-child(1) {
 
-
-
-
-                ul li {
-                    &:nth-child(odd) {
-                        background: $tarif1-tra;
-                    }
-
-                    &:nth-child(even) {
-                        background: #ffffff;
-                    }
-                }
-
-
-
-
-
-
-
+            .colored-list li:nth-child(odd) {
+                background-color: var(--color-odd);
             }
 
-            &:nth-child(2) {
-
-
-
-
-                ul li {
-                    &:nth-child(odd) {
-                        background: $tarif2-tra;
-                    }
-
-                    &:nth-child(even) {
-                        background: #ffffff;
-                    }
-                }
-
-
+            .colored-list li:nth-child(even) {
+                background-color: var(--color-even);
             }
 
-            &:nth-child(3) {
 
 
 
-
-                ul li {
-                    &:nth-child(odd) {
-                        background: $tarif3-tra;
-                    }
-
-                    &:nth-child(even) {
-                        background: #ffffff;
-                    }
-                }
-
-
-
-            }
 
             .tarif {
                 font-family: $fontTitre;

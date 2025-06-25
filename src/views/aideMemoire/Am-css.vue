@@ -71,7 +71,7 @@ left: 50px;</code></pre>
 }</code></pre>
 
 			<h3>🔧 Responsive Design</h3>
-			<pre><code>@media (max-width: 768px) {
+			<pre><code>@media screen and (max-width: 768px) {
   body {
     font-size: 14px;
   }

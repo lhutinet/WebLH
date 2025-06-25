@@ -10,6 +10,10 @@
 
     .contactContent {
         display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+
 
         form {
             display: flex;
@@ -18,6 +22,44 @@
             flex-direction: column;
         }
 
+        .map-wrapper {
+            position: relative;
+            width: 100%;
+            /* ratio 16:9 → padding-bottom: 56.25% */
+            padding-bottom: 56.25%;
+            overflow: hidden;
 
+            border-radius: 20px;
+            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+
+
+        }
+
+        .google-map {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            padding: 1rem;
+        }
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+
+    .contactContainer {
+        .contactContent {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .map-wrapper {
+            height: 500px;
+        }
     }
 }

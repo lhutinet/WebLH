@@ -1,13 +1,13 @@
 <template>
     <div class="TarifCard" v-for="(item, id) in TarifList" :key="id">
-        <div class="titre" :style="{background: item.couleur}">
+        <div class="titre" :style="{ background: item.couleur }">
             <h3>{{ item.title }}</h3>
             <p>{{ item.presentation }}</p>
         </div>
-        <div class="tarif" :style="{color:item.couleur}">
+        <div class="tarif" :style="{ color: item.couleur }">
             {{ item.tarif }}
         </div>
-        <ul    >
+        <ul class="colored-list" :style="{ '--color-odd': item.couleurTrans, '--color-even': '#ffffff' }">
             <li>Design personnalisé</li>
             <li>Site responsive (mobile / tablette / ordinateur)</li>
             <li>Pages principales (ex : Accueil + 4 pages)</li>
@@ -18,7 +18,7 @@
             <li>Assistance technique (3 mois)</li>
 
         </ul>
-        <button @click="openModal(item)" :style="{background:item.couleur}" >plus ...</button>
+        <button @click="openModal(item)" :style="{ background: item.couleur }">plus ...</button>
     </div>
     <!-- Modal -->
     <div v-if="selectedItem" class="modal-overlay" @click.self="closeModal">
