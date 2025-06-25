@@ -6,15 +6,12 @@
 
             <div class="coordonneesContent">
                 <form name="contact" method="POST" data-netlify="true">
-
                     <input type="hidden" name="form-name" value="contact" />
-
                     <input type="text" name="nom" placeholder="Votre nom" required />
                     <input type="text" name="prenom" placeholder="Votre prénom" required />
                     <input type="email" name="email" placeholder="Votre email" required />
                     <input type="tel" name="telephone" placeholder="Votre téléphone" required />
                     <textarea name="demande" placeholder="Votre demande" required></textarea>
-
                     <button type="submit">Envoyer</button>
                 </form>
 
@@ -27,7 +24,7 @@
                 <p>
                     Mail : <a href="mailto:lhutinet@free.fr">lhutinet@free.fr</a>
                 </p>
-                <p>11.96</p>
+                <p>11.97</p>
             </div>
 
             <iframe
