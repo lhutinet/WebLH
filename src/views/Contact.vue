@@ -5,7 +5,7 @@
 
 
             <div class="coordonneesContent">
-                <form name="contact" method="POST" data-netlify="true">
+                <form @submit.prevent="submitForm" name="contact" method="POST" data-netlify="true">
                     <input type="hidden" name="form-name" value="contact" />
                     <input type="text" name="nom" placeholder="Votre nom" required />
                     <input type="text" name="prenom" placeholder="Votre prénom" required />
@@ -24,7 +24,7 @@
                 <p>
                     Mail : <a href="mailto:lhutinet@free.fr">lhutinet@free.fr</a>
                 </p>
-                <p>11.98</p>
+                <p>11.100</p>
             </div>
 
             <iframe
@@ -47,16 +47,18 @@ const form = ref({
 })
 
 function submitForm() {
-    // Ici tu pourras traiter ton formulaire (envoi API, console.log, etc.)
-    console.log('Formulaire soumis :', form.value)
-    alert('Merci pour votre message !')
-    // Optionnel : vider le formulaire
-    form.value = {
-        nom: '',
-        prenom: '',
-        email: '',
-        telephone: '',
-        demande: ''
-    }
+    const formElement = document.forms['contact']
+    const formData = new FormData(formElement)
+
+    fetch('/', {
+        method: 'POST',
+        body: formData
+    })
+        .then(() => {
+            alert('Merci pour votre message !')
+        })
+        .catch((error) => {
+            alert('Une erreur est survenue : ' + error)
+        })
 }
 </script>
