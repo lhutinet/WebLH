@@ -9,6 +9,7 @@ import AmReact from '@/views/aideMemoire/Am-react.vue'
 import AmScss from '@/views/aideMemoire/Am-scss.vue'
 import AmVue from '@/views/aideMemoire/Am-vue.vue'
 import AmGitHub from '@/views/aideMemoire/AmGitHub.vue'
+import Amform from '@/views/aideMemoire/Am-form.vue'
 
 const routes = [
   { path: '/', name: 'Accueil', component: Accueil },
@@ -21,6 +22,7 @@ const routes = [
   { path: '/amscss', name: 'Amscss', component: AmScss },
   { path: '/amvue', name: 'Amvue', component: AmVue },
   { path: '/amgithub', name: 'Amgithub', component: AmGitHub },
+  { path: '/amform', name: 'Amform', component: Amform },
   { path: '/:pathMatch(.*)*', redirect: '/' },
 ]
 

@@ -1,13 +1,13 @@
 <template>
     <div class="TarifCard" v-for="(item, id) in TarifList" :key="id">
-        <div class="titre">
+        <div class="titre" :style="{background: item.couleur}">
             <h3>{{ item.title }}</h3>
             <p>{{ item.presentation }}</p>
         </div>
-        <div class="tarif">
+        <div class="tarif" :style="{color:item.couleur}">
             {{ item.tarif }}
         </div>
-        <ul>
+        <ul    >
             <li>Design personnalisé</li>
             <li>Site responsive (mobile / tablette / ordinateur)</li>
             <li>Pages principales (ex : Accueil + 4 pages)</li>
@@ -18,7 +18,7 @@
             <li>Assistance technique (3 mois)</li>
 
         </ul>
-        <button @click="openModal(item)">plus ...</button>
+        <button @click="openModal(item)" :style="{background:item.couleur}" >plus ...</button>
     </div>
     <!-- Modal -->
     <div v-if="selectedItem" class="modal-overlay" @click.self="closeModal">
@@ -65,6 +65,16 @@
                     portfolios ou des projets qui doivent être visibles rapidement.</li>
             </ul>
 
+            <ul v-if="selectedItem.title === 'Site hostinger'">
+                <li>Assistance sur l'éditeur Wix</li>
+                <li>Wix est parfait pour un projet simple et rapide à mettre
+                    en ligne. <br>Sa plateforme clé-en-main permet de créer un site sans toucher au code grâce à un
+                    éditeur
+                    en glisser-déposer. <br> L’hébergement et la maintenance sont inclus, ce qui limite les soucis
+                    techniques. <br> C’est une solution accessible à petit budget, idéale pour des sites vitrines, des
+                    portfolios ou des projets qui doivent être visibles rapidement.</li>
+            </ul>
+
             <!-- Tu peux ajouter d'autres spécificités ici -->
 
             <button @click="closeModal">Fermer</button>
@@ -84,17 +94,21 @@ const TarifList = ref([
         id: 1,
         title: "Site sur-mesure (Code pur)",
         presentation: "Un site unique, entièrement développé selon vos besoins...",
-        tarif: "900€",
+        tarif: "750€",
         formation: "",
-        liplus: ""
+        liplus: "",
+        couleur: "#8eb2bd",
+        couleurTrans: "rgba(142, 178, 189, 0.3)"
     },
     {
         id: 2,
         title: "Site wordpress",
         presentation: "Un site puissant et évolutif, facile à gérer au quotidien.",
-        tarif: "600€",
+        tarif: "750€",
         formation: "Formation à la prise en main WordPress",
-        liplus: ""
+        liplus: "",
+        couleur: "#66ae98",
+        couleurTrans: "rgba(102, 174, 152, 0.3)"
     },
     {
         id: 3,
@@ -102,7 +116,19 @@ const TarifList = ref([
         presentation: "une solution simple et rapide pour être présent en ligne.",
         tarif: "400€",
         formation: "Formation à la prise en main wix",
-        liplus: ""
+        liplus: "",
+        couleur: "#5fc0c7",
+        couleurTrans: "rgba(95, 192, 199, 0.3)"
+    },
+    {
+        id: 4,
+        title: "Site hostinger",
+        presentation: "une solution  tres simple et rapide pour être présent en ligne.",
+        tarif: "400€",
+        formation: "Formation à la prise en main hostinger",
+        liplus: "",
+        couleur: "#5f7bc7",
+        couleurTrans: "rgba(95, 123, 199, 0.3)"
     },
 ])
 

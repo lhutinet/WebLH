@@ -56,13 +56,9 @@
             }
 
             &:nth-child(1) {
-                .titre {
-                    background: $tarif1;
-                }
 
-                .tarif {
-                    color: $tarif1;
-                }
+
+
 
                 ul li {
                     &:nth-child(odd) {
@@ -74,9 +70,7 @@
                     }
                 }
 
-                button {
-                    background: $tarif1;
-                }
+
 
 
 
@@ -85,17 +79,13 @@
             }
 
             &:nth-child(2) {
-                .titre {
-                    background: $tarif2;
-                }
 
-                .tarif {
-                    color: $tarif2;
-                }
+
+
 
                 ul li {
                     &:nth-child(odd) {
-                        background: $tarif2-tran;
+                        background: $tarif2-tra;
                     }
 
                     &:nth-child(even) {
@@ -103,23 +93,17 @@
                     }
                 }
 
-                button {
-                    background: $tarif2;
-                }
+
             }
 
             &:nth-child(3) {
-                .titre {
-                    background: $tarif3;
-                }
 
-                .tarif {
-                    color: $tarif3;
-                }
+
+
 
                 ul li {
                     &:nth-child(odd) {
-                        background: $tarif3-tran;
+                        background: $tarif3-tra;
                     }
 
                     &:nth-child(even) {
@@ -127,9 +111,7 @@
                     }
                 }
 
-                button {
-                    background: $tarif3;
-                }
+
 
             }
 
