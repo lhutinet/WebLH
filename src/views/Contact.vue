@@ -26,7 +26,7 @@
                 <p>
                     Mail : <a href="mailto:lhutinet@free.fr">lhutinet@free.fr</a>
                 </p>
-                <p>11.8</p>
+                <p>11.9</p>
             </div>
 
             <iframe
