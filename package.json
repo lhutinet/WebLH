@@ -20,4 +20,10 @@
     "vite": "^6.2.4",
     "vite-plugin-vue-devtools": "^7.7.2"
   }
+  {
+    "scripts": {
+      "build": "vite build",
+      "postbuild": "cp _redirects dist/_redirects"
+    }
+  }
 }

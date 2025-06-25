@@ -5,7 +5,8 @@
 
 
             <div class="coordonneesContent">
-                <form name="contact" method="POST" data-netlify="true" netlify>
+                <form name="contact" method="POST" data-netlify="true">
+
                     <input type="hidden" name="form-name" value="contact" />
 
                     <input type="text" name="nom" placeholder="Votre nom" required />
@@ -26,7 +27,7 @@
                 <p>
                     Mail : <a href="mailto:lhutinet@free.fr">lhutinet@free.fr</a>
                 </p>
-                <p>11.9</p>
+                <p>11.94</p>
             </div>
 
             <iframe
