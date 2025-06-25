@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp _redirects dist/_redirects",
     "preview": "vite preview",
     "format": "prettier --write src/"
   },
@@ -19,11 +19,5 @@
     "prettier": "3.5.3",
     "vite": "^6.2.4",
     "vite-plugin-vue-devtools": "^7.7.2"
-  }
-  {
-    "scripts": {
-      "build": "vite build",
-      "postbuild": "cp _redirects dist/_redirects"
-    }
   }
 }
