@@ -61,27 +61,32 @@ git commit</code></pre>
 
 			<h3>📋 Commandes utiles</h3>
 			<table>
-				<tr>
-					<th>Commande</th>
-					<th>Description</th>
-				</tr>
-				<tr>
-					<td>git stash</td>
-					<td>Met de côté les modifs</td>
-				</tr>
-				<tr>
-					<td>git diff</td>
-					<td>Voir les changements</td>
-				</tr>
-				<tr>
-					<td>git tag</td>
-					<td>Créer un tag version</td>
-				</tr>
-				<tr>
-					<td>git reflog</td>
-					<td>Historique avancé</td>
-				</tr>
+				<thead>
+					<tr>
+						<th>Commande</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>git stash</td>
+						<td>Met de côté les modifs</td>
+					</tr>
+					<tr>
+						<td>git diff</td>
+						<td>Voir les changements</td>
+					</tr>
+					<tr>
+						<td>git tag</td>
+						<td>Créer un tag version</td>
+					</tr>
+					<tr>
+						<td>git reflog</td>
+						<td>Historique avancé</td>
+					</tr>
+				</tbody>
 			</table>
+
 
 			<h3>🛠️ Outils utiles</h3>
 			<ul>

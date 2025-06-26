@@ -85,35 +85,40 @@ watch(nom, (nouv, anc) => {
 
       <h3>🔧 Fonctions utiles</h3>
       <table>
-        <tr>
-          <th>Fonction</th>
-          <th>Rôle</th>
-        </tr>
-        <tr>
-          <td>ref()</td>
-          <td>Valeur réactive</td>
-        </tr>
-        <tr>
-          <td>reactive()</td>
-          <td>Objet réactif</td>
-        </tr>
-        <tr>
-          <td>computed()</td>
-          <td>Valeur dérivée</td>
-        </tr>
-        <tr>
-          <td>watch()</td>
-          <td>Surveillance de changements</td>
-        </tr>
-        <tr>
-          <td>defineProps()</td>
-          <td>Props dans &lt;script setup&gt;</td>
-        </tr>
-        <tr>
-          <td>defineEmits()</td>
-          <td>Événements émis</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Fonction</th>
+            <th>Rôle</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ref()</td>
+            <td>Valeur réactive</td>
+          </tr>
+          <tr>
+            <td>reactive()</td>
+            <td>Objet réactif</td>
+          </tr>
+          <tr>
+            <td>computed()</td>
+            <td>Valeur dérivée</td>
+          </tr>
+          <tr>
+            <td>watch()</td>
+            <td>Surveillance de changements</td>
+          </tr>
+          <tr>
+            <td>defineProps()</td>
+            <td>Props dans &lt;script setup&gt;</td>
+          </tr>
+          <tr>
+            <td>defineEmits()</td>
+            <td>Événements émis</td>
+          </tr>
+        </tbody>
       </table>
+
 
       <h3>🛠️ Outils utiles</h3>
       <ul>

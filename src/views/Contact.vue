@@ -4,20 +4,18 @@
         <h3>Laurent Hutinet</h3>
         <div class="adressContent">
             <div class="coordContent">
-                <div class="logoCoo"><img src="/public/appel.png" alt="telephone"></div>
+                <div class="logoCoo"><img src="/appel.png" alt="telephone"></div>
                 <p>
                     Tél : <a href="tel:+33662316823">06 62 31 68 23</a>
                 </p>
             </div>
 
             <div class="coordContent">
-                <div class="logoCoo"><img src="/public/e-mail.png" alt="mail"></div>
-                <p>
-                    Mail : <a href="mailto:lhutinet@free.fr">lhutinet@free.fr</a>
-                </p>
+                <div class="logoCoo"><img src="/e-mail.png" alt="mail"></div>
+                <p>Email : <a href="mailto:contact@digitalh.fr">contact@digitalh.fr</a></p>
             </div>
             <div class="coordContent">
-                <div class="logoCoo"><img src="/public/adresse-du-domicile.png" alt="adresse postale"></div>
+                <div class="logoCoo"><img src="/adresse-du-domicile.png" alt="adresse postale"></div>
                 <p>3 grande rue</p>
                 <p>38150 Roussillon</p>
             </div>

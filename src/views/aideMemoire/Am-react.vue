@@ -64,30 +64,34 @@ const memoCallback = useCallback(() => faireAction(), [])</code></pre>
 
       <h3>🛠️ Fonctions React</h3>
       <table>
-        <tr>
-          <th>Hook</th>
-          <th>Usage</th>
-        </tr>
-        <tr>
-          <td>useState</td>
-          <td>État local</td>
-        </tr>
-        <tr>
-          <td>useEffect</td>
-          <td>Effets secondaires</td>
-        </tr>
-        <tr>
-          <td>useMemo</td>
-          <td>Mémoïsation</td>
-        </tr>
-        <tr>
-          <td>useCallback</td>
-          <td>Fonction mémoïsée</td>
-        </tr>
-        <tr>
-          <td>useRef</td>
-          <td>Référence persistante</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>Hook</th>
+            <th>Usage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>useState</td>
+            <td>État local</td>
+          </tr>
+          <tr>
+            <td>useEffect</td>
+            <td>Effets secondaires</td>
+          </tr>
+          <tr>
+            <td>useMemo</td>
+            <td>Mémoïsation</td>
+          </tr>
+          <tr>
+            <td>useCallback</td>
+            <td>Fonction mémoïsée</td>
+          </tr>
+          <tr>
+            <td>useRef</td>
+            <td>Référence persistante</td>
+          </tr>
+        </tbody>
       </table>
     </div>
   </div>
