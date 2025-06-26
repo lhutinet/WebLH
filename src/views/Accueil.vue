@@ -1,12 +1,25 @@
 <template>
 
-    <section class="acccontent">
-        <h1 id="accTitre"><img src="/logo-LH-ss-f.png" alt="logo" width=100px;> Digital</h1>
-        <h3 id="accText">Conception de sites internet</h3>
+    <section class="accContainer">
+        <div class="accContent">
+            <video class="accBackground" autoplay muted loop playsinline>
+                <source src="/public/banniere.mp4" type="video/mp4">
+                Ton navigateur ne supporte pas les vidéos HTML5.
+            </video>
+
+
+            <h1 id="accTitre"><img src="/logo-LH-ss-f.png" alt="logo" width=100px;> Digital</h1>
+            <h3 id="accText">Conception de sites internet</h3>
+            <p>
+                <a href="#prestations" style>prestations</a>
+                <a href="#tarifs">tarifs</a>
+                <a href="#porfolio">porfolio</a>
+            </p>
+        </div>
     </section>
     <!-- fin presentation ------------------ -->
 
-    <section class="propositionContainer">
+    <section class="propositionContainer" id="prestations">
         <h2>Mes prestations</h2>
 
         <div class="propositionContent">
@@ -59,7 +72,7 @@
     </section>
     <!-- fin proposition content ----------- -->
 
-    <section class="tarifContainer">
+    <section class="tarifContainer" id="tarifs">
         <h2>TARIFS</h2>
         <div class="tarifContent">
             <Tarifs />
@@ -68,7 +81,7 @@
     </section>
     <!-- fin tarif ------------------------- -->
 
-    <section class="portfolioContainer">
+    <section class="portfolioContainer" id="portfolio">
         <h2>PORTFOLIO</h2>
         <div class="porfolioContent">
             <PortfolioCard />

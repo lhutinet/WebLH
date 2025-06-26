@@ -4,10 +4,9 @@ $white :#fff;
 $black: rgb(22, 22, 22);
 $red: red;
 
-// $colorGrd1: rgba(248, 248, 248, 0.4);
-// $colorGrd2: rgba(211, 211, 211, 0.4);
-$colorGrd1: rgb(255, 17, 17);
-$colorGrd2: rgb(57, 36, 253);
+$colorGrd1: rgba(248, 248, 248, 0.4);
+$colorGrd2: rgba(211, 211, 211, 0.4);
+
 
 $tarif1: #8eb2bd;
 $tarif1-tra: rgba(142, 178, 189, 0.3);
@@ -30,11 +29,16 @@ $fontText : "roboto";
 $boxshadow1: 5px 5px 5px rgba(0, 0, 0, 0.5);
 $textShasow1: 5px 5px 5px rgba(0, 0, 0, 0.2);
 
+html {
+    scroll-behavior: smooth;
+}
 
 * {
 
     font-family: $fontText;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -42,6 +46,11 @@ body {
     margin: 2rem;
     background: #f9f9f9;
     color: #333;
+
+}
+
+section {
+    scroll-margin-top: 100px;
 }
 
 h1 {
