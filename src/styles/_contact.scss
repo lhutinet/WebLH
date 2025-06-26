@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     margin-top: 100px;
 
     h2 {
@@ -135,6 +135,9 @@
 @media screen and (max-width: 700px) {
 
     .contactContainer {
+
+        min-height: 100vh;
+        padding-top: 100px; // si tu as un header fixe par exemple
         width: 100%;
         margin: 0;
         padding: 0;
