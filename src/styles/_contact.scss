@@ -1,12 +1,62 @@
+@use './settings' as *;
+
 .contactContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin-top: 100px;
 
-    h1 {
-        margin-top: 50px;
+    h2 {
+
+        font-family: $fontTitre;
     }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+
+    .adressContent {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        margin: 1rem 0 1rem 0;
+
+
+        .coordContent {
+            box-shadow: $boxshadow1;
+            border-radius: 1rem;
+            margin: 2rem;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .logoCoo {
+                width: 50px;
+                height: 50px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+            p {
+                font-family: $fontSoustitre;
+                font-weight: 500;
+                margin: 0.5rem;
+            }
+        }
+    }
+
 
     .contactContent {
         display: flex;
@@ -14,31 +64,65 @@
         justify-content: center;
         align-items: center;
 
+        .coordonneesContent {
+            min-height: 350px;
+            margin: 1rem;
 
-        form {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+
+            form {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                width: 100%;
+                box-shadow: $boxshadow1;
+                border-radius: 1rem;
+
+                input,
+                textarea {
+                    min-width: 350px;
+                    border: none;
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                    margin-top: 0.2rem;
+                    margin-bottom: 0.2rem;
+                    background: none;
+                }
+
+                input {
+                    height: 40px;
+                }
+
+                textarea {
+                    height: 200px;
+                }
+
+            }
+
+
         }
 
+
+
+
+
         .map-wrapper {
-            position: relative;
-            width: 100%;
+            // position: relative;
+            width: 50%;
+            height: 450px;
             /* ratio 16:9 → padding-bottom: 56.25% */
-            padding-bottom: 56.25%;
+            // padding-bottom: 56.25%;
             overflow: hidden;
 
             border-radius: 20px;
-            box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+            box-shadow: $boxshadow1;
 
 
         }
 
         .google-map {
-            position: absolute;
-            top: 0;
-            left: 0;
+            // position: absolute;
+            // top: 0;
+            // left: 0;
             width: 100%;
             height: 100%;
             border: none;
@@ -51,15 +135,37 @@
 @media screen and (max-width: 700px) {
 
     .contactContainer {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
         .contactContent {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            width: 100%;
+
+            .map-wrapper {
+                width: 100%;
+                height: 500px;
+            }
         }
 
-        .map-wrapper {
-            height: 500px;
-        }
+    }
+
+    .adressContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 400px) {
+
+    input,
+    textarea {
+        width: 99%;
     }
 }

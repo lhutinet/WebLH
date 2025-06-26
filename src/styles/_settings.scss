@@ -15,12 +15,16 @@ $tarif3-tra: rgba(95, 192, 199, 0.3);
 
 $tarif4: #5f7bc7;
 $tarif4-tra: rgba(95, 123, 199, 0.3);
-;
+
 
 
 $fontTitre : "IBM Plex Mono";
 $fontSoustitre : "Playfair Display";
 $fontText : "roboto";
+
+$boxshadow1: 5px 5px 5px rgba(0, 0, 0, 0.5);
+$textShasow1: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
 
 * {
 
@@ -48,7 +52,7 @@ h2 {
     text-align: center;
     margin: 2.5rem;
     color: #336699;
-    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    text-shadow: $textShasow1;
 
 
 
@@ -60,7 +64,7 @@ h2 {
         background: #336699;
         right: 120%;
         top: 50%;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: $boxshadow1;
     }
 
     &::after {
@@ -71,7 +75,7 @@ h2 {
         background: #336699;
         left: 120%;
         top: 50%;
-        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        box-shadow: $boxshadow1;
     }
 
 
