@@ -2,12 +2,14 @@
     <div>
         <MenuNav :hidden="isNavHidden" />
         <router-view />
+        <Footer />
     </div>
 </template>
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue'
 import MenuNav from './components/MenuNav.vue'
+import Footer from './components/Footer.vue'
 
 const isNavHidden = ref(false)
 let lastScrollY = 0
