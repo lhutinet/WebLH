@@ -26,7 +26,17 @@
     z-index: 2;
     text-align: center;
     color: #7198bf;
-    pointer-events: none;
+    // pointer-events: none;
+
+    p {
+        z-index: 1000;
+
+        a {
+            margin: 2rem;
+
+        }
+
+    }
 }
 
 #accTitre {
@@ -47,17 +57,17 @@
     text-shadow: $textShasow1;
 
 
+}
 
-
-
-
-
-
-
-
-
+#accText {
+    font-size: 2.5rem;
+    color: #292929;
+    z-index: 10;
+    font-family: $fontSoustitre;
+    text-align: center;
 
 }
+
 
 .logoImg {
     height: 60px;
@@ -73,9 +83,6 @@
     align-items: center;
     flex-direction: column;
     background-image: linear-gradient(to top left, $colorGrd2, $colorGrd1);
-
-
-
 
 
     .propositionContent {

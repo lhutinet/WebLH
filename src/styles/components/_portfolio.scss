@@ -8,7 +8,7 @@
     background-image: linear-gradient(to top left, $colorGrd2, $colorGrd1);
     padding-bottom: 2rem;
 
-    .porfolioContent {
+    .portfolioContent {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -32,15 +32,8 @@
                         transform: scale(1.1);
                     }
 
-
-
                 }
-
-
-
             }
-
         }
-
     }
 }
