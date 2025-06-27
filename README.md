@@ -50,3 +50,4 @@ https://www.youtube.com/watch?v=JUSjju1Y1Ds&list=PLjwdMgw5TTLVQgowwmhNCpXfHMfM9J
 question pour plus tard:
 -- mettre un script genre fond d'ecran evolutif
 -- permettre le transfert wix ou wordpress vers les clients
+-- changer le style exemple bouton jour nuit
