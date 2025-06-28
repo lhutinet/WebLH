@@ -36,19 +36,6 @@ nav {
         color: #6fd1a5; // couleur du lien actif
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     .hamburger {
         display: none;
         flex-direction: column;
@@ -134,6 +121,8 @@ nav {
 
     // Responsive hamburger
     @media (max-width: 768px) {
+        background: transparent;
+
         .hamburger {
             display: flex;
         }
@@ -143,7 +132,12 @@ nav {
 
             &.open {
                 display: flex;
+
             }
         }
+
+
+
+
     }
 }

@@ -18,7 +18,7 @@
             <li>Assistance technique (3 mois)</li>
 
         </ul>
-        <button @click="openModal(item)" :style="{ background: item.couleur }">plus ...</button>
+        <button class="btn" @click="openModal(item)" :style="{ background: item.couleur }">plus ...</button>
     </div>
     <!-- Modal -->
     <div v-if="selectedItem" class="modal-overlay" @click.self="closeModal">
@@ -77,8 +77,8 @@
 
             <!-- Tu peux ajouter d'autres spécificités ici -->
 
-            <button @click="closeModal">Fermer</button>
-            <button @click="goToContact">Contactez-moi</button>
+            <button class="btn" @click="closeModal">Fermer</button>
+            <button class="btn" @click="goToContact">Contactez-moi</button>
         </div>
     </div>
 

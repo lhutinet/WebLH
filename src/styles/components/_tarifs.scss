@@ -43,7 +43,7 @@
 
             }
 
-            button {
+            .btn {
                 width: 150px;
                 height: 30px;
                 margin: 0.3rem;
@@ -122,7 +122,7 @@
     margin-top: 0;
 }
 
-button {
+.btn {
     margin-top: 1rem;
 }
 
@@ -132,7 +132,7 @@ button {
     border-top: 10px solid $tarif1;
     border-bottom: 10px solid $tarif1;
 
-    button {
+    .btn {
         background: $tarif1;
     }
 }
@@ -141,7 +141,7 @@ button {
     border-top: 10px solid $tarif2;
     border-bottom: 10px solid $tarif2;
 
-    button {
+    .btn {
         background: $tarif2;
     }
 
@@ -151,7 +151,7 @@ button {
     border-top: 10px solid $tarif3;
     border-bottom: 10px solid $tarif3;
 
-    button {
+    .btn {
         background: $tarif3;
     }
 }
