@@ -28,14 +28,14 @@
             <p><strong>Tarif :</strong> {{ selectedItem.tarif }}</p>
             <ul v-if="selectedItem.title === 'Site sur-mesure (Code pur)'">
                 <li>Support API possible</li>
-                <li>Un site développé en code pur vous
+                <li> ✅Un site développé en code pur vous
                     offre un maximum de liberté et de performance.
-                    <br> Vous n’êtes pas limité par les contraintes des
+                    <br> ✅ Vous n’êtes pas limité par les contraintes des
                     plateformes :
-                    <br>chaque élément est pensé pour votre projet. Le code est optimisé, ce qui garantit un
-                    site plus rapide, plus léger et mieux référencé par les moteurs de recherche. <br>
+                    <br> ✅chaque élément est pensé pour votre projet. Le code est optimisé, ce qui garantit un
+                    site plus rapide, plus léger et mieux référencé par les moteurs de recherche. <br> ✅
                     C’est aussi la
-                    meilleure option si vous avez des besoins spécifiques <br>
+                    meilleure option si vous avez des besoins spécifiques <br> ✅
                     fonctionnalités avancées, design unique.
                     Enfin, la sécurité est renforcée car il n’y a pas de dépendance à des plugins
                     externes.
@@ -43,36 +43,50 @@
             </ul>
             <ul v-if="selectedItem.title === 'Site wordpress'">
                 <li>Installation de plugins essentiels</li>
-                <li>WordPress est une solution idéale pour un site
+                <li> ✅WordPress est une solution idéale pour un site
                     évolutif et facile à gérer.
-                    <br> Grâce à son interface intuitive, vous pouvez modifier vos contenus
+                    <br> ✅ Grâce à son interface intuitive, vous pouvez modifier vos contenus
                     (textes, images, articles) sans aucune connaissance technique.
-                    <br> Avec sa vaste bibliothèque de plugins
+                    <br> ✅ Avec sa vaste bibliothèque de plugins
                     et de thèmes, il permet d’ajouter rapidement des fonctionnalités (blog, boutique, réservation…).
-                    <br>
+                    <br> ✅
                     WordPress bénéficie d’une large communauté : vous avez accès à de nombreuses ressources et supports.
-                    <br>
+                    <br> ✅
                     C’est un excellent compromis entre flexibilité, coût et rapidité de mise en œuvre.
                 </li>
             </ul>
             <ul v-if="selectedItem.title === 'Site Wix'">
                 <li>Assistance sur l'éditeur Wix</li>
-                <li>Wix est parfait pour un projet simple et rapide à mettre
-                    en ligne. <br>Sa plateforme clé-en-main permet de créer un site sans toucher au code grâce à un
+                <li> ✅Wix est parfait pour un projet simple et rapide à mettre
+                    en ligne. <br> ✅Sa plateforme clé-en-main permet de créer un site sans toucher au code grâce à un
                     éditeur
-                    en glisser-déposer. <br> L’hébergement et la maintenance sont inclus, ce qui limite les soucis
-                    techniques. <br> C’est une solution accessible à petit budget, idéale pour des sites vitrines, des
+                    en glisser-déposer. <br> ✅ L’hébergement et la maintenance sont inclus, ce qui limite les soucis
+                    techniques. <br> ✅C’est une solution accessible à petit budget, idéale pour des sites vitrines, des
                     portfolios ou des projets qui doivent être visibles rapidement.</li>
             </ul>
 
             <ul v-if="selectedItem.title === 'Site hostinger'">
-                <li>Assistance sur l'éditeur Wix</li>
-                <li>Wix est parfait pour un projet simple et rapide à mettre
-                    en ligne. <br>Sa plateforme clé-en-main permet de créer un site sans toucher au code grâce à un
-                    éditeur
-                    en glisser-déposer. <br> L’hébergement et la maintenance sont inclus, ce qui limite les soucis
-                    techniques. <br> C’est une solution accessible à petit budget, idéale pour des sites vitrines, des
-                    portfolios ou des projets qui doivent être visibles rapidement.</li>
+                <li>Hostinger Website Builder</li>
+                <li>✅ Interface glisser-déposer facile
+                    Créez vos pages en quelques clics : ajoutez textes, images, vidéos et boutons où vous le souhaitez.
+                    <br>
+                    ✅ Designs modernes et personnalisables
+                    Choisissez parmi des centaines de templates professionnels et adaptez-les à votre image : couleurs,
+                    polices, mise en page… tout est modulable.
+                    <br>
+                    ✅ Site optimisé pour mobile
+                    Chaque design est automatiquement responsive pour s’adapter à tous les écrans.
+                    <br>
+                    ✅ Fonctionnalités intégrées
+                    <br>
+                    Formulaire de contact
+                    <br>
+                    Galerie d’images
+                    <br>
+                    Blog
+                    <br>
+                    Boutique en ligne (e-commerce)
+                </li>
             </ul>
 
             <!-- Tu peux ajouter d'autres spécificités ici -->
