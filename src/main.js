@@ -3,4 +3,18 @@ import './styles/index.scss'
 import App from './App.vue'
 import router from './router'
 
-createApp(App).use(router).mount('#app')
+import VueGtag from 'vue-gtag-next'
+
+const app = createApp(App)
+
+app.use(router)
+
+app.use(
+  VueGtag,
+  {
+    config: { id: 'G-1HHVF5ZPZ0' },
+  },
+  router,
+)
+
+app.mount('#app')
