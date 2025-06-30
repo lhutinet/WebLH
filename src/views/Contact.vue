@@ -32,7 +32,7 @@
                     <input type="email" name="email" placeholder=" email" required />
                     <input type="tel" name="telephone" placeholder=" téléphone" required />
                     <textarea name="demande" placeholder="Votre demande" required></textarea>
-                    <button type="submit">Envoyer</button>
+                    <button class="btn" type="submit">Envoyer</button>
                 </form>
 
 
