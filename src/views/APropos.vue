@@ -2,11 +2,11 @@
 
 
     <iframe src="https://mellifluous-kangaroo-e5b604.netlify.app/" frameborder="0"></iframe>
-    <MarqueeBanner text="Pages en construction –" :speed="20" bgColor="red" textColor="white" :height="60"
-        :pauseOnHover="true" />
+    <!-- <MarqueeBanner text="Pages en construction –" :speed="20" bgColor="red" textColor="white" :height="60"
+        :pauseOnHover="true" /> -->
 </template>
 <script setup>
-import MarqueeBanner from '@/components/MarqueeBanner.vue';
+// import MarqueeBanner from '@/components/MarqueeBanner.vue';
 
 
 
