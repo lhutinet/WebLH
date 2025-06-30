@@ -53,3 +53,18 @@ question pour plus tard:
 -- changer le style exemple bouton jour nuit
 -- faire un wrapped sur les prix et portfolio
 --cree un fichier robot attention seo
+
+page 1 les titre depasse en telephone
+--voir les majuscules
+-- mettre par defaut tous et pas javascript
+-- elevr le telecharger le cv
+texte a la place
+
+autodidact j'ai suivi une formation
+
+--> je suis a votre écoute pour élaboré ensemble un site qui vous resemble
+
+contact en mode telephone voir la taille des boites
+et majuscule
+
+faire mention legale et polmitique de confidencialité
