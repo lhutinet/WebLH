@@ -53,11 +53,4 @@ question pour plus tard:
 -- faire un wrapped sur les prix et portfolio
 --cree un fichier robot attention seo
 
-page 1
---voir les majuscules
--- mettre par defaut tous et pas javascript
-
-contact en mode telephone voir la taille des boites
-et majuscule
-
 faire mention legale et polmitique de confidencialité

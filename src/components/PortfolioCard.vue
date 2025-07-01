@@ -8,11 +8,12 @@
                 <div class="portfolioCard" v-for="(item, index) in portfolio" :key="index"
                     :style="{ minWidth: cardWidth + 'px' }">
                     <h3>{{ item.title }}</h3>
-                    <a :href="item.adress" target="_blank" rel="noopener">
-                        <div class="imgContent">
-                            <img :src="item.img" :alt="item.altP" width="350px" />
-                        </div>
-                    </a>
+                    <div class="imgContent">
+                        <img :src="item.img" :alt="item.altP" width="350px" />
+                    </div>
+                    <a class="btn" :href="item.adress" target="_blank" rel="noopener">Allez voir ... </a>
+
+
                 </div>
             </div>
         </div>
