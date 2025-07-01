@@ -155,3 +155,63 @@
         background: $tarif3;
     }
 }
+
+.carousel-container {
+    position: relative;
+    width: 900px;
+    margin: auto;
+    overflow: hidden;
+    user-select: none;
+}
+
+.carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+    cursor: grab;
+}
+
+.carousel-wrapper:active {
+    cursor: grabbing;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.TarifCard {
+    box-sizing: border-box;
+    padding: 20px;
+    margin: 0 10px;
+    background-color: #eee;
+    border-radius: 8px;
+    user-select: none;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+@media (max-width: 600px) {
+    .carousel-container {
+        width: 320px;
+    }
+}
