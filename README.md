@@ -48,21 +48,14 @@ https://www.youtube.com/watch?v=JUSjju1Y1Ds&list=PLjwdMgw5TTLVQgowwmhNCpXfHMfM9J
 ╚════════════════╧══════════════════════╧═════════════════════════════════════════════════╧═══════════════════════════════════╝ -->
 
 question pour plus tard:
--x- mettre un script genre fond d'ecran evolutif
 -- permettre le transfert wix ou wordpress vers les clients
 -- changer le style exemple bouton jour nuit
 -- faire un wrapped sur les prix et portfolio
 --cree un fichier robot attention seo
 
-page 1 les titre depasse en telephone
+page 1
 --voir les majuscules
 -- mettre par defaut tous et pas javascript
--- elevr le telecharger le cv
-texte a la place
-
-autodidact j'ai suivi une formation
-
---> je suis a votre écoute pour élaboré ensemble un site qui vous resemble
 
 contact en mode telephone voir la taille des boites
 et majuscule

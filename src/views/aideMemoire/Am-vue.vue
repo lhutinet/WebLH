@@ -189,4 +189,9 @@ watch(nom, (nouv, anc) => {
       &lt;/script&gt;</code></pre>
     </div>
   </div>
+  <ScrollRetour />
 </template>
+<script setup>
+import ScrollRetour from '@/components/ScrollRetour.vue'
+
+</script>

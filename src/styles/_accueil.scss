@@ -8,39 +8,6 @@
     overflow: hidden;
     border-radius: 20px;
 
-    p {
-        font-size: 1.2rem;
-        font-family: $fontTitre;
-        margin: 1.2rem;
-
-
-        a {
-            color: $black;
-            text-decoration: none;
-
-            transition: color 0.3s ease;
-
-            &:hover {
-                color: #304355f8;
-                font-size: 1.5rem;
-                font-weight: 600;
-
-            }
-
-
-        }
-
-        &:hover {
-            a:not(:hover) {
-                color: rgba(0, 0, 0, 0.178);
-
-            }
-
-        }
-
-
-
-    }
 }
 
 .matrixCanvas {
@@ -59,19 +26,60 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 20;
     text-align: center;
     color: #7198bf;
-    // pointer-events: none;
+
+    &::before {
+        position: absolute;
+        content: "";
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(2px);
+        top: 0;
+        left: -1.2rem;
+        height: 110%;
+        width: 100%;
+        z-index: -1;
+        transform: skew(-10deg, 0deg);
+        border-radius: 2rem;
+        box-shadow: $textShasow1;
+        padding-right: 2rem;
+    }
 
     p {
         z-index: 1000;
 
         a {
             margin: 2rem;
+        }
+    }
 
+    p {
+        font-size: 1.2rem;
+        font-family: $fontTitre;
+        margin: 1.2rem;
+
+        a {
+            color: $black;
+            text-decoration: none;
+
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: #304355f8;
+                font-size: 1.5rem;
+                font-weight: 600;
+
+            }
         }
 
+        &:hover {
+            a:not(:hover) {
+                color: rgba(0, 0, 0, 0.178);
+
+            }
+
+        }
     }
 }
 
@@ -84,7 +92,7 @@
     justify-content: center;
 
     font-size: 5rem;
-    background: linear-gradient(165deg, #3d5368c2 50%, #090909 90%);
+    background: linear-gradient(165deg, #2d3d4dc2 50%, #090909 90%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -99,7 +107,6 @@
 #accText {
     font-size: 2.5rem;
     color: #292929;
-    z-index: 10;
     font-family: $fontSoustitre;
     text-align: center;
     background: linear-gradient(165deg, #283846c2 70%, #090909 90%);
@@ -116,8 +123,6 @@
     margin-right: 15px;
 
 }
-
-
 
 // ---------------fin debut--------------
 .propositionContainer {
@@ -164,26 +169,7 @@
     }
 }
 
-.scrollTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-    z-index: 1000;
-}
 
-.scrollTopBtn:hover {
-    opacity: 1;
-}
 
 
 @media (max-width: 450px) {
@@ -192,7 +178,29 @@
     }
 
     #accText {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .accContent {
+        &::before {
+            transform: none;
+            left: 5%;
+            width: 90%;
+            padding: 0;
+
+        }
+
+        p {
+            font-size: 1rem;
+
+            a {
+                &:hover {
+                    font-size: 1.1rem;
+                }
+            }
+
+
+        }
     }
 
 }

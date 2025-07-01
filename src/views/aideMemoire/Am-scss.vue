@@ -92,4 +92,9 @@ body {
 			</ul>
 		</div>
 	</div>
+	<ScrollRetour />
 </template>
+<script setup>
+import ScrollRetour from '@/components/ScrollRetour.vue'
+
+</script>

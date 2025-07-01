@@ -12,12 +12,14 @@
 
             <div class="coordContent">
                 <div class="logoCoo"><img src="/e-mail.png" alt="mail"></div>
-                <p>Email : <a href="mailto:contact@digitalh.fr">contact@digitalh.fr</a></p>
+                <p>E-mail : <a href="mailto:contact@digitalh.fr">contact@digitalh.fr</a></p>
             </div>
             <div class="coordContent">
                 <div class="logoCoo"><img src="/adresse-du-domicile.png" alt="adresse postale"></div>
                 <p>3 grande rue</p>
-                <p>38150 Roussillon</p>
+                <a href="https://maps.app.goo.gl/2fYAPtCE1pjqnTLn6" target="_blank" rel="noopener">
+                    <p>38150 Roussillon</p>
+                </a>
             </div>
 
         </div>
@@ -26,11 +28,11 @@
 
             <div class="coordonneesContent">
                 <form name="contact" method="POST" data-netlify="true" @submit.prevent="submitForm">
-                    <input type="hidden" name="form-name" value="contact" />
-                    <input type="text" name="nom" placeholder=" nom" required />
-                    <input type="text" name="prenom" placeholder=" prénom" required />
-                    <input type="email" name="email" placeholder=" email" required />
-                    <input type="tel" name="telephone" placeholder=" téléphone" required />
+                    <input type="hidden" name="form-name" value="Contact" />
+                    <input type="text" name="nom" placeholder=" Nom" required />
+                    <input type="text" name="prenom" placeholder=" Prénom" required />
+                    <input type="email" name="email" placeholder=" E-mail" required />
+                    <input type="tel" name="telephone" placeholder=" Téléphone" required />
                     <textarea name="demande" placeholder="Votre demande" required></textarea>
                     <button class="btn" type="submit">Envoyer</button>
                 </form>

@@ -77,13 +77,18 @@
             <li>Si tu ajoutes des inputs : ajoute le <code>name</code></li>
         </ul>
     </div>
+    <ScrollRetour />
 </template>
-
 <script setup>
-// Pas besoin de JS spécifique : c'est purement un aide-mémoire affiché
+import ScrollRetour from '@/components/ScrollRetour.vue'
+
 </script>
 
-<style scoped>
+<!-- <script setup> -->
+<!-- // Pas besoin de JS spécifique : c'est purement un aide-mémoire affiché -->
+<!-- </script> -->
+
+<!-- <style scoped>
 .aideMemoire {
     max-width: 800px;
     margin: auto;
@@ -102,4 +107,4 @@ pre {
     padding: 0.5rem;
     overflow: auto;
 }
-</style>
+</style> -->

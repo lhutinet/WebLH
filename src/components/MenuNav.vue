@@ -18,7 +18,7 @@
                 <router-link to="/apropos" @click="closeAll">À propos</router-link>
             </li>
             <li class="dropdown" @mouseenter="openDropdown" @mouseleave="closeDropdown">
-                <span class="dropdown-toggle" @click.prevent.stop="toggleDropdown">tech</span>
+                <span class="dropdown-toggle" @click.prevent.stop="toggleDropdown">Tech</span>
                 <ul class="dropdown-content" :class="{ open: dropdownOpen }">
                     <li><router-link to="/AmHTML" @click="closeAll">Aide HTML</router-link></li>
                     <li><router-link to="/AmCss" @click="closeAll">Aide CSS</router-link></li>

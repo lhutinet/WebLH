@@ -75,9 +75,7 @@
             <PortfolioCard />
         </div>
     </section>
-    <button v-if="showScrollTop" class="scrollTopBtn" @click="scrollToTop">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    <ScrollRetour />
 
 </template>
 
@@ -89,25 +87,7 @@
 import PortfolioCard from '@/components/PortfolioCard.vue';
 import Tarifs from '@/components/Tarifs.vue';
 import Banniere from '@/components/Banniere.vue';
-import { ref, onMounted, onUnmounted } from 'vue';
-
-const showScrollTop = ref(false);
-
-function handleScroll() {
-    showScrollTop.value = window.scrollY > 100;
-}
-
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-onMounted(() => {
-    window.addEventListener('scroll', handleScroll);
-});
-
-onUnmounted(() => {
-    window.removeEventListener('scroll', handleScroll);
-});
+import ScrollRetour from '@/components/ScrollRetour.vue'
 
 
 </script>

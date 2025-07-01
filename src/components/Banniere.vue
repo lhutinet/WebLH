@@ -9,9 +9,9 @@
         </h1>
         <h3 id="accText">Conception de sites internet</h3>
         <p>
-            <a href="#prestations">prestations</a>
-            <a href="#tarifs">tarifs</a>
-            <a href="#portfolio">portfolio</a>
+            <a href="#prestations">Prestations</a>
+            <a href="#tarifs">Tarifs</a>
+            <a href="#portfolio">Portfolio</a>
         </p>
     </div>
 </template>

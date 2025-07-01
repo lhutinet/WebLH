@@ -95,4 +95,9 @@ const memoCallback = useCallback(() => faireAction(), [])</code></pre>
       </table>
     </div>
   </div>
+  <ScrollRetour />
 </template>
+<script setup>
+import ScrollRetour from '@/components/ScrollRetour.vue'
+
+</script>
