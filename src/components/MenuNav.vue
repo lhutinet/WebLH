@@ -29,15 +29,19 @@
                     <li><router-link to="/Amgithub" @click="closeAll">Aide GitHub</router-link></li>
                     <li><router-link to="/Amform" @click="closeAll">Aide form </router-link></li>
                 </ul>
+
             </li>
+            <!-- <Ampoule /> -->
         </ul>
         <slot />
+
     </nav>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import { defineProps } from 'vue'
+import Ampoule from "./Ampoule.vue"
 
 defineProps({
     hidden: Boolean
