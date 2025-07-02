@@ -54,3 +54,7 @@ question pour plus tard:
 --cree un fichier robot attention seo
 
 faire mention legale et polmitique de confidencialité
+
+lampes :
+
+https://youtu.be/OAgH_VMz08A?si=Aqul_FqnaNmkryzf

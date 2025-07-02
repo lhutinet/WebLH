@@ -211,10 +211,21 @@ function clampIndex() {
     }
 }
 
-
 function updateTranslateFromIndex() {
-    currentTranslate.value = -currentIndex.value * cardWidth.value
+    if (!carouselWrapper.value) return
+
+    const containerWidth = carouselWrapper.value.clientWidth
+    let targetTranslate = -currentIndex.value * cardWidth.value + (containerWidth - cardWidth.value) / 2
+
+    // limiter pour ne pas dépasser les bornes
+    const maxTranslate = 0
+    const minTranslate = -((TarifList.value.length - 1) * cardWidth.value)
+    if (targetTranslate > maxTranslate) targetTranslate = maxTranslate
+    if (targetTranslate < minTranslate) targetTranslate = minTranslate
+
+    currentTranslate.value = targetTranslate
     prevTranslate.value = currentTranslate.value
+    setTranslate(currentTranslate.value)
 }
 
 // Animations frame update for smooth dragging
@@ -246,9 +257,11 @@ function dragMove(event) {
     let currentX = event.type === 'touchmove' ? event.touches[0].clientX : event.clientX
     let deltaX = currentX - startX.value
     currentTranslate.value = prevTranslate.value + deltaX
-    // Limit drag boundaries (optionnel, on peut rendre infini en bouclant)
-    const maxTranslate = 0
-    const minTranslate = -((TarifList.value.length - visibleCards.value) * cardWidth.value)
+
+    // Limit drag boundaries (on limite pour pas dépasser la première et dernière carte)
+    const maxTranslate = (carouselWrapper.value.clientWidth - cardWidth.value) / 2
+    const minTranslate = -((TarifList.value.length - 1) * cardWidth.value) + (carouselWrapper.value.clientWidth - cardWidth.value) / 2
+
     if (currentTranslate.value > maxTranslate) {
         currentTranslate.value = maxTranslate
     }
@@ -261,8 +274,24 @@ function dragEnd() {
     if (!isDragging.value) return
     isDragging.value = false
     cancelAnimationFrame(animationFrame.value)
-    // Snap to nearest card index
-    currentIndex.value = Math.round(-currentTranslate.value / cardWidth.value)
+
+    if (!carouselWrapper.value) return
+
+    const containerWidth = carouselWrapper.value.clientWidth
+
+    // Trouver l’index de la carte la plus proche du centre
+    let closestIndex = 0
+    let minDistance = Infinity
+    for (let i = 0; i < TarifList.value.length; i++) {
+        let cardCenterPosition = -i * cardWidth.value + (containerWidth - cardWidth.value) / 2
+        let distance = Math.abs(cardCenterPosition - currentTranslate.value)
+        if (distance < minDistance) {
+            minDistance = distance
+            closestIndex = i
+        }
+    }
+
+    currentIndex.value = closestIndex
     clampIndex()
     updateTranslateFromIndex()
 }
