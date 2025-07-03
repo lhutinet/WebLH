@@ -1,6 +1,7 @@
 <template>
     <section class="accContainer">
         <Banniere />
+        <!-- <Ampoule /> -->
     </section>
 
     <section class="propositionContainer" id="prestations">
@@ -88,6 +89,7 @@ import PortfolioCard from '@/components/PortfolioCard.vue';
 import Tarifs from '@/components/Tarifs.vue';
 import Banniere from '@/components/Banniere.vue';
 import ScrollRetour from '@/components/ScrollRetour.vue'
+import Ampoule from '@/components/Ampoule.vue';
 
 
 </script>
