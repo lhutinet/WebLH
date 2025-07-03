@@ -31,7 +31,7 @@
                 </ul>
 
             </li>
-            <!-- <Ampoule /> -->
+
         </ul>
         <slot />
 
@@ -41,7 +41,7 @@
 <script setup>
 import { ref } from 'vue'
 import { defineProps } from 'vue'
-import Ampoule from "./Ampoule.vue"
+
 
 defineProps({
     hidden: Boolean
