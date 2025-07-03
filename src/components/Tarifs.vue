@@ -27,17 +27,9 @@
                         <li>Code propre, optimisé, évolutif)</li>
                         <li>Assistance technique (3 mois)</li>
                     </ul>
-
-
                     <button class="btn" @click="openModal(item)" :style="{ background: item.couleur }">
                         Plus ...
                     </button>
-
-
-
-
-
-
                 </div>
             </div>
         </div>
@@ -50,74 +42,29 @@
                 <h3>{{ selectedItem.title }} : Détails</h3>
                 <p>{{ selectedItem.presentation }}</p>
                 <p><strong>Tarif :</strong> {{ selectedItem.tarif }}</p>
+
                 <ul v-if="selectedItem.title === 'Site sur-mesure (Code pur)'">
                     <li>Support API possible</li>
-                    <li> ✅Un site développé en code pur vous
-                        offre un maximum de liberté et de performance.
-                        <br> ✅ Vous n’êtes pas limité par les contraintes des
-                        plateformes :
-                        <br> ✅chaque élément est pensé pour votre projet. Le code est optimisé, ce qui garantit un
-                        site plus rapide, plus léger et mieux référencé par les moteurs de recherche. <br> ✅
-                        C’est aussi la
-                        meilleure option si vous avez des besoins spécifiques <br> ✅
-                        fonctionnalités avancées, design unique.
-                        Enfin, la sécurité est renforcée car il n’y a pas de dépendance à des plugins
-                        externes.
-                    </li>
+                    <li v-if="selectedItem.caracteristiques !== ''" v-html="selectedItem.caracteristiques"></li>
                 </ul>
+                <ul v-if="selectedItem.title === 'Tarifs à la page - Code pur'">
+                    <li>Support API possible</li>
+                    <li v-if="selectedItem.caracteristiques !== ''" v-html="selectedItem.caracteristiques"></li>
+                </ul>
+
                 <ul v-if="selectedItem.title === 'Site wordpress'">
                     <li>Installation de plugins essentiels</li>
-                    <li> ✅WordPress est une solution idéale pour un site
-                        évolutif et facile à gérer.
-                        <br> ✅ Grâce à son interface intuitive, vous pouvez modifier vos contenus
-                        (textes, images, articles) sans aucune connaissance technique.
-                        <br> ✅ Avec sa vaste bibliothèque de plugins
-                        et de thèmes, il permet d’ajouter rapidement des fonctionnalités (blog, boutique, réservation…).
-                        <br> ✅
-                        WordPress bénéficie d’une large communauté : vous avez accès à de nombreuses ressources et
-                        supports.
-                        <br> ✅
-                        C’est un excellent compromis entre flexibilité, coût et rapidité de mise en œuvre.
-                    </li>
+                    <li v-if="selectedItem.caracteristiques !== ''" v-html="selectedItem.caracteristiques"></li>
                 </ul>
                 <ul v-if="selectedItem.title === 'Site Wix'">
                     <li>Assistance sur l'éditeur Wix</li>
-                    <li> ✅Wix est parfait pour un projet simple et rapide à mettre
-                        en ligne. <br> ✅Sa plateforme clé-en-main permet de créer un site sans toucher au code grâce à
-                        un
-                        éditeur
-                        en glisser-déposer. <br> ✅ L’hébergement et la maintenance sont inclus, ce qui limite les soucis
-                        techniques. <br> ✅C’est une solution accessible à petit budget, idéale pour des sites vitrines,
-                        des
-                        portfolios ou des projets qui doivent être visibles rapidement.</li>
+                    <li v-if="selectedItem.caracteristiques !== ''" v-html="selectedItem.caracteristiques"></li>
                 </ul>
 
                 <ul v-if="selectedItem.title === 'Site hostinger'">
                     <li>Hostinger Website Builder</li>
-                    <li>✅ Interface glisser-déposer facile
-                        Créez vos pages en quelques clics : ajoutez textes, images, vidéos et boutons où vous le
-                        souhaitez.
-                        <br>
-                        ✅ Designs modernes et personnalisables
-                        Choisissez parmi des centaines de templates professionnels et adaptez-les à votre image :
-                        couleurs,
-                        polices, mise en page… tout est modulable.
-                        <br>
-                        ✅ Site optimisé pour mobile
-                        Chaque design est automatiquement responsive pour s’adapter à tous les écrans.
-                        <br>
-                        ✅ Fonctionnalités intégrées
-                        <br>
-                        Formulaire de contact
-                        <br>
-                        Galerie d’images
-                        <br>
-                        Blog
-                        <br>
-                        Boutique en ligne (e-commerce)
-                    </li>
+                    <li v-if="selectedItem.caracteristiques !== ''" v-html="selectedItem.caracteristiques"></li>
                 </ul>
-                <!-- contenu modal inchangé -->
 
                 <button class="btn" @click="closeModal">Fermer</button>
                 <button class="btn" @click="goToContact">Contactez-moi</button>
@@ -136,44 +83,87 @@ const TarifList = ref([
     {
         id: 1,
         title: 'Site sur-mesure (Code pur)',
-        presentation: 'Un site unique, entièrement développé selon vos besoins...',
-        tarif: '750€',
+        presentation: 'Un site unique, entièrement développé selon vos besoins.',
+        tarif: '750€ ',
         formation: '',
         liplus: '',
         couleur: '#8eb2bd',
         couleurTrans: 'rgba(142, 178, 189, 0.3)',
+        caracteristiques: `
+    ✅ Liberté totale sur le design et les fonctionnalités<br>
+    ✅ Code optimisé, plus rapide et léger<br>
+    ✅ Meilleur potentiel de référencement (SEO)<br>
+    ✅ Pas de dépendance à des plugins ou plateformes externes<br>
+    ✅ Sécurité renforcée et adaptée à votre projet<br>
+    ✅ Idéal pour des besoins spécifiques ou des fonctionnalités avancées<br><br>
+    ⚠️ Temps de développement plus long<br>
+    ⚠️ Évolutions futures nécessitent un développeur<br>
+    ⚠️ Moins adapté si vous souhaitez tout modifier vous-même sans aide<br><br>
+    
+  `
     },
+    //     {
+    //         id: 2,
+    //         title: 'Tarifs à la page - Code pur',
+    //         presentation: 'Détails des tarifs pour les pages supplémentaires sur un site sur-mesure (code pur).',
+    //         tarif: 'Dés 150€',
+    //         formation: '',
+    //         liplus: '',
+    //         couleur: '#8eb2bd',
+    //         couleurTrans: 'rgba(142, 178, 189, 0.3)',
+    //         caracteristiques: `
+    //     ✅Forfait de base (site simple, jusqu'à 5 pages) : 750 €<br>
+    //     ✅Pages supplémentaires :<br>
+    //     ✅ Page simple (texte, images, mise en page standard) : 150 € / page<br>
+    //     ✅Page avec fonctionnalités spécifiques (formulaire, animation, sections dynamiques) : 250 € / page<br>
+    //     ✅ Page très complexe (intégration API, espace client, fonctionnalités avancées) : devis personnalisé à partir de 300 € / page<br><br>
+    //     <strong>Nom de domaine :</strong> à partir de ~3 €/an (OVH .com) ou ~10 €/an (.fr)<br>
+    //     <strong>Hébergement conseillé :</strong> environ 50 – 100 €/an, facturé séparément<br><br>
+    //     <em>Contactez-moi pour un devis personnalisé adapté à votre projet.</em>
+    //   `
+    //     },
+
+
     {
-        id: 2,
+        id: 3,
         title: 'Site wordpress',
-        presentation: 'Un site puissant et évolutif, facile à gérer au quotidien.',
+        presentation: 'Deux solutions possibles selon vos besoins : auto-hébergé ou WordPress.com.',
         tarif: '750€',
         formation: 'Formation à la prise en main WordPress',
         liplus: '',
         couleur: '#66ae98',
         couleurTrans: 'rgba(102, 174, 152, 0.3)',
+        caracteristiques: '✅ Option 1 – WordPress auto-hébergé (Hostinger, OVH, o2switch…)<br>- Plus puissant et évolutif<br>- Accès complet aux plugins, thèmes et au code<br>- Design sur mesure et meilleur contrôle<br>- Environ 3&euro; à 10&euro;/mois pour l’hébergement + ≈ 12&euro;/an pour le nom de domaine<br><br>✅ Recommandé si vous souhaitez un site évolutif et sur mesure.<br><br>✅ Option 2 – WordPress.com<br>- Hébergement inclus, mises à jour automatiques<br>- Interface simplifiée en ligne<br>- Idéal pour débuter sans technique<br>- Version gratuite limitée (.wordpress.com et publicités)<br>- Abonnement payant (≈ 5&euro; à 25&euro;/mois) pour un nom de domaine personnalisé et des options avancées<br><br>✅ Je vous accompagne pour choisir la meilleure option selon vos besoins.'
+
     },
+
     {
-        id: 3,
+        id: 4,
         title: 'Site Wix',
-        presentation: 'une solution simple et rapide pour être présent en ligne.',
+        presentation: 'Une solution simple et rapide pour être visible en ligne.',
         tarif: '400€',
-        formation: 'Formation à la prise en main wix',
+        formation: 'Formation à la prise en main Wix',
         liplus: '',
         couleur: '#5fc0c7',
         couleurTrans: 'rgba(95, 192, 199, 0.3)',
+        caracteristiques: '✅ Plateforme tout-en-un très facile à utiliser<br>✅ Éditeur en glisser-déposer : vous placez vos éléments sans coder <br>✅ Mise en ligne rapide, idéale pour des projets urgents<br>✅ Hébergement, maintenance et sécurité inclus<br>✅ Design responsive adapté à tous les écrans<br>✅ Idéal pour les sites vitrines, portfolios ou petits projets <br>✅ Formation à la prise en main incluse<br> <br>⚠️ Moins de liberté sur le design ou les fonctionnalités avancées <br>⚠️ Fonctionnalités limitées pour des projets complexes ou très évolutifs<br>⚠️ Référencement (SEO) plus limité qu’avec du code ou WordPress<br>⚠️ Abonnement payant obligatoire (environ 17€ / mois) uniquement si vous souhaitez un nom de domaine personnalisé (.fr, .com, etc.)'
     },
     {
-        id: 4,
+        id: 5,
         title: 'Site hostinger',
-        presentation: 'une solution  tres simple et rapide pour être présent en ligne.',
+        presentation: 'Une solution simple et rapide pour être visible en ligne.',
         tarif: '400€',
-        formation: 'Formation à la prise en main hostinger',
+        formation: 'Formation à la prise en main Hostinger',
         liplus: '',
         couleur: '#5f7bc7',
         couleurTrans: 'rgba(95, 123, 199, 0.3)',
-    },
+        caracteristiques: '✅ Éditeur intuitif en glisser-déposer, facile à utiliser<br>✅ Hébergement, maintenance et sécurité inclus<br>✅ Templates modernes et personnalisables<br>✅ Design responsive adapté à tous les écrans<br>✅ Fonctionnalités intégrées : formulaire, galerie, blog, boutique<br>✅ Formation à la prise en main incluse<br><br>⚠️ Moins de liberté pour des fonctionnalités complexes ou très spécifiques<br>⚠️ Nécessite un abonnement payant (environ 6&euro; à 12&euro;/mois) si vous souhaitez un nom de domaine personnalisé (.fr, .com, etc.)'
+
+    }
+
+
 ])
+
 
 const selectedItem = ref(null)
 const currentIndex = ref(0)
@@ -217,7 +207,6 @@ function updateTranslateFromIndex() {
     const containerWidth = carouselWrapper.value.clientWidth
     let targetTranslate = -currentIndex.value * cardWidth.value + (containerWidth - cardWidth.value) / 2
 
-    // limiter pour ne pas dépasser les bornes
     const maxTranslate = 0
     const minTranslate = -((TarifList.value.length - 1) * cardWidth.value)
     if (targetTranslate > maxTranslate) targetTranslate = maxTranslate
@@ -228,7 +217,6 @@ function updateTranslateFromIndex() {
     setTranslate(currentTranslate.value)
 }
 
-// Animations frame update for smooth dragging
 function animation() {
     setTranslate(currentTranslate.value)
     if (isDragging.value) {
@@ -243,48 +231,36 @@ function setTranslate(x) {
 }
 
 function dragStart(event) {
-    if (event.type === 'touchstart') {
-        startX.value = event.touches[0].clientX
-    } else {
-        startX.value = event.clientX
-    }
+    startX.value = event.type === 'touchstart' ? event.touches[0].clientX : event.clientX
     isDragging.value = true
     animationFrame.value = requestAnimationFrame(animation)
 }
 
 function dragMove(event) {
     if (!isDragging.value) return
-    let currentX = event.type === 'touchmove' ? event.touches[0].clientX : event.clientX
-    let deltaX = currentX - startX.value
+    const currentX = event.type === 'touchmove' ? event.touches[0].clientX : event.clientX
+    const deltaX = currentX - startX.value
     currentTranslate.value = prevTranslate.value + deltaX
 
-    // Limit drag boundaries (on limite pour pas dépasser la première et dernière carte)
     const maxTranslate = (carouselWrapper.value.clientWidth - cardWidth.value) / 2
     const minTranslate = -((TarifList.value.length - 1) * cardWidth.value) + (carouselWrapper.value.clientWidth - cardWidth.value) / 2
 
-    if (currentTranslate.value > maxTranslate) {
-        currentTranslate.value = maxTranslate
-    }
-    if (currentTranslate.value < minTranslate) {
-        currentTranslate.value = minTranslate
-    }
+    if (currentTranslate.value > maxTranslate) currentTranslate.value = maxTranslate
+    if (currentTranslate.value < minTranslate) currentTranslate.value = minTranslate
 }
 
 function dragEnd() {
     if (!isDragging.value) return
     isDragging.value = false
     cancelAnimationFrame(animationFrame.value)
-
     if (!carouselWrapper.value) return
 
     const containerWidth = carouselWrapper.value.clientWidth
-
-    // Trouver l’index de la carte la plus proche du centre
     let closestIndex = 0
     let minDistance = Infinity
     for (let i = 0; i < TarifList.value.length; i++) {
-        let cardCenterPosition = -i * cardWidth.value + (containerWidth - cardWidth.value) / 2
-        let distance = Math.abs(cardCenterPosition - currentTranslate.value)
+        const cardCenterPosition = -i * cardWidth.value + (containerWidth - cardWidth.value) / 2
+        const distance = Math.abs(cardCenterPosition - currentTranslate.value)
         if (distance < minDistance) {
             minDistance = distance
             closestIndex = i
