@@ -2,6 +2,12 @@
   <h1>⚛️ Aide-mémoire React</h1>
   <div class="columns">
     <div class="column">
+
+      <h3>Telechargement de base vide </h3>
+      <a href="https://github.com/lhutinet/_depart_react_vite/archive/refs/heads/main.zip">
+        Télécharger le projet en ZIP
+      </a>
+
       <h3>⚙️ Installation</h3>
       <pre><code>npx create-react-app mon-app
 cd mon-app
