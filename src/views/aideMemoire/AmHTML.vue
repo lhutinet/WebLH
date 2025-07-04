@@ -2,6 +2,11 @@
     <h1>📄 Aide-mémoire HTML</h1>
     <div class="columns">
         <div class="column">
+            <h3>Telechargement de base vide </h3>
+            <a href="https://github.com/lhutinet/depart/archive/refs/heads/main.zip">
+                Télécharger le projet en ZIP
+            </a>
+
             <h3>⚖️ Structure de base</h3>
             <pre><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="fr"&gt;
