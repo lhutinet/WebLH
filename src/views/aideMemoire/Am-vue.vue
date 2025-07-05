@@ -2,6 +2,12 @@
   <h1>🧠 Aide-mémoire Vue.js (Vue 3+)</h1>
   <div class="columns">
     <div class="column">
+      <h3>Telechargement de base vide </h3>
+      <a href="https://github.com/lhutinet/departVueJs/archive/refs/heads/main.zip">
+        Télécharger le projet en ZIP
+      </a>
+      <br>
+      <br>
       <h3>⚙️ Installation</h3>
       <pre><code>npm install vue
 npm create vite@latest mon-projet -- --template vue

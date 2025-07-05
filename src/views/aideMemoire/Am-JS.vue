@@ -2,6 +2,7 @@
   <h1>📜 Aide-mémoire JavaScript</h1>
   <div class="columns">
     <div class="column">
+
       <h3>🌤️ Bases & syntaxe</h3>
       <ul>
         <li>déclarations: <code>let</code> <code>const</code> <code>var</code></li>

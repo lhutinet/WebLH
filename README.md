@@ -50,11 +50,14 @@ https://www.youtube.com/watch?v=JUSjju1Y1Ds&list=PLjwdMgw5TTLVQgowwmhNCpXfHMfM9J
 question pour plus tard:
 -- permettre le transfert wix ou wordpress vers les clients
 -- changer le style exemple bouton jour nuit
--- faire un wrapped sur les prix et portfolio
+-- faire un wrapped sur les prix et portfolio --> ne me plais pas perfectible
 --cree un fichier robot attention seo
 
-faire mention legale et polmitique de confidencialité
+faire mention legale et politique de confidencialité
 
 lampes :
 
 https://youtu.be/OAgH_VMz08A?si=Aqul_FqnaNmkryzf
+
+--ID------
+ajout dans les lien pour mettre en forme (dans mes favoris )
