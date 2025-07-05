@@ -75,7 +75,7 @@ body {
 			<h3>📁 Organisation recommandée</h3>
 			<pre><code>scss/
 ├── base/
-│   └── reset.scss
+│   └── settinges.scss
 ├── components/
 │   └── bouton.scss
 ├── layout/
@@ -88,7 +88,7 @@ body {
 			<ul>
 				<li>Nommer clairement ses variables et mixins</li>
 				<li>Limiter la profondeur d’imbrication</li>
-				<li>Modulariser avec <code>@import</code> ou <code>@use</code></li>
+				<li>Modulariser avec <code>@import</code> ou <code>@use ==> ajout @use './settings' as *; </code></li>
 			</ul>
 		</div>
 	</div>
