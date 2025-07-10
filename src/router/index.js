@@ -29,6 +29,15 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      // Restaure la position si l'utilisateur utilise "précédent"/"suivant"
+      return savedPosition
+    } else {
+      // Sinon, toujours remonter en haut de la page
+      return { top: 0 }
+    }
+  },
 })
 
 export default router
