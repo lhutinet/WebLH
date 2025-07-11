@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floating Squares</title>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background: #121212;
+      }
+
+      .square {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.1);
+        animation: float 5s linear infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(100vh) rotate(0);
+        }
+        100% {
+          transform: translateY(-10vh) rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      for (let i = 0; i < 50; i++) {
+        const square = document.createElement("div");
+        square.className = "square";
+        square.style.left = Math.random() * 100 + "vw";
+        square.style.animationDuration = Math.random() * 5 + 3 + "s";
+        document.body.appendChild(square);
+      }
+    </script>
+  </body>
+</html>
