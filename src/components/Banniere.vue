@@ -40,8 +40,8 @@ const CONFIG = {
     minFontSize: 6,
     maxFontSize: 22,
 
-    moveSpeed: 0.001,             // valeur de base, sera ajustée
-    particlesPerFrame: 1,
+    moveSpeed: 0.5,             // valeur de base, sera ajustée
+    particlesPerFrame: 0.01,
     maxParticleLife: 50
 };
 
@@ -135,7 +135,7 @@ onMounted(() => {
             const dy = p.targetY - p.y;
             const dist = Math.hypot(dx, dy);
 
-            if (dist < 0.2 || p.life <= 0) {
+            if (dist < 0.02 || p.life <= 0) {
                 particles.splice(i, 1);
                 continue;
             }
