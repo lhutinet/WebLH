@@ -1,0 +1,33 @@
+
+    <style>
+      body {
+        margin: 0;
+        background-color: black;
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        height: 100vh;
+      }
+
+      .cell {
+        background: rgba(255, 255, 255, 0.1);
+        animation: fade 2s infinite;
+      }
+
+      @keyframes fade {
+        0%,
+        100% {
+          background: rgba(255, 255, 255, 0.1);
+        }
+        50% {
+          background: rgba(255, 255, 255, 0.5);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cell"></div>
+    <div class="cell"></div>
+    <!-- Répétez ou générez 100 cellules -->
+  </body>
+

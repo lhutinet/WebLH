@@ -1,0 +1,197 @@
+<body>
+  <br />
+  <div id="obal">
+    <canvas id="c"></canvas>
+    <script>
+      var b = document.body
+      var c = document.getElementsByTagName('canvas')[0]
+      var a = c.getContext('2d')
+      document.body.clientWidth
+
+      e = [] // trails
+      h = [] // heart path
+      O = c.width = innerWidth
+      Q = c.height = innerHeight
+      battement = 15
+      battement2 = 2
+      battement3 = 5
+
+      v = 32 // num trails, num particles per trail & num nodes in heart path
+      M = Math
+      R = M.random
+      C = M.cos
+      Y = 6.3 // close to 44/7 or Math.PI * 2 - 6.3 seems is close enough.
+
+      function generateHeartPath() {
+        h = []
+        for (i = 0; i < Y; i += 0.2) {
+          h.push([
+            O / 2 + battement * 45 * M.pow(M.sin(i), 3),
+            Q / 2 + 10 * -(15 * C(i) - 5 * C(2 * i) - 3 * C(3 * i) - C(4 * i)),
+          ])
+        }
+      }
+
+      generateHeartPath()
+
+      setInterval(() => {
+        battement = M.floor(R() * 15)
+        generateHeartPath()
+      }, 3000)
+      setInterval(() => {
+        battement2 = M.floor(R() * 5)
+        generateHeartPath()
+      }, 3000)
+      setInterval(() => {
+        battement3 = M.floor(R() * 2)
+        generateHeartPath()
+      }, 3000)
+
+      i = 0
+      while (i < v) {
+        x = R() * O
+        y = R() * Q
+        H = (i / v) * 80 + 280
+        S = R() * 40 + 60
+        B = R() * 60 + 20
+        f = [] // create new trail
+        k = 0
+        while (k < v) {
+          f[k++] = {
+            x: x,
+            y: y,
+            X: 0,
+            Y: 0,
+            R: 1 - k / v + 1,
+            S: R() + 1,
+            q: ~~(R() * v),
+            D: (i % 2) * 2 - 1,
+            F: R() * 0.2 + 0.7,
+            f: 'hsla(' + ~~H + ',' + ~~S + '%,' + ~~B + '%,.1)',
+          }
+        }
+        e[i++] = f
+      }
+
+      function render(_) {
+        a.fillStyle = _.f
+        a.beginPath()
+        a.arc(_.x, _.y, _.R, 0, Y, 1)
+        a.closePath()
+        a.fill()
+      }
+
+      function loop() {
+        a.fillStyle = 'rgba(0,0,0,.2)'
+        a.fillRect(0, 0, O, Q)
+        i = v
+        while (i--) {
+          f = e[i]
+          u = f[0]
+          q = h[u.q]
+          D = u.x - q[0]
+          E = u.y - q[1]
+          G = M.sqrt(D * D + E * E)
+
+          if (G < 10) {
+            if (R() > 0.95) {
+              u.q = ~~(R() * v)
+            } else {
+              if (R() > 0.99) u.D *= -1
+              u.q += u.D
+              u.q %= v
+              if (u.q < 0) u.q += v
+            }
+          }
+
+          u.X += (-D / G) * u.S
+          u.Y += (-E / G) * u.S
+
+          u.x += u.X
+          u.y += u.Y
+          render(u)
+          u.X *= u.F
+          u.Y *= u.F
+
+          k = 0
+          while (k < v - 1) {
+            T = f[k]
+            N = f[++k]
+            N.x -= (N.x - T.x) * 0.7
+            N.y -= (N.y - T.y) * 0.7
+            render(N)
+          }
+        }
+      }
+
+      ;(function doit() {
+        requestAnimationFrame(doit)
+        loop()
+      })()
+    </script>
+  </div>
+</body>
+
+<style>
+  body {
+    background: black;
+    color: #fff;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    scrollbar-width: none;
+  }
+
+  .heart {
+    fill: red;
+    position: relative;
+    top: 5px;
+    width: 50px;
+    animation: pulse 1s ease infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.3);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  #heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+  }
+
+  #heart span {
+    width: 100%;
+    display: block;
+    top: 50%;
+    z-index: 1;
+  }
+
+  #heart {
+    width: 100px;
+    height: 90px;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  #heart span {
+    width: 100%;
+    display: block;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+</style>
