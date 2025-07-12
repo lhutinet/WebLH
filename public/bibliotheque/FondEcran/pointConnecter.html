@@ -16,8 +16,8 @@
     <script>
       const canvas = document.querySelector("canvas");
       const ctx = canvas.getContext("2d");
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = document.body.clientWidth;
+      canvas.height = document.body.clientHeight;
 
       const particles = Array.from({ length: 50 }, () => ({
         x: Math.random() * canvas.width,

@@ -19,14 +19,14 @@ const codeToCopy = `
   height: 30px;
   border-radius: 20px;
   box-shadow: 2px 2px 7px 1px #1c6ea4;
-
-  &:hover {
+  }
+ .btnOriginal:hover {
     background: rgba(31, 31, 31, 0.353);
     color: white;
     box-shadow:
       2px 2px 7px 1px #1c6ea4,
       2px 2px 7px 1px #72a41c;
-  }
+
 }
 </style>
 `;
@@ -46,6 +46,8 @@ const copyCode = async () => {
 .btnCont {
   display: flex;
   align-items: center;
+  justify-content: center;
+
   height: 80px;
   width: 100%;
 

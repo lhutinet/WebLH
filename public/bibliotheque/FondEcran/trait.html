@@ -1,9 +1,4 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animated Lines Background</title>
+
     <style>
       body {
         margin: 0;
@@ -28,8 +23,8 @@
       const canvas = document.getElementById('backgroundCanvas')
       const ctx = canvas.getContext('2d')
 
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      canvas.width = document.body.clientWidth
+      canvas.height = document.body.clientHeight
 
       const lines = []
       const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A1']
@@ -121,4 +116,4 @@
       animate()
     </script>
   </body>
-</html>
+

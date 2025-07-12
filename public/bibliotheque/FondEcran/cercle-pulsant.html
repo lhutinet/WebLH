@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -13,7 +13,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
-        height: 100vh;
+        height: 100%;
       }
 
       .circle {
@@ -40,32 +40,32 @@
   </head>
   <body>
     <script>
-      const colors = ["#FF5733", "#33FF57", "#3357FF", "#F3FF33", "#FF33A1"];
-      const numCircles = 50; // Number of pulsars
-      const maxSize = 50; // Maximum size of the pulsars
+      const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A1']
+      const numCircles = 50 // Number of pulsars
+      const maxSize = 50 // Maximum size of the pulsars
 
       function createCircle() {
-        const circle = document.createElement("div");
-        circle.classList.add("circle");
+        const circle = document.createElement('div')
+        circle.classList.add('circle')
 
         // Randomize size, color, and position
-        const size = Math.random() * maxSize + 10;
-        const color = colors[Math.floor(Math.random() * colors.length)];
-        const x = Math.random() * window.innerWidth;
-        const y = Math.random() * window.innerHeight;
+        const size = Math.random() * maxSize + 10
+        const color = colors[Math.floor(Math.random() * colors.length)]
+        const x = Math.random() * window.innerWidth
+        const y = Math.random() * window.innerHeight
 
-        circle.style.width = `${size}px`;
-        circle.style.height = `${size}px`;
-        circle.style.background = `radial-gradient(circle, ${color}, transparent)`;
-        circle.style.left = `${x}px`;
-        circle.style.top = `${y}px`;
+        circle.style.width = `${size}px`
+        circle.style.height = `${size}px`
+        circle.style.background = `radial-gradient(circle, ${color}, transparent)`
+        circle.style.left = `${x}px`
+        circle.style.top = `${y}px`
 
-        document.body.appendChild(circle);
+        document.body.appendChild(circle)
       }
 
       // Create multiple pulsars
       for (let i = 0; i < numCircles; i++) {
-        createCircle();
+        createCircle()
       }
     </script>
   </body>
