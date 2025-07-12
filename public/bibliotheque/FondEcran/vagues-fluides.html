@@ -16,8 +16,13 @@
     <script>
       const canvas = document.querySelector("canvas");
       const ctx = canvas.getContext("2d");
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+  function resizeCanvas() {
+  canvas.width = document.body.clientWidth;
+  canvas.height = document.body.clientHeight;
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
 
       let time = 0;
 

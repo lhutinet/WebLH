@@ -1,46 +1,49 @@
-
-  <style>
-     body {
-      margin: 0;
-      overflow: hidden;
-      background: black;
-      height: 100%;
-      width: 100%;
-    }
-    #obal, canvas {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-  </style>
+<style>
+  body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+    height: 100%;
+    width: 100%;
+  }
+  #obal {
+    width: 100%;
+    height: 100%;
+  }
+  canvas {
+    display: block;
+    /* Ne pas forcer width/height CSS, on gère en JS */
+  }
+</style>
 </head>
 <body>
   <div id="obal">
     <canvas id="c"></canvas>
   </div>
   <script>
-    var c = document.getElementById('c');
-    var a = c.getContext('2d');
+    const c = document.getElementById('c');
+    const a = c.getContext('2d');
 
-    var e = []; 
-    var h = []; 
-    var battement = 15;
-    var battement2 = 2;
-    var battement3 = 5;
+    const e = []; // Tableau des particules groupées
+    let h = [];   // Tableau des points du coeur
 
-    var v = 32; 
-    var M = Math;
-    var R = M.random;
-    var C = M.cos;
-    var Y = 6.3;
+    let battement = 15;
+    let battement2 = 2;
+    let battement3 = 5;
 
-    var O, Q;
-    var scale;
+    const v = 32; // Nombre de groupes de particules
+    const M = Math;
+    const R = M.random;
+    const C = M.cos;
+    const Y = 6.3;
+
+    let O, Q; // Largeur et hauteur du canvas en pixels
+    let scale;
 
     function resizeCanvas() {
       O = c.width = document.body.clientWidth;
       Q = c.height = document.body.clientHeight;
-      scale = Math.min(O, Q) * 0.15; 
+      scale = Math.min(O, Q) * 0.15;
       generateHeartPath();
     }
 
@@ -52,26 +55,27 @@
       for (let i = 0; i < Y; i += 0.2) {
         h.push([
           O / 2 + battement * scale * M.pow(M.sin(i), 3),
-          Q / 2 + scale * -(
-            15 * C(i) - 5 * C(2 * i) - 3 * C(3 * i) - C(4 * i)
-          ) * 0.1
+          Q / 2 +
+            scale *
+              -(
+                15 * C(i) -
+                5 * C(2 * i) -
+                3 * C(3 * i) -
+                C(4 * i)
+              ) *
+              0.1,
         ]);
       }
     }
 
     setInterval(() => {
       battement = M.floor(R() * 7);
-      generateHeartPath();
-    }, 3000);
-    setInterval(() => {
       battement2 = M.floor(R() * 5);
-      generateHeartPath();
-    }, 3000);
-    setInterval(() => {
       battement3 = M.floor(R() * 2);
       generateHeartPath();
     }, 3000);
 
+    // Initialisation des particules
     for (let i = 0; i < v; i++) {
       let x = R() * O;
       let y = R() * Q;
@@ -90,7 +94,7 @@
           q: ~~(R() * v),
           D: (i % 2) * 2 - 1,
           F: R() * 0.2 + 0.7,
-          f: 'hsla(' + ~~H + ',' + ~~S + '%,' + ~~B + '%,.1)'
+          f: 'hsla(' + ~~H + ',' + ~~S + '%,' + ~~B + '%,.1)',
         };
       }
       e[i] = f;
@@ -126,8 +130,10 @@
           }
         }
 
-        u.X += (-D / G) * u.S;
-        u.Y += (-E / G) * u.S;
+        if (G > 0) {
+          u.X += (-D / G) * u.S;
+          u.Y += (-E / G) * u.S;
+        }
         u.x += u.X;
         u.y += u.Y;
         render(u);
@@ -150,4 +156,3 @@
     })();
   </script>
 </body>
-

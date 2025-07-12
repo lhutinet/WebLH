@@ -118,27 +118,4 @@ iframe {
     margin: 10px;
     overflow: visible;
 }
-
-.fEcontent {
-    box-sizing: border-box;
-    flex: 1 1 150px;
-    max-width: 200px;
-    aspect-ratio: 1/1;
-    margin: 4px;
-    overflow: hidden;
-    transition: transform 0.5s ease-in-out;
-}
-
-.fEcontent iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-@media (max-width: 600px) {
-    .fEcontent {
-        flex-basis: 45vw;
-        max-width: 45vw;
-    }
-}
 </style>

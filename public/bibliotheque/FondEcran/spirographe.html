@@ -1,79 +1,83 @@
+<style>
+  body,
+  html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: black;
+  }
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+</style>
+<body>
+  <canvas id="spiroCanvas"></canvas>
+  <script>
+    const canvas = document.getElementById('spiroCanvas')
+    const ctx = canvas.getContext('2d')
 
-    <style>
-      body
-      {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        /* overflow: hidden; */
-        background: black;
-      }
-      canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <canvas id="spiroCanvas"></canvas>
-    <script>
-      const canvas = document.getElementById("spiroCanvas");
-      const ctx = canvas.getContext("2d");
-      canvas.width = document.body.clientWidth;
-      canvas.height = document.body.clientHeight;
+    // Variables globales
+    let var1, var2, var3
+    let time = 0
+    const speed = 0.05
+    let R, r, d
 
+    function initVariables() {
+      var1 = Math.random() * 500
+      var2 = Math.random() * 500
+      var3 = Math.random() * 500
 
+      // Limiter les variables par rapport à la taille du canvas
+      R = Math.min(var1, canvas.width / 2)
+      r = Math.min(var2, canvas.width / 2)
+      d = Math.min(var3, canvas.width / 2)
+    }
 
+    function resizeCanvas() {
+      canvas.width = document.body.clientWidth
+      canvas.height = document.body.clientHeight
+      initVariables() // Réinitialise les variables à chaque resize
+      time = 0 // Remet le temps à zéro (optionnel)
+    }
 
-      let var1 = Math.random() * 500;
-      let var2 = Math.random() * 500;
-      let var3 = Math.random() * 500;
-      let var4 = Math.random() * 500;
+    window.addEventListener('resize', () => {
+      resizeCanvas()
+    })
 
-      let time = 0;
-      const speed = 0.05; // Vitesse de dessin
-      const R = var1; // Rayon du stator
-      const r = var2; // Rayon du rotor
-      const d = var3; // Distance du stylet par rapport au centre du rotor
-      const fixedColor = "grey"; // Couleur fixe
+    resizeCanvas()
 
-      function drawNonCircularSpirograph(cx, cy, R, r, d, t) {
-        ctx.strokeStyle = fixedColor;
+    function drawNonCircularSpirograph(cx, cy, R, r, d, t) {
+      ctx.strokeStyle = 'grey'
+      ctx.lineWidth = 1
+      ctx.beginPath()
 
-        ctx.lineWidth = 1;
-        ctx.beginPath();
-
-        for (let theta = 0; theta <= t; theta += 0.01) {
-          // Utilisation d'une ellipse au lieu d'un cercle pour le rotor
-          const x =
-            cx +
-            (R - r) * Math.cos(theta) +
-            d * Math.cos(((R - r) / r) * theta) * Math.cos(theta);
-          const y =
-            cy +
-            (R - r) * Math.sin(theta) +
-            d * Math.sin(((R - r) / r) * theta) * Math.sin(theta);
-          if (theta === 0) {
-            ctx.moveTo(x, y);
-          } else {
-            ctx.lineTo(x, y);
-          }
+      for (let theta = 0; theta <= t; theta += 0.01) {
+        const x =
+          cx + (R - r) * Math.cos(theta) + d * Math.cos(((R - r) / r) * theta) * Math.cos(theta)
+        const y =
+          cy + (R - r) * Math.sin(theta) + d * Math.sin(((R - r) / r) * theta) * Math.sin(theta)
+        if (theta === 0) {
+          ctx.moveTo(x, y)
+        } else {
+          ctx.lineTo(x, y)
         }
-        ctx.stroke();
       }
+      ctx.stroke()
+    }
 
-      function animate() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        const cx = canvas.width / 2;
-        const cy = canvas.height / 2;
-        drawNonCircularSpirograph(cx, cy, R, r, d, time);
-        time += speed;
-        requestAnimationFrame(animate);
-      }
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      const cx = canvas.width / 2
+      const cy = canvas.height / 2
+      drawNonCircularSpirograph(cx, cy, R, r, d, time)
+      time += speed
+      requestAnimationFrame(animate)
+    }
 
-      animate();
-    </script>
-  </body>
-
+    animate()
+  </script>
+</body>

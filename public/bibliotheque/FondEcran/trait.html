@@ -24,7 +24,13 @@
       const ctx = canvas.getContext('2d')
 
       canvas.width = document.body.clientWidth
-      canvas.height = document.body.clientHeight
+  function resizeCanvas() {
+  canvas.width = document.body.clientWidth;
+  canvas.height = document.body.clientHeight;
+}
+
+window.addEventListener('resize', resizeCanvas);
+resizeCanvas();
 
       const lines = []
       const colors = ['#FF5733', '#33FF57', '#3357FF', '#F3FF33', '#FF33A1']
