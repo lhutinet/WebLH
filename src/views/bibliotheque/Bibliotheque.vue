@@ -116,6 +116,7 @@ iframe {
 .buttonContent {
 
     width: 150px;
+
     align-content: center;
     margin: 10px;
 }
