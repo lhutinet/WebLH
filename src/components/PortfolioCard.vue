@@ -25,13 +25,12 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import portfolioData from '@/data/portfolio.json'
 
 const portfolio = ref(portfolioData)
-
 const translateX = ref(0)
 const currentIndex = ref(0)
 const visibleCards = ref(3)
 const cardWidth = ref(350) // largeur fixe des cartes
-
 const sliderWrapper = ref(null)
+
 let isDragging = false
 let startX = 0
 let currentTranslate = 0

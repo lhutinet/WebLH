@@ -1,6 +1,6 @@
 <template>
-  <div class="btnCont ">
-    <button class="btnRond  tooltip" @click="copyCode"> CM <span class="tooltip-text">BtnRond</span> </button>
+  <div class="btnCont tooltip">
+    <button class="btnRond " @click="copyCode"> CM </button><span class="tooltip-text">BtnRond</span>
 
 
   </div>
@@ -58,42 +58,4 @@ const copyCode = async () => {
 }
 
 /* fin a copier ------------ */
-.btnCont {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 120px;
-  width: 120px;
-}
-
-
-.tooltip {
-  position: relative;
-  /* display: inline-block; */
-
-
-}
-
-.tooltip-text {
-  visibility: hidden;
-  width: 140px;
-  background-color: rgb(49, 49, 49);
-  color: #fff;
-  text-align: center;
-  padding: 5px;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 200;
-  bottom: 25%;
-  /* Au-dessus du bouton */
-  left: 125%;
-  /* transform: translateX(-25%); */
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
 </style>

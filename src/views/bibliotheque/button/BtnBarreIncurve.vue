@@ -1,7 +1,7 @@
 <template>
-    <div class="btnCont">
-        <button class="buttonBarre tooltip" @click="copyCode"> Copie moi!<span class="tooltip-text">Btn original</span>
-        </button>
+    <div class="btnCont tooltip ">
+        <button class="buttonBarre " @click="copyCode"> Copie moi!
+        </button><span class="tooltip-text">Btn barre curve</span>
     </div>
 
 
@@ -23,7 +23,8 @@ const codeToCopy = `
         0px 0px 6px rgba(43, 43, 43, 0.338),
         0px 0px 12px rgb(231, 231, 231);
     color: rgba(78, 78, 78, 0.725);
-    padding: 1rem 3rem;
+    min-width: 180px;
+    padding: 0.5rem 1rem;
     border-radius: 5rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -77,7 +78,8 @@ const copyCode = async () => {
         0px 0px 6px rgba(43, 43, 43, 0.338),
         0px 0px 12px rgb(231, 231, 231);
     color: rgba(78, 78, 78, 0.725);
-    padding: 1rem 3rem;
+    min-width: 180px;
+    padding: 0.5rem 1rem;
     border-radius: 5rem;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -109,42 +111,4 @@ const copyCode = async () => {
 }
 
 /* ----------fin a copier--------------- */
-.btnCont {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 120px;
-    max-width: 200px;
-}
-
-
-.tooltip {
-    position: relative;
-    /* display: inline-block; */
-
-
-}
-
-.tooltip-text {
-    visibility: hidden;
-    width: 140px;
-    background-color: rgb(49, 49, 49);
-    color: #fff;
-    text-align: center;
-    padding: 5px;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 200;
-    bottom: 25%;
-    /* Au-dessus du bouton */
-    left: 125%;
-    /* transform: translateX(-25%); */
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.tooltip:hover .tooltip-text {
-    visibility: visible;
-    opacity: 1;
-}
 </style>

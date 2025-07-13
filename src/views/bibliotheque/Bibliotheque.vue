@@ -1,5 +1,5 @@
 <template>
-    <h1>Bibliotheque</h1>
+    <h1>Bibliothèque</h1>
     <p>Clique sur un titre pour déplier la section, puis sur une image pour copier le code</p>
 
     <!-- ACCORDEON FOND D'ECRAN -->
@@ -26,6 +26,7 @@
             <BtnOriginal />
             <BtnRond />
             <BtnBarreIncurve />
+            <BtnRondBleu />
         </section>
     </div>
 </template>
@@ -35,6 +36,7 @@ import { ref } from 'vue';
 import BtnOriginal from '@/views/bibliotheque/button/BtnOriginal.vue';
 import BtnRond from './button/BtnRond.vue';
 import BtnBarreIncurve from './button/BtnBarreIncurve.vue';
+import BtnRondBleu from './button/BtnRondBleu.vue';
 
 // Stocke la section ouverte : 'fondEcran', 'button', etc.
 const openSection = ref(null);
@@ -75,57 +77,3 @@ const copyHtmlFile = async (filePath) => {
     }
 };
 </script>
-
-<style scoped>
-.accordeon {
-    width: 100%;
-
-
-    h3 {
-        cursor: pointer;
-        background-color: #eee;
-        padding: 10px;
-        border: 1px solid #ccc;
-        user-select: none;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        h3:hover {
-            background-color: #ddd;
-        }
-
-    }
-}
-
-
-section {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 2rem;
-    overflow: hidden;
-    transition: all 0.3s ease;
-
-}
-
-iframe {
-    z-index: 0;
-}
-
-.fEcontent {
-    transition: ease-in-out 0.5s;
-    margin: 2px;
-}
-
-.fEcontent:hover {
-    z-index: 20;
-    transform: scale(2);
-}
-
-.buttonContent {
-
-    align-content: center;
-    margin: 10px;
-    overflow: visible;
-}
-</style>

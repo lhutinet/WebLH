@@ -42,7 +42,15 @@
         z-index: -1;
         transform: skew(-10deg, 0deg);
         border-radius: 2rem;
-        box-shadow: $textShasow1;
+        box-shadow:
+            6px 6px 6px 2px rgba(0, 0, 0, 0.3),
+            6px 12px 6px 2px rgba(0, 0, 0, 0.4),
+            -6px -6px 12px 2px rgba(255, 255, 255, 0.8),
+            -6px -12px 12px 2px rgba(172, 172, 172, 0.2),
+            inset 2px 4px 4px 2px rgba(0, 0, 0, 0.4),
+            inset 2px 10px 10px 2px rgba(0, 0, 0, 0.1),
+            inset -2px -4px 8px 2px rgba(255, 255, 255, 0.7),
+            inset -2px -2px 4px 2px rgba(255, 255, 255, 0.8);
         padding-right: 2rem;
     }
 
@@ -173,12 +181,60 @@
 
 
 @media (max-width: 450px) {
+    body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .accContent {
+        width: 95%;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .propositionContainer,
+    .tarifContainer,
+    .portfolioContainer {
+        margin: 0;
+        width: 100%;
+    }
+
+    .accContainer {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        p {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            a {
+                margin: 2px;
+                padding: 2px;
+            }
+
+        }
+    }
+
+    .matrixCanvas {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
     #accTitre {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     #accText {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .accContent {
