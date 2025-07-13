@@ -25,6 +25,7 @@
         <section v-show="openSection === 'button'" class="buttonContent">
             <BtnOriginal />
             <BtnRond />
+            <BtnBarreIncurve />
         </section>
     </div>
 </template>
@@ -33,6 +34,7 @@
 import { ref } from 'vue';
 import BtnOriginal from '@/views/bibliotheque/button/BtnOriginal.vue';
 import BtnRond from './button/BtnRond.vue';
+import BtnBarreIncurve from './button/BtnBarreIncurve.vue';
 
 // Stocke la section ouverte : 'fondEcran', 'button', etc.
 const openSection = ref(null);
@@ -75,20 +77,27 @@ const copyHtmlFile = async (filePath) => {
 </script>
 
 <style scoped>
-.accordeon h3 {
-    cursor: pointer;
-    background-color: #eee;
-    padding: 10px;
-    border: 1px solid #ccc;
-    user-select: none;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.accordeon {
+    width: 100%;
+
+
+    h3 {
+        cursor: pointer;
+        background-color: #eee;
+        padding: 10px;
+        border: 1px solid #ccc;
+        user-select: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h3:hover {
+            background-color: #ddd;
+        }
+
+    }
 }
 
-.accordeon h3:hover {
-    background-color: #ddd;
-}
 
 section {
     display: flex;
@@ -96,6 +105,7 @@ section {
     margin: 2rem;
     overflow: hidden;
     transition: all 0.3s ease;
+
 }
 
 iframe {
@@ -113,7 +123,7 @@ iframe {
 }
 
 .buttonContent {
-    width: 150px;
+
     align-content: center;
     margin: 10px;
     overflow: visible;

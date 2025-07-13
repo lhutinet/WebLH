@@ -61,3 +61,5 @@ https://youtu.be/OAgH_VMz08A?si=Aqul_FqnaNmkryzf
 
 --ID------
 ajout dans les lien pour mettre en forme (dans mes favoris )
+
+--- sur les bouton en mode telephone mettre le texte en dessous
