@@ -27,6 +27,18 @@
             <BtnRond />
             <BtnBarreIncurve />
             <BtnRondBleu />
+            <!-- <Btn3d /> -->
+        </section>
+    </div>
+    <!-- ACCORDEON MENU , -->
+    <div class="accordeon">
+        <h3 @click="toggleSection('menu')">
+            Menu icon
+            <span>{{ openSection === 'menu' ? '▲' : '▼' }}</span>
+        </h3>
+        <section v-show="openSection === 'menu'" class="menuContent">
+            <MenuNav01 />
+
         </section>
     </div>
 </template>
@@ -37,6 +49,8 @@ import BtnOriginal from '@/views/bibliotheque/button/BtnOriginal.vue';
 import BtnRond from './button/BtnRond.vue';
 import BtnBarreIncurve from './button/BtnBarreIncurve.vue';
 import BtnRondBleu from './button/BtnRondBleu.vue';
+import Btn3d from './button/Btn3d.vue';
+import MenuNav01 from './Menu/MenuNav01.vue';
 
 // Stocke la section ouverte : 'fondEcran', 'button', etc.
 const openSection = ref(null);
