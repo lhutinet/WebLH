@@ -124,18 +124,18 @@ const TarifList = ref([
     //     },
 
 
-    {
-        id: 3,
-        title: 'Site wordpress',
-        presentation: 'Deux solutions possibles selon vos besoins : auto-hébergé ou WordPress.com.',
-        tarif: '750€',
-        formation: 'Formation à la prise en main WordPress',
-        liplus: '',
-        couleur: '#66ae98',
-        couleurTrans: 'rgba(102, 174, 152, 0.3)',
-        caracteristiques: '✅ Option 1 – WordPress auto-hébergé (Hostinger, OVH, o2switch…)<br>- Plus puissant et évolutif<br>- Accès complet aux plugins, thèmes et au code<br>- Design sur mesure et meilleur contrôle<br>- Environ 3&euro; à 10&euro;/mois pour l’hébergement + ≈ 12&euro;/an pour le nom de domaine<br><br>✅ Recommandé si vous souhaitez un site évolutif et sur mesure.<br><br>✅ Option 2 – WordPress.com<br>- Hébergement inclus, mises à jour automatiques<br>- Interface simplifiée en ligne<br>- Idéal pour débuter sans technique<br>- Version gratuite limitée (.wordpress.com et publicités)<br>- Abonnement payant (≈ 5&euro; à 25&euro;/mois) pour un nom de domaine personnalisé et des options avancées<br><br>✅ Je vous accompagne pour choisir la meilleure option selon vos besoins.'
+    // {
+    //     id: 3,
+    //     title: 'Site wordpress',
+    //     presentation: 'Deux solutions possibles selon vos besoins : auto-hébergé ou WordPress.com.',
+    //     tarif: '750€',
+    //     formation: 'Formation à la prise en main WordPress',
+    //     liplus: '',
+    //     couleur: '#66ae98',
+    //     couleurTrans: 'rgba(102, 174, 152, 0.3)',
+    //     caracteristiques: '✅ Option 1 – WordPress auto-hébergé (Hostinger, OVH, o2switch…)<br>- Plus puissant et évolutif<br>- Accès complet aux plugins, thèmes et au code<br>- Design sur mesure et meilleur contrôle<br>- Environ 3&euro; à 10&euro;/mois pour l’hébergement + ≈ 12&euro;/an pour le nom de domaine<br><br>✅ Recommandé si vous souhaitez un site évolutif et sur mesure.<br><br>✅ Option 2 – WordPress.com<br>- Hébergement inclus, mises à jour automatiques<br>- Interface simplifiée en ligne<br>- Idéal pour débuter sans technique<br>- Version gratuite limitée (.wordpress.com et publicités)<br>- Abonnement payant (≈ 5&euro; à 25&euro;/mois) pour un nom de domaine personnalisé et des options avancées<br><br>✅ Je vous accompagne pour choisir la meilleure option selon vos besoins.'
 
-    },
+    // },
 
     {
         id: 4,

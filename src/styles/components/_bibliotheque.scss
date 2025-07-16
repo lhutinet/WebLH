@@ -92,7 +92,7 @@ iframe {
     text-align: center;
     padding: 5px;
     border-radius: 6rem;
-    bottom: -10px;
+    bottom: -5%;
     left: 50%;
     transform: translateX(-50%);
     transition: opacity 0.3s;
@@ -110,7 +110,7 @@ iframe {
 @media screen and (max-width: 768px) {
     .tooltip-text {
 
-        bottom: -40px;
+        bottom: -20%;
         left: 50%;
     }
 }
