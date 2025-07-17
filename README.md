@@ -63,3 +63,35 @@ https://youtu.be/OAgH_VMz08A?si=Aqul_FqnaNmkryzf
 ajout dans les lien pour mettre en forme (dans mes favoris )
 
 --- sur les bouton en mode telephone mettre le texte en dessous
+
+video css a faire : menu
+https://youtu.be/ArTVfdHOB-M?si=p0zdteVM20LqOl12
+
+https://youtu.be/ErYsUPYowkI?si=Xtv8KOiSnXA_RA8Q
+
+https://youtu.be/wEqNWUunn18?si=cS4247uqIW9wwdxg
+
+https://youtu.be/ySYbpDAJevQ?si=MuWcfwBDu1sBVpH8
+
+https://youtu.be/DjaNof-HFyY?si=IZMoNs52unbx3sIW
+
+bouton
+https://youtu.be/N0Ed_GrCGwU?si=uFikVXjf8D1m0sVR
+
+menu hover liste
+https://www.youtube.com/watch?v=esaZF76Igxk&list=PL5e68lK9hEzfe1nPJ2aB5A7jmwgRuTZOm&index=14
+
+https://www.youtube.com/watch?v=1sBYOt3d1DA&list=PL07efmqYWHZ81_zqshUgM-tz40MtzOmN9&index=11
+
+menu side bar liste
+https://www.youtube.com/watch?v=RQ50oWuAwKw&list=PLpwngcHZlPafcrmbvCsXig3tiUpIa-DVo&index=3
+
+menu social
+https://www.youtube.com/watch?v=yU3giDe-N6c&list=PLpwngcHZlPacgMG_APw961UEBAmN18h8B&index=1
+
+button liste
+https://www.youtube.com/watch?v=sB8o02rkqQk&list=PLpwngcHZlPacTW6cuXEQP64VGMbvkD43G&index=7
+
+createur video
+odingNepal:
+https://www.youtube.com/@CodingNepal/playlists
