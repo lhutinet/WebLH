@@ -196,7 +196,7 @@ const copyCode = async () => {
     align-items: center;
     overflow-y: hidden;
     overflow-x: hidden;
-    background: red;
+
 }
 
 .menu {
