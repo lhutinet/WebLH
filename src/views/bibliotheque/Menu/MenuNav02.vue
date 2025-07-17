@@ -1,6 +1,6 @@
 <template>
     <div class="MenuContent02">
-        <div class="navigation">
+        <div class="navigation tooltip ">
             <ul>
                 <li class="list active ">
                     <a href="#">
@@ -38,17 +38,18 @@
 
                     </a>
                 </li>
-                <li class="list">
+                <li class="list" @click="copyCode">
                     <a href="#">
                         <span class="icon">
                             <ion-icon name="settings-outline"></ion-icon>
                         </span>
-                        <span class="text">Settings</span>
+                        <span class="text">Copies</span>
 
                     </a>
                 </li>
                 <div class="indicator"></div>
             </ul>
+            <span class="tooltip-text">BtnRond</span>
         </div>
 
 
@@ -57,11 +58,12 @@
 
     </div>
 
-
-    <!-- https://youtu.be/ArTVfdHOB-M?si=Dx0-Me0plAWvf2Bj&t=555 -->
-
-
 </template>
+
+
+
+
+
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -78,7 +80,7 @@
 .MenuContent02 {
     --clr: #222327;
     width: 500px;
-    height: 400px;
+    height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -134,7 +136,7 @@
 
 .navigation ul li.active a .icon {
 
-    transform: translateY(-35px);
+    transform: translateY(-32px);
 
 }
 
@@ -157,9 +159,10 @@
 
 .indicator {
     position: absolute;
-    top: -60%;
-    width: 70px;
-    height: 70px;
+    top: -50%;
+    width: 60px;
+    height: 60px;
+    left: 25px;
     background: #29fd53;
     border-radius: 50%;
     border: 6px solid var(--clr);
@@ -169,11 +172,74 @@
 .indicator::before {
     content: "";
     position: absolute;
-    top: 50%;
-    left: -20px;
+    top: 49%;
+    left: -22px;
     width: 20px;
     height: 20px;
-    background: red;
+    background: transparent;
+    border-top-right-radius: 20px;
+    box-shadow: 0 -10px 0 0 var(--clr);
+
+}
+
+.indicator::after {
+    content: "";
+    position: absolute;
+    top: 49%;
+    right: -22px;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-top-left-radius: 20px;
+    box-shadow: 0 -10px 0 0 var(--clr);
 
 }
 </style>
+
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+    const list = document.querySelectorAll('.list')
+    const indicator = document.querySelector('.indicator')
+
+    function handleHover(event) {
+        list.forEach(item => item.classList.remove('active'))
+        const current = event.currentTarget
+        current.classList.add('active')
+
+        // Déplacement de l'indicateur
+        const index = Array.from(list).indexOf(current)
+        indicator.style.left = `${25 + index * 70}px`
+    }
+
+    list.forEach(item => {
+        item.addEventListener('mouseover', handleHover)
+    })
+})
+
+async function copyCode() {
+    try {
+        const response = await fetch('/bibliotheque/menu/MenuNav02.html')
+        if (!response.ok) throw new Error('Fichier introuvable.')
+
+        const text = await response.text()
+        await navigator.clipboard.writeText(text)
+        alert('Contenu copié avec succès !')
+    } catch (err) {
+        console.error(err)
+        alert('Erreur lors de la copie : ' + err.message)
+    }
+}
+
+// const copyCode = async () => {
+//     try {
+//         await navigator.clipboard.writeText(codeToCopy.trim());
+//         alert('Code copié dans le presse-papiers !');
+//     } catch (e) {
+//         console.error(e);
+//         alert('Erreur : ' + e.message);
+//     }
+// };
+
+</script>
