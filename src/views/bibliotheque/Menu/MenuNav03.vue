@@ -1,4 +1,4 @@
-<!-- https://youtu.be/ErYsUPYowkI?si=2UEQKio48txNjH4I&t=440 -->
+<!-- https://youtu.be/ErYsUPYowkI?si=bI4zcI3PublShKYf&t=491 -->
 
 <template>
     <div class="MenuContent03">
@@ -61,7 +61,7 @@
     --yellow-color: #ffcc70;
     --fb-color: #4267b2;
     --insta-color: #d62976;
-    --twiter-color: #1da1f2;
+    --twitter-color: #1da1f2;
     --linkedin-color: #0077b7;
     --google-color: #f4b400;
     --youtube-color: #ff0000;
@@ -96,26 +96,23 @@
     justify-content: center;
     font-size: 2rem;
     cursor: pointer;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.);
-    transition: transform 1.2s scale 0.2s ease;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 1.2s linear, box-shadow 1.2s ease, scale 0.2s ease;
     z-index: 1;
 }
 
 .menu .action_btn:hover {
-
-    transform: scale(1.05) rotate(360deg);
-
+    scale: 1.05;
 }
 
 .menu .action_btn:active {
-    transform: scale(0.95) rotate(360deg);
+    scale: 0.95;
 }
 
 .menu.open .action_btn {
     transform: rotate(360deg);
     box-shadow: 0 0 0 2px var(--pink-color), 0 0 0 10px #fff;
 }
-
 
 .menu li {
     list-style: none;
@@ -145,3 +142,13 @@
     transition: font-size 0.2s ease;
 }
 </style>
+
+<script>
+const button = document.querySelector('.action_btn')
+const menu = document.querySelector('.menu')
+
+button.onclick = function () {
+    menu.classList.toggle('open')
+}
+
+</script>
