@@ -79,8 +79,8 @@
 
 .MenuContent02 {
     --clr: #222327;
-    width: 500px;
-    height: 250px;
+    width: 450px;
+    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -231,15 +231,5 @@ async function copyCode() {
         alert('Erreur lors de la copie : ' + err.message)
     }
 }
-
-// const copyCode = async () => {
-//     try {
-//         await navigator.clipboard.writeText(codeToCopy.trim());
-//         alert('Code copié dans le presse-papiers !');
-//     } catch (e) {
-//         console.error(e);
-//         alert('Erreur : ' + e.message);
-//     }
-// };
 
 </script>

@@ -39,6 +39,7 @@
         <section v-show="openSection === 'menu'" class="menuContent">
             <MenuNav01 />
             <MenuNav02 />
+            <!-- <MenuNav03 /> -->
 
         </section>
     </div>
@@ -53,6 +54,7 @@ import BtnRondBleu from './button/BtnRondBleu.vue';
 import Btn3d from './button/Btn3d.vue';
 import MenuNav01 from './Menu/MenuNav01.vue';
 import MenuNav02 from './Menu/MenuNav02.vue';
+import MenuNav03 from './Menu/MenuNav03.vue';
 
 // Stocke la section ouverte : 'fondEcran', 'button', etc.
 const openSection = ref(null);

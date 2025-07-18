@@ -65,7 +65,7 @@ ajout dans les lien pour mettre en forme (dans mes favoris )
 --- sur les bouton en mode telephone mettre le texte en dessous
 
 video css a faire : menu
-https://youtu.be/ArTVfdHOB-M?si=p0zdteVM20LqOl12
+https://youtu.be/ArTVfdHOB-M?si=p0zdteVM20LqOl12 --x--
 
 https://youtu.be/ErYsUPYowkI?si=Xtv8KOiSnXA_RA8Q
 
