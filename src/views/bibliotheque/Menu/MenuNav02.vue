@@ -80,11 +80,13 @@
 .MenuContent02 {
     --clr: #222327;
     width: 450px;
-    height: 200px;
+    height: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
     background: var(--clr);
+    border-radius: 20px;
+    margin: 5px;
 }
 
 .navigation {
@@ -192,6 +194,19 @@
     background: transparent;
     border-top-left-radius: 20px;
     box-shadow: 0 -10px 0 0 var(--clr);
+
+}
+
+@media screen and (max-width: 500px) {
+    .MenuContent02 {
+        width: 100%;
+
+    }
+
+    .navigation {
+        transform: scale(0.7);
+    }
+
 
 }
 </style>

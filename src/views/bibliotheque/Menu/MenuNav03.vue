@@ -1,46 +1,46 @@
 <!-- https://youtu.be/ErYsUPYowkI?si=bI4zcI3PublShKYf&t=491 -->
 
 <template>
-    <div class="MenuContent03">
-        <div class="menu open">
-            <button class="action_btn">
+    <div class="MenuContent03   tooltip">
+        <div class="menuNav3 ">
+            <button class="action_btn ">
                 <ion-icon name="share-outline"></ion-icon>
             </button>
             <ul>
-                <li style="--i:1; --color:var(--fb-color)">
+                <li style="--i: 1; --x: -50; --y: -100; --color: var(--fb-color)">
                     <a href=" #">
                         <ion-icon name="logo-facebook"></ion-icon>
                     </a>
                 </li>
-                <li style="--i:1; --color:var(--instagram-color)">
+                <li style="--i: 2; --x: 50; --y: -100; --color:var(--instagram-color)">
                     <a href=" #">
                         <ion-icon name="logo-instagram"></ion-icon>
                     </a>
                 </li>
-                <li style="--i:1; --color:var(--twitter-color)">
+                <li style="--i: 3; --x: 100; --y: 0; --color:var(--twitter-color)">
                     <a href=" #">
                         <ion-icon name="logo-twitter"></ion-icon>
                     </a>
                 </li>
-                <li style="--i:1 ;--color:var(--linkedin-color)">
+                <li style="--i: 4; --x: 50; --y: 100;--color:var(--linkedin-color)">
                     <a href=" #">
                         <ion-icon name="logo-linkedin"></ion-icon>
                     </a>
                 </li>
-                <li style="--i:1 ;--color:var(--google-color)">
-                    <a href=" #">
+                <li style="--i: 5 ; --x: -50; --y: 100;--color:var(--google-color)">
+                    <a href=" #" @click.prevent="copyCode">
                         <ion-icon name="logo-google"></ion-icon>
                     </a>
                 </li>
-                <li style="--i:1; --color:var(--youtube-color)">
-                    <a href=" #">
+                <li title="video tuto" style="--i:6; --x: -100; --y: 0; --color:var(--youtube-color)">
+                    <a href=" https://www.youtube.com/watch?v=ErYsUPYowkI&t=491s" target="_blank">
                         <ion-icon name="logo-youtube"></ion-icon>
                     </a>
                 </li>
             </ul>
         </div>
 
-
+        <span class="tooltip-text">BtnRond</span>
     </div>
 </template>
 
@@ -53,9 +53,11 @@
 }
 
 .MenuContent03 {
-    width: 500px;
-    height: 500px;
-    border: 0.5px solid black;
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    margin: 5px;
+
     --bue-color: #4158d0;
     --pink-color: #c850c0;
     --yellow-color: #ffcc70;
@@ -65,7 +67,7 @@
     --linkedin-color: #0077b7;
     --google-color: #f4b400;
     --youtube-color: #ff0000;
-    background-color: var(--bue-color);
+    /* background-color: var(--bue-color); */
     background-image: linear-gradient(45deg, var(--bue-color), var(--pink-color), var(--yellow-color));
     display: flex;
     align-items: center;
@@ -74,7 +76,7 @@
 
 }
 
-.menu {
+.menuNav3 {
     position: relative;
     width: 300px;
     height: 300px;
@@ -84,7 +86,7 @@
     /* background-color: #fff; */
 }
 
-.menu .action_btn {
+.menuNav3 .action_btn {
     width: 60px;
     height: 60px;
     background-color: #fff;
@@ -101,30 +103,39 @@
     z-index: 1;
 }
 
-.menu .action_btn:hover {
+.menuNav3 .action_btn:hover {
     scale: 1.05;
 }
 
-.menu .action_btn:active {
+.menuNav3 .action_btn:active {
     scale: 0.95;
 }
 
-.menu.open .action_btn {
+.menuNav3.open .action_btn {
     transform: rotate(360deg);
     box-shadow: 0 0 0 2px var(--pink-color), 0 0 0 10px #fff;
 }
 
-.menu li {
+.menuNav3 li {
     list-style: none;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    transition: 0.5s;
+    overflow: hidden;
+    transition-delay: calc(0.2s * (6 - var(--i)));
 }
 
-.menu li a {
-    width: 60px;
-    height: 60px;
+.menuNav3.open li {
+    transform: translate(calc(-50% + 1px * var(--x)), calc(-50% + 1px * var(--y)));
+    transition-delay: calc(0.15s * var(--i));
+}
+
+
+.menuNav3 li a {
+    width: 10px;
+    height: 10px;
     background-color: #fff;
     border-radius: 50%;
     display: flex;
@@ -132,23 +143,62 @@
     justify-content: center;
     font-size: 1.5rem;
     color: var(--color);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease-in-out height 0.3s ease-in-out;
+    transition-delay: calc(0.2s *(6 - var(--i) - 1));
+}
 
+.menuNav3.open li a {
+    width: 60px;
+    height: 60px;
+    transition-delay: calc(0.25s * var(--i));
 
 }
 
-.menu li:hover a {
+.menuNav3 li:hover a {
     font-size: 2.2rem;
     transition: font-size 0.2s ease;
 }
+
+@media screen and (max-width: 500px) {
+    .MenuContent03 {
+        width: 100%;
+
+    }
+
+
+
+}
 </style>
 
-<script>
-const button = document.querySelector('.action_btn')
-const menu = document.querySelector('.menu')
+<script setup>
 
-button.onclick = function () {
-    menu.classList.toggle('open')
+
+import { onMounted } from 'vue'
+
+onMounted(() => {
+    const menu3 = document.querySelector('.menuNav3')
+
+    menu3.addEventListener('mouseenter', () => {
+        menu3.classList.add('open')
+    })
+
+    menu3.addEventListener('mouseleave', () => {
+        menu3.classList.remove('open')
+    })
+})
+async function copyCode() {
+    try {
+        const response = await fetch('/bibliotheque/menu/MenuNav03.html')
+        if (!response.ok) throw new Error('Fichier introuvable.')
+
+        const text = await response.text()
+        await navigator.clipboard.writeText(text)
+        alert('Contenu copié avec succès !')
+    } catch (err) {
+        console.error(err)
+        alert('Erreur lors de la copie : ' + err.message)
+    }
 }
 
 </script>

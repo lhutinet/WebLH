@@ -188,14 +188,17 @@ const copyCode = async () => {
 
 <style scoped>
 .menu1Content {
-    min-height: 200px;
-    width: 400px;
+    width: 350px;
+    height: 350px;
     font-family: Roboto, Arial;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow-y: hidden;
     overflow-x: hidden;
+    margin: 5px;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px 0 black;
 
 }
 
@@ -306,5 +309,19 @@ const copyCode = async () => {
     --s: 1;
     --y: -14px;
     opacity: 1;
+}
+
+@media screen and (max-width: 500px) {
+    .menu1Content {
+        width: 100%;
+
+    }
+
+    .menu {
+        transform: scale(0.8);
+    }
+
+
+
 }
 </style>
