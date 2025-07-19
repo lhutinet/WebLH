@@ -20,6 +20,9 @@
             <li>
                 <router-link to="/Bibliotheque" @click="closeAll">Bibliothèque</router-link>
             </li>
+            <li>
+                <router-link to="/creaButton" @click="closeAll">Créabutton</router-link>
+            </li>
             <li class="dropdown" @mouseenter="openDropdown" @mouseleave="closeDropdown">
                 <span class="dropdown-toggle" @click.prevent.stop="toggleDropdown">Tech</span>
                 <ul class="dropdown-content" :class="{ open: dropdownOpen }">

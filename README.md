@@ -67,7 +67,7 @@ ajout dans les lien pour mettre en forme (dans mes favoris )
 video css a faire : menu
 https://youtu.be/ArTVfdHOB-M?si=p0zdteVM20LqOl12 --x--
 
-https://youtu.be/ErYsUPYowkI?si=Xtv8KOiSnXA_RA8Q
+https://youtu.be/ErYsUPYowkI?si=Xtv8KOiSnXA_RA8Q --x--
 
 https://youtu.be/wEqNWUunn18?si=cS4247uqIW9wwdxg
 
