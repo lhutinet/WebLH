@@ -1,264 +1,346 @@
- @use '../settings' as *;
+@use '../settings' as *;
 
- $bg-light: #f5f5f5;
- $bg-pre: #eaeaea;
- $btn-bg: #3498db;
- $btn-hover: #2980b9;
- $btn-color: #ffffff;
+// Variables locales
+$bg-light: #f5f5f5;
+$bg-pre: #eaeaea;
+$btn-bg: #3498db;
+$btn-hover: #2980b9;
+$btn-color: #ffffff;
 
- #h1CreaButton {
-     margin-top: 0.5rem;
-     margin-bottom: 0.5rem;
-
- }
-
-
- .crea-button-container {
-     font-family: sans-serif;
-     padding: 0 auto;
-     min-width: 1600px;
-
-     margin: auto;
-
-     // flex-direction: column;
-     align-items: center;
-     gap: 20px;
-     width: 100%;
-
-     display: grid;
-     grid-template-columns: 50% 25% 25%;
-
-     h2 {
-         position: relative;
-         font-size: 1.2rem;
-         text-align: center;
-         margin: 1rem;
-         color: #336699;
-         text-shadow: $textShasow1;
-     }
-
-     .creacontainer {
-         margin-bottom: 2rem;
-
-
-         justify-content: center;
-         align-items: center;
-         flex-wrap: wrap;
+#h1CreaButton {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
 
 
 
-         .controls {
-             display: flex;
-             flex-direction: column;
-             gap: 1rem;
-
-             label {
-                 display: flex;
-                 align-items: center;
-                 gap: 1rem;
-
-                 input[type='range'] {
-                     flex: 1;
-                 }
-
-                 input[type='number'],
-                 input[type='text'],
-                 select,
-                 input[type='color'] {
-                     width: 80px;
-                 }
-
-                 input[type='checkbox'] {
-                     width: auto;
-                     margin-left: 0.3rem;
-                 }
-             }
-         }
-
-
-         /* Sections repliables */
-         .section {
-             border: 1px solid #ddd;
-             border-radius: 6px;
-             overflow: auto;
-             display: flex;
-             justify-content: center;
-             align-items: center;
-             flex-direction: column;
+.crea-button-container {
+    font-family: sans-serif;
+    margin: auto;
+    padding: 0 auto;
+    min-width: 1600px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50% 25% 25%;
+    align-items: center;
+    gap: 20px;
 
 
 
-             &+.section {
-                 margin-top: 1rem;
-             }
-
-             .section-header {
-                 cursor: pointer;
-                 background: $bg-light;
-                 padding: 0.5rem 3rem;
-                 user-select: none;
-                 display: flex;
-                 justify-content: space-between;
-                 align-items: center;
-                 font-weight: bold;
-                 font-size: 1.1rem;
-
-                 span {
-                     background: $bg-light;
-
-                     z-index: 2;
-                 }
-
-             }
-
-             .section-content {
-                 padding: 1rem;
-
-                 label {
-                     flex-wrap: wrap;
-                 }
-             }
-         }
-     }
-
-     .preview {
-         margin: 2rem 0;
-         min-width: 300px;
-         min-height: 120px;
-         display: flex;
-         justify-content: center;
-         align-items: center;
-         flex-direction: column;
-
-         button {
-             font-size: 16px;
-             background-color: $btn-bg;
-             color: $btn-color;
-             border: none;
-             transition: 0.3s;
-             padding: 0.6em 1.4em;
-             border-radius: 6px;
-
-             &:hover {
-                 background-color: $btn-hover;
-             }
-         }
-     }
-
-     .copiContainer {
-         .code-section {
-             display: flex;
-             flex-direction: column;
-             gap: 2rem;
-             min-width: 300px;
-
-             @media (min-width: 700px) {
-                 flex-direction: row;
-             }
-
-             .code-block {
-                 background: $bg-light;
-                 padding: 1rem;
-                 border-radius: 8px;
-                 flex: 1 1 300px;
-
-                 pre {
-                     background: $bg-pre;
-                     padding: 1rem;
-                     border-radius: 5px;
-                     overflow-x: auto;
-                     white-space: pre-wrap;
-                     word-break: break-word;
-                     max-height: 250px;
-                 }
-
-                 button {
-                     margin-top: 0.5rem;
-                     padding: 0.4rem 1rem;
-                     background-color: $btn-bg;
-                     color: $btn-color;
-                     border: none;
-                     border-radius: 4px;
-                     cursor: pointer;
-                     transition: background-color 0.3s;
-
-                     &:hover {
-                         background-color: $btn-hover;
-                     }
-                 }
-             }
-         }
-     }
-
-     /* Ombres box-shadow */
-
-
-     .shadows-list {
-         display: flex;
-         // flex-direction: column;
-         gap: 1rem;
-         overflow-x: auto;
 
 
 
-         .shadow-item {
-             border: 1px solid #ccc;
-             border-radius: 6px;
-             padding: 0.8rem;
-             background: #fff;
+    h2 {
+        position: relative;
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 1rem;
+        color: #336699;
+        text-shadow: $textShasow1;
+    }
 
-             h4 {
-                 margin: 0 0 0.5rem 0;
-             }
+    .tabs {
+        display: flex;
+        gap: 0.5rem;
+        padding: 0;
+        margin: 0;
 
-             label {
-                 width: 140px;
-                 margin-right: 1rem;
-             }
 
-             button.btn-remove-shadow {
-                 background-color: #e74c3c;
-                 color: white;
-                 border: none;
-                 padding: 0.25rem 0.5rem;
-                 border-radius: 4px;
-                 margin-top: 0.5rem;
-                 cursor: pointer;
-                 transition: background-color 0.3s;
+        button {
+            width: 120px;
+            height: 30px;
+            background: rgb(204, 204, 204);
+            transform: skewX(15deg) scale(1);
+            border-radius: 0.2rem;
+            border: none;
+            color: #333;
+            transition: transform 0.2s ease, background-color 0.3s;
 
-                 &:hover {
-                     background-color: #c0392b;
-                 }
-             }
-         }
 
-         button.btn-add-shadow {
-             align-self: start;
-             margin-top: 0.5rem;
-             padding: 0.5rem 1rem;
-             background-color: #27ae60;
-             color: white;
-             border: none;
-             border-radius: 4px;
-             cursor: pointer;
-             transition: background-color 0.3s;
+            &:hover {
+                transform: skewX(15deg) scale(1.05);
+            }
 
-             &:hover {
-                 background-color: #1e8449;
-             }
-         }
-     }
+            &:active {
+                color: $btn-color;
+                border: darken($btn-bg, 10%);
+                box-shadow: 0px 2px 14px 5px rgba(0, 0, 0, 0.36);
+            }
 
-     /* Ombre texte fieldset */
-     .text-shadow-fieldset {
-         border: 1px solid #ccc;
-         padding: 0.5rem 1rem;
-         margin-top: 1rem;
-         border-radius: 4px;
+            &.active {
 
-         label {
-             margin-bottom: 0.25rem;
-             width: 100%;
-         }
-     }
- }
+                color: $btn-color;
+                font-weight: bold;
+                box-shadow: 0px 2px 7px 5px rgba(0, 0, 0, 0.1);
+            }
+
+        }
+
+        .btnDefaut {
+            background: rgb(233, 229, 229);
+        }
+
+
+        .btnHover {
+            background: rgb(204, 200, 100);
+        }
+
+
+        .btnActive {
+            // background: rgb(169, 169, 194);
+            background: red;
+        }
+    }
+
+
+    // Section Création
+    .creaContainer {
+        margin-bottom: 2rem;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .creaContent {
+            margin: 1.1rem;
+            padding: 1.1rem;
+            box-shadow: 0px 2px 14px 5px rgba(0, 0, 0, 0.36);
+            border-radius: 1.1rem;
+        }
+
+        .defaultContent {
+            background: rgb(225, 231, 230);
+
+        }
+
+        .hoverContent {
+            background: rgb(230, 225, 225);
+        }
+
+        .activeContent {
+            background: rgb(222, 221, 225);
+        }
+
+
+        .controls {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+
+            label {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+
+                input[type='range'] {
+                    flex: 1;
+                }
+
+                input[type='number'],
+                input[type='text'],
+                select,
+                input[type='color'] {
+                    width: 80px;
+                }
+
+                input[type='checkbox'] {
+                    width: auto;
+                    margin-left: 0.3rem;
+                }
+            }
+        }
+
+        // Sections repliables
+        .section {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+
+            &+.section {
+                margin-top: 1rem;
+            }
+
+            .section-header {
+                cursor: pointer;
+                background: $bg-light;
+                padding: 0.5rem 3rem;
+                user-select: none;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-weight: bold;
+                font-size: 1.1rem;
+
+                span {
+                    background: $bg-light;
+                    z-index: 2;
+                }
+            }
+
+            .section-content {
+                padding: 1rem;
+
+
+                label {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+    }
+
+    .apercuContent {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        // Section Aperçu
+        .preview {
+            margin: 2rem 0;
+            min-width: 300px;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        button {
+            font-size: 16px;
+            background-color: $btn-bg;
+            color: $btn-color;
+            border: none;
+            padding: 0.6em 1.4em;
+            border-radius: 6px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $btn-hover;
+            }
+        }
+    }
+
+
+
+
+    // Section Code Copiable
+    .copiContainer {
+        .code-section {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            min-width: 300px;
+
+            @media (min-width: 700px) {
+                flex-direction: row;
+            }
+
+            .code-block {
+                background: $bg-light;
+                padding: 1rem;
+                border-radius: 8px;
+                flex: 1 1 300px;
+
+                pre {
+                    background: $bg-pre;
+                    padding: 1rem;
+                    border-radius: 5px;
+                    overflow-x: auto;
+                    white-space: pre-wrap;
+                    word-break: break-word;
+                    max-height: 250px;
+                }
+
+                button {
+                    margin-top: 0.5rem;
+                    padding: 0.4rem 1rem;
+                    background-color: $btn-bg;
+                    color: $btn-color;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: $btn-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    // Section Ombres multiples
+    .shadows-list {
+        display: flex;
+        gap: 1rem;
+        overflow-x: auto;
+
+        .shadow-item {
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            padding: 0.8rem;
+            background: #fff;
+
+            h4 {
+                margin: 0 0 0.5rem 0;
+            }
+
+            label {
+                width: 140px;
+                margin-right: 1rem;
+            }
+
+            button.btn-remove-shadow {
+                background-color: #e74c3c;
+                color: white;
+                border: none;
+                padding: 0.25rem 0.5rem;
+                border-radius: 4px;
+                margin-top: 0.5rem;
+                cursor: pointer;
+                transition: background-color 0.3s;
+
+                &:hover {
+                    background-color: #c0392b;
+                }
+            }
+        }
+
+        button.btn-add-shadow {
+            align-self: start;
+            margin-top: 0.5rem;
+            padding: 0.5rem 1rem;
+            background-color: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #1e8449;
+            }
+        }
+    }
+
+
+
+    // Ombres texte
+    .text-shadow-fieldset {
+        border: 1px solid #ccc;
+        padding: 0.5rem 1rem;
+        margin-top: 1rem;
+        border-radius: 4px;
+
+        label {
+            margin-bottom: 0.25rem;
+            width: 100%;
+        }
+    }
+}
