@@ -11,7 +11,7 @@ import AmVue from '@/views/aideMemoire/Am-vue.vue'
 import AmGitHub from '@/views/aideMemoire/AmGitHub.vue'
 import Amform from '@/views/aideMemoire/Am-form.vue'
 import bibliotheque from '@/views/bibliotheque/Bibliotheque.vue'
-import creaButton from '@/components/CreaButton.vue'
+import creaButton from '@/views/CreaButton.vue'
 
 const routes = [
   { path: '/', name: 'Accueil', component: Accueil },
