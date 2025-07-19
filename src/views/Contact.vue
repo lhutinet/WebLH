@@ -55,7 +55,7 @@
             <textarea name="demande"></textarea>
         </form>
     </div>
-    <p>1</p>
+
 </template>
 
 
