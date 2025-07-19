@@ -1,269 +1,54 @@
+le code que je vais te donner est trop long tu a du mal a le modifier , comme je suis en vue.js , il est peut etre
+judicieux de le separer en plusieurs template , surtout que la phase suivant est de cree un onglet dans la partie
+creation pour mettre un hover et un active , le css est deja cree reste pour cette parti il faut en cree de nouveauau
+besoin
+
+
+
 <template>
     <h1>Générateur de bouton avancé</h1>
     <div class="crea-button-container">
         <div class="creacontainer">
 
+
+            <div class="tabs">
+                <button :class="{ active: activeTab === 'default' }" @click="activeTab = 'default'">
+                    Bouton
+                </button>
+                <button :class="{ active: activeTab === 'hover' }" @click="activeTab = 'hover'">
+                    Hover
+                </button>
+            </div>
+            <!-- -----------------------button------------------------- -->
             <!-- Dimensions -->
-            <section class="section">
-                <header @click="toggleSection('dimensions')" class="section-header">
-                    <h2>Dimensions</h2>
-                    <span>{{ isOpen.dimensions ? '▼' : '▶' }}</span>
-                </header>
-                <div v-if="isOpen.dimensions" class="section-content">
-                    <label>
-                        Largeur (px) :
-                        <input type="range" min="50" max="400" v-model="config.width" />
-                        <input type="number" min="50" max="400" v-model.number="config.width" />
-                    </label>
-                    <label>
-                        Hauteur (px) :
-                        <input type="range" min="20" max="150" v-model="config.height" />
-                        <input type="number" min="20" max="150" v-model.number="config.height" />
-                    </label>
-                    <label>
-                        Rayon des bords (px) :
-                        <input type="range" min="0" max="50" v-model="config.borderRadius" />
-                        <input type="number" min="0" max="50" v-model.number="config.borderRadius" />
-                    </label>
-                </div>
-            </section>
+            <div v-if="activeTab === 'default'">
+                <DimensionSection :config="config" :isOpen="isOpen.dimensions" @toggle="toggleSection('dimensions')" />
+                <!-- Texte -->
+                <TextSection :config="config" :isOpen="isOpen.texte" @toggle="toggleSection('texte')" />
+                <!-- Apparence -->
+                <AppearanceSection :config="config" :isOpen="isOpen.apparence" @toggle="toggleSection('apparence')" />
+                <!-- Ombres (box-shadow) dynamiques -->
+                <BoxShadowSection :config="config" :isOpen="isOpen.ombres" @toggle="toggleSection('ombres')"
+                    @add="addShadow" @remove="removeShadow" />
+            </div>
 
-            <!-- Texte -->
-            <section class="section">
-                <header @click="toggleSection('texte')" class="section-header">
-                    <h2>Texte</h2>
-                    <span>{{ isOpen.texte ? '▼' : '▶' }}</span>
-                </header>
-                <div v-if="isOpen.texte" class="section-content">
-                    <label>
-                        Contenu du bouton :
-                        <input type="text" v-model="config.text" />
-                    </label>
-                    <label>
-                        Taille du texte (px) :
-                        <input type="range" min="10" max="40" v-model="config.fontSize" />
-                        <input type="number" min="10" max="40" v-model.number="config.fontSize" />
-                    </label>
-                    <label>
-                        Police :
-                        <select v-model="config.fontFamily">
-                            <option value="Arial">Arial</option>
-                            <option value="Verdana">Verdana</option>
-                            <option value="Georgia">Georgia</option>
-                            <option value="Courier New">Courier New</option>
-                            <option value="Times New Roman">Times New Roman</option>
-                        </select>
-                    </label>
-                    <label>
-                        Gras :
-                        <input type="checkbox" v-model="config.bold" />
-                    </label>
+            <!-- -----------------------fin------hover---------------------- -->
+            <!-- Dimensions -->
 
-                    <!-- Ombre texte simple -->
-                    <fieldset class="text-shadow-fieldset">
-                        <legend>Ombre du texte</legend>
-                        <label>
-                            Décalage X (px) :
-                            <input type="number" v-model.number="config.textShadow.hOffset" />
-                        </label>
-                        <label>
-                            Décalage Y (px) :
-                            <input type="number" v-model.number="config.textShadow.vOffset" />
-                        </label>
-                        <label>
-                            Flou (px) :
-                            <input type="number" v-model.number="config.textShadow.blur" />
-                        </label>
-                        <label>
-                            Couleur :
-                            <input type="color" v-model="config.textShadow.color" />
-                        </label>
-                    </fieldset>
-                </div>
-            </section>
+            <div v-else-if="activeTab === 'hover'">
+                <DimensionSection :config="config" :isOpen="isOpen.dimensions" @toggle="toggleSection('dimensions')" />
+                <!-- Texte -->
+                <TextSection :config="config" :isOpen="isOpen.texte" @toggle="toggleSection('texte')" />
+                <!-- Apparence -->
+                <AppearanceSection :config="config" :isOpen="isOpen.apparence" @toggle="toggleSection('apparence')" />
+                <!-- Ombres (box-shadow) dynamiques -->
+                <BoxShadowSection :config="config" :isOpen="isOpen.ombres" @toggle="toggleSection('ombres')"
+                    @add="addShadow" @remove="removeShadow" />
 
-            <!-- Apparence -->
-            <section class="section">
-                <header @click="toggleSection('apparence')" class="section-header">
-                    <h2>Apparence</h2>
-                    <span>{{ isOpen.apparence ? '▼' : '▶' }}</span>
-                </header>
-                <div v-if="isOpen.apparence" class="section-content">
-                    <label>
-                        Couleur de fond :
-                        <input type="color" v-model="config.backgroundColor" />
-                    </label>
-                    <label>
-                        Couleur du texte :
-                        <input type="color" v-model="config.textColor" />
-                    </label>
-                    <label>
-                        Bordure (CSS) :
-                        <input type="text" v-model="config.border" placeholder="ex: 2px solid #000" />
-                    </label>
-                </div>
-            </section>
+                <!-- -----------------------------hover---------------------- -->
 
-            <!-- Ombres (box-shadow) dynamiques -->
-            <section class="section">
-                <header @click="toggleSection('ombres')" class="section-header">
-                    <h2>Ombres (box-shadow)</h2>
-                    <span>{{ isOpen.ombres ? '▼' : '▶' }}</span>
-                </header>
-                <div v-if="isOpen.ombres" class="section-content shadows-list">
-                    <div v-for="(shadow, index) in config.boxShadows" :key="index" class="shadow-item">
-                        <h4>Ombre #{{ index + 1 }}</h4>
-                        <label>
-                            Décalage X (px) :
-                            <input type="number" v-model.number="shadow.hOffset" />
-                        </label>
-                        <label>
-                            Décalage Y (px) :
-                            <input type="number" v-model.number="shadow.vOffset" />
-                        </label>
-                        <label>
-                            Flou (px) :
-                            <input type="number" v-model.number="shadow.blur" />
-                        </label>
-                        <label>
-                            Étendue (spread, px) :
-                            <input type="number" v-model.number="shadow.spread" />
-                        </label>
-                        <label>
-                            Opacité (0 à 1) :
-                            <input type="range" min="0" max="1" step="0.01" v-model.number="shadow.opacity" />
-                            <input type="number" min="0" max="1" step="0.01" v-model.number="shadow.opacity" />
-                        </label>
-                        <label>
-                            Couleur :
-                            <input type="color" v-model="shadow.color" />
-                        </label>
-                        <label>
-                            Inset :
-                            <input type="checkbox" v-model="shadow.inset" />
-                        </label>
-                        <button @click="removeShadow(index)" class="btn-remove-shadow">Supprimer</button>
-                        <hr />
-                    </div>
+            </div>
 
-                    <button @click="addShadow" class="btn-add-shadow">+ Ajouter une ombre</button>
-                </div>
-            </section>
-
-            <!-- Hover Settings -->
-            <section class="section">
-                <header @click="toggleSection('hover')" class="section-header">
-                    <h2>Hover</h2>
-                    <span>{{ isOpen.hover ? '▼' : '▶' }}</span>
-                </header>
-                <div v-if="isOpen.hover" class="section-content">
-
-                    <!-- Texte Hover -->
-                    <fieldset>
-                        <legend>Texte (hover)</legend>
-                        <label>
-                            Couleur du texte :
-                            <input type="color" v-model="hoverConfig.textColor" />
-                        </label>
-                        <label>
-                            Taille du texte (px) :
-                            <input type="range" min="10" max="40" v-model="hoverConfig.fontSize" />
-                            <input type="number" min="10" max="40" v-model.number="hoverConfig.fontSize" />
-                        </label>
-                        <label>
-                            Gras :
-                            <input type="checkbox" v-model="hoverConfig.bold" />
-                        </label>
-                        <label>
-                            Police :
-                            <select v-model="hoverConfig.fontFamily">
-                                <option value="Arial">Arial</option>
-                                <option value="Verdana">Verdana</option>
-                                <option value="Georgia">Georgia</option>
-                                <option value="Courier New">Courier New</option>
-                                <option value="Times New Roman">Times New Roman</option>
-                            </select>
-                        </label>
-                        <!-- Ombre texte simple hover -->
-                        <fieldset class="text-shadow-fieldset">
-                            <legend>Ombre du texte (hover)</legend>
-                            <label>
-                                Décalage X (px) :
-                                <input type="number" v-model.number="hoverConfig.textShadow.hOffset" />
-                            </label>
-                            <label>
-                                Décalage Y (px) :
-                                <input type="number" v-model.number="hoverConfig.textShadow.vOffset" />
-                            </label>
-                            <label>
-                                Flou (px) :
-                                <input type="number" v-model.number="hoverConfig.textShadow.blur" />
-                            </label>
-                            <label>
-                                Couleur :
-                                <input type="color" v-model="hoverConfig.textShadow.color" />
-                            </label>
-                        </fieldset>
-                    </fieldset>
-
-                    <!-- Apparence Hover -->
-                    <fieldset>
-                        <legend>Apparence (hover)</legend>
-                        <label>
-                            Couleur de fond :
-                            <input type="color" v-model="hoverConfig.backgroundColor" />
-                        </label>
-                        <label>
-                            Bordure (CSS) :
-                            <input type="text" v-model="hoverConfig.border" placeholder="ex: 2px solid #000" />
-                        </label>
-                    </fieldset>
-
-                    <!-- Ombres (box-shadow) dynamiques hover -->
-                    <section class="section">
-                        <h3>Ombres (box-shadow) hover</h3>
-                        <div class="section-content shadows-list">
-                            <div v-for="(shadow, index) in hoverConfig.boxShadows" :key="index" class="shadow-item">
-                                <h4>Ombre #{{ index + 1 }}</h4>
-                                <label>
-                                    Décalage X (px) :
-                                    <input type="number" v-model.number="shadow.hOffset" />
-                                </label>
-                                <label>
-                                    Décalage Y (px) :
-                                    <input type="number" v-model.number="shadow.vOffset" />
-                                </label>
-                                <label>
-                                    Flou (px) :
-                                    <input type="number" v-model.number="shadow.blur" />
-                                </label>
-                                <label>
-                                    Étendue (spread, px) :
-                                    <input type="number" v-model.number="shadow.spread" />
-                                </label>
-                                <label>
-                                    Opacité (0 à 1) :
-                                    <input type="range" min="0" max="1" step="0.01" v-model.number="shadow.opacity" />
-                                    <input type="number" min="0" max="1" step="0.01" v-model.number="shadow.opacity" />
-                                </label>
-                                <label>
-                                    Couleur :
-                                    <input type="color" v-model="shadow.color" />
-                                </label>
-                                <label>
-                                    Inset :
-                                    <input type="checkbox" v-model="shadow.inset" />
-                                </label>
-                                <button @click="removeShadowHover(index)" class="btn-remove-shadow">Supprimer</button>
-                                <hr />
-                            </div>
-
-                            <button @click="addShadowHover" class="btn-add-shadow">+ Ajouter une ombre</button>
-                        </div>
-                    </section>
-
-                </div>
-            </section>
 
         </div>
 
@@ -292,8 +77,13 @@
 </template>
 
 <script setup>
-import { reactive, computed } from 'vue'
+import { reactive, computed, ref } from 'vue'
+import DimensionSection from './CreaButtonComponents/DimensionSection.vue'
+import TextSection from './CreaButtonComponents/TextSection.vue'
+import AppearanceSection from './CreaButtonComponents/AppearanceSection.vue'
+import BoxShadowSection from './CreaButtonComponents/BoxShadowSection.vue'
 
+const activeTab = ref('default')
 const config = reactive({
     width: 150,
     height: 50,
