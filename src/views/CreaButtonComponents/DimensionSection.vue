@@ -1,7 +1,7 @@
 <template>
     <section class="section">
         <header @click="$emit('toggle')">
-            <h2>Dimensions</h2>
+            <h2>Dimensions <span>{{ isOpen ? '▼' : '▶' }}</span></h2>
         </header>
         <div v-if="isOpen" class="section-content">
             <label>

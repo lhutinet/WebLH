@@ -1,8 +1,8 @@
 <template>
-    <section class="section">
+    <section id="sectionShadow" class="section">
         <header @click="$emit('toggle')">
-            <h2>Ombres (box-shadow)</h2>
-            <span>{{ isOpen ? '▼' : '▶' }}</span>
+            <h2>Ombres (box-shadow)<span>{{ isOpen ? '▼' : '▶' }}</span></h2>
+
         </header>
         <div v-if="isOpen" class="section-content shadows-list">
             <div v-for="(shadow, index) in config.boxShadows" :key="index" class="shadow-item">

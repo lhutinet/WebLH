@@ -21,7 +21,7 @@
                 <router-link to="/Bibliotheque" @click="closeAll">Bibliothèque</router-link>
             </li>
             <li>
-                <router-link to="/creaButton" @click="closeAll">Créabutton</router-link>
+                <router-link to="/creaButton" @click="closeAll">Génerateur</router-link>
             </li>
             <li class="dropdown" @mouseenter="openDropdown" @mouseleave="closeDropdown">
                 <span class="dropdown-toggle" @click.prevent.stop="toggleDropdown">Tech</span>

@@ -25,18 +25,19 @@
                     @add="addShadow(config)" @remove="removeShadow(config)" />
             </div>
 
-            <div class="creaContent hoverContent" v-if="activeTab === 'hover'">
+            <div class="creaContent hoverContent" v-if="activeTab === 'hover'" @toggle="toggleSection('modif')">
                 <section class="section">
-                    <h3>Effet Hover (Transform)</h3>
-                    <label>
+                    <header @click="$emit('toggle')">
+                        <h2>Effet Hover (Transform) <span>{{ isOpen ? '▼' : '▶' }}</span></h2>
+                    </header>
+                    <div v-if="isOpen" class="section-content">
                         Scale :
                         <input type="range" min="0.5" max="1.5" step="0.01" v-model="hoverConfig.transformScale" />
                         <input type="number" min="0.5" max="1.5" step="0.01"
                             v-model.number="activeConfig.transformScale" />
                         <label>Translate X : <input type="number" v-model.number="hoverConfig.translateX" /></label>
                         <label>Translate Y : <input type="number" v-model.number="hoverConfig.translateY" /></label>
-
-                    </label>
+                    </div>
                 </section>
                 <TextSection :config="hoverConfig" :isOpen="isOpen.texte" @toggle="toggleSection('texte')" />
                 <AppearanceSection :config="hoverConfig" :isOpen="isOpen.apparence"
@@ -47,8 +48,11 @@
 
             <div class="creaContent activeContent" v-if="activeTab === 'active'">
                 <section class="section">
-                    <h3>Effet Active (Transform)</h3>
-                    <label>
+                    <header @click="$emit('toggle')">
+                        <h2>Effet Active (Transform)<span>{{ isOpen ? '▼' : '▶' }}</span></h2>
+
+                    </header>
+                    <div v-if="isOpen" class="section-content">
                         Scale :
                         <input type="range" min="0.5" max="1.5" step="0.01" v-model="activeConfig.transformScale" />
                         <input type="number" min="0.5" max="1.5" step="0.01"
@@ -56,7 +60,7 @@
                         <label>Translate X : <input type="number" v-model.number="activeConfig.translateX" /></label>
                         <label>Translate Y : <input type="number" v-model.number="activeConfig.translateY" /></label>
 
-                    </label>
+                    </div>
                 </section>
                 <TextSection :config="activeConfig" :isOpen="isOpen.texte" @toggle="toggleSection('texte')" />
                 <AppearanceSection :config="activeConfig" :isOpen="isOpen.apparence"
@@ -68,28 +72,32 @@
 
         </div>
         <!-- Aperçu -->
-        <div class="apercuContent">
-            <div class="preview">
-                <button :style="buttonStyle">{{ config.text }}</button>
-            </div>
-            <button class="reset-button" @click="resetConfig">
-                🔄 Réinitialiser
-            </button>
-        </div>
-        <!-- Export HTML / CSS -->
-        <div class="copiContainer">
-            <div class="code-block">
-                <h3>HTML</h3>
-                <pre>{{ htmlCode }}</pre>
-                <button @click="copyToClipboard(htmlCode)">Copier HTML</button>
-            </div>
-            <div class="code-block">
-                <h3>CSS</h3>
-                <pre>{{ cssCode }}</pre>
-                <button @click="copyToClipboard(cssCode)">Copier CSS</button>
-            </div>
-        </div>
 
+        <section class="visuContent">
+            <div class="apercuContent">
+
+                <div class="preview">
+                    <button :style="buttonStyle">{{ config.text }}</button>
+                </div>
+                <button class="reset-button" @click="resetConfig">
+                    <ion-icon name="sync-outline"></ion-icon>Réinitialiser
+                </button>
+            </div>
+
+            <!-- Export HTML / CSS -->
+            <div class="copiContainer">
+                <div class="code-block">
+                    <h3>HTML</h3>
+                    <pre>{{ htmlCode }}</pre>
+                    <button @click="copyToClipboard(htmlCode)">Copier HTML</button>
+                </div>
+                <div class="code-block">
+                    <h3>CSS</h3>
+                    <pre>{{ cssCode }}</pre>
+                    <button @click="copyToClipboard(cssCode)">Copier CSS</button>
+                </div>
+            </div>
+        </section>
 
     </div>
 </template>
@@ -103,6 +111,7 @@ import BoxShadowSection from './CreaButtonComponents/BoxShadowSection.vue'
 
 const activeTab = ref('default')
 const previewState = ref('default')
+
 
 const config = reactive({
     width: 150,
@@ -160,7 +169,7 @@ const activeConfig = reactive({
 })
 
 const isOpen = reactive({
-    dimensions: true, texte: true, apparence: true, ombres: true
+    dimensions: true, texte: true, apparence: true, ombres: true, modif: true,
 })
 
 function toggleSection(name) {
@@ -400,4 +409,8 @@ function getDiffCSS(base, variant) {
 
     return diffs
 }
+defineProps({
+    config: Object,
+    isOpen: Boolean
+})
 </script>
