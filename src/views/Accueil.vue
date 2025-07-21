@@ -7,7 +7,7 @@
     <section class="propositionContainer" id="prestations">
         <h2>Mes prestations</h2>
         <div class="propositionContent">
-            <div class="propositionCard">
+            <!-- <div class="propositionCard">
                 <div class="propositionLogo">
                     <img src="/logo.png" alt="logo graphique" />
                 </div>
@@ -16,7 +16,7 @@
                     Je conçois des visuels uniques et personnalisés : logos, flyers,
                     affiches, brochures ou encore chartes graphiques complètes.
                 </p>
-            </div>
+            </div> -->
 
             <div class="propositionCard">
                 <div class="propositionLogo">

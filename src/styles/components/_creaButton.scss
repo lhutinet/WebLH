@@ -6,14 +6,7 @@ $bg-pre: #eaeaea;
 $btn-bg: #3498db;
 $btn-hover: #2980b9;
 $btn-color: #ffffff;
-$shadow1: 6px 6px 6px 2px rgba(0, 0, 0, 0.3),
-    6px 12px 6px 2px rgba(0, 0, 0, 0.4),
-    -6px -6px 12px 2px rgba(255, 255, 255, 0.6),
-    -6px -12px 12px 2px rgba(255, 255, 255, 0.8),
-    inset 2px 4px 2px 2px rgba(0, 0, 0, 0.4),
-    inset 2px 4px 0px 2px rgba(0, 0, 0, 0.1),
-    inset -2px -4px 8px 2px rgba(255, 255, 255, 0.7),
-    inset -2px -2px 4px 2px rgba(255, 255, 255, 0.8);
+
 
 
 #h1CreaButton {
@@ -69,7 +62,7 @@ $shadow1: 6px 6px 6px 2px rgba(0, 0, 0, 0.3),
 
             &:active {
                 color: $btn-color;
-                border: darken($btn-bg, 10%);
+                border: ($btn-bg, 10%);
                 box-shadow: 0px 2px 14px 5px rgba(0, 0, 0, 0.36);
             }
 
@@ -168,9 +161,16 @@ $shadow1: 6px 6px 6px 2px rgba(0, 0, 0, 0.3),
             .section-content {
                 padding: 1rem;
 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
 
                 label {
+                    display: flex;
                     flex-wrap: wrap;
+                    justify-content: space-between;
+                    width: 100%;
                 }
             }
         }
@@ -188,10 +188,10 @@ $shadow1: 6px 6px 6px 2px rgba(0, 0, 0, 0.3),
         flex-direction: column;
         flex-wrap: nowrap;
         height: 100%;
-        box-shadow:
-            $shadow1;
+        box-shadow: 0px 2px 14px 5px rgba(0, 0, 0, 0.2);
+        background: rgb(225, 231, 230);
         padding: 2rem 1rem;
-        border-radius: 2rem;
+        border-radius: 1.5rem;
     }
 
     .apercuContent {
@@ -342,8 +342,9 @@ $shadow1: 6px 6px 6px 2px rgba(0, 0, 0, 0.3),
     }
 
     // Section Ombres multiples
-    .shadows-list {
+    #shadows-list {
         display: flex;
+        flex-direction: row;
         gap: 1rem;
         overflow-x: auto;
 

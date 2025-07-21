@@ -71,10 +71,10 @@ function prevSlide() {
 function updateVisibleCards() {
     if (window.innerWidth < 600) {
         visibleCards.value = 1
-        cardWidth.value = 320
+
     } else {
         visibleCards.value = 3
-        cardWidth.value = 350
+
     }
     clampIndex()
     updateTranslateFromIndex()

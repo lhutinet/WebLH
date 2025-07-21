@@ -4,7 +4,7 @@
             <h2>Ombres (box-shadow)<span>{{ isOpen ? '▼' : '▶' }}</span></h2>
 
         </header>
-        <div v-if="isOpen" class="section-content shadows-list">
+        <div v-if="isOpen" class="section-content" id="shadows-list">
             <div v-for="(shadow, index) in config.boxShadows" :key="index" class="shadow-item">
                 <h4>Ombre #{{ index + 1 }}</h4>
                 <label>

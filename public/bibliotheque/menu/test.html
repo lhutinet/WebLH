@@ -4,19 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <button class="custom-button">Aperçu</button>
+
     <style>
-      .newtxt {
-        text-decoration: none;
-        font-family: tahoma;
-        font-size: 2rem;
-        color: #000000;
-        text-shadow:
-          6px 10px 9px #e61616,
-          12px 20px 10px #5c597a,
-          18px 30px 9px #444444,
-          20px 40px 9px #444444;
-        -webkit-text-shadow: 6px 10px 9px #444444;
-        -moz-text-shadow: 6px 10px 9px #444444;
+      .custom-button {
+        width: 150px;
+        height: 50px;
+        border-radius: 0px;
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        font-size: 29px;
+        font-family: Arial;
+        font-weight: normal;
+        text-shadow: 0px 0px 0px #000000;
+        box-shadow:
+          0px 0px 0px 0px rgba(0, 0, 0, 1),
+          0px 0px 0px 0px rgba(0, 0, 0, 1),
+          0px 0px 0px 0px rgba(0, 0, 0, 1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      .custom-button:hover {
+        font-size: 24px;
+        font-family: Georgia;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2);
+      }
+
+      .custom-button:active {
+        font-size: 16px;
+        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2);
       }
     </style>
   </head>
