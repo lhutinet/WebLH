@@ -3,6 +3,7 @@
         <MenuNav :hidden="isNavHidden" />
         <router-view />
         <Footer />
+        <CookieConsent />
     </div>
 </template>
 
@@ -10,6 +11,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import MenuNav from './components/MenuNav.vue'
 import Footer from './components/Footer.vue'
+import CookieConsent from './components/CookieConsent.vue'
 
 const isNavHidden = ref(false)
 let lastScrollY = 0
