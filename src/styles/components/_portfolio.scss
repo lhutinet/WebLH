@@ -9,6 +9,7 @@
     align-items: center;
     flex-direction: column;
 
+
     .portfolio-container {
         position: relative;
         overflow: hidden;
@@ -58,8 +59,14 @@
 
         .portfolio-wrapper {
             overflow: hidden;
+            padding: 2rem;
             flex-grow: 1;
             cursor: grab;
+            background: #f9f9f9;
+            width: 100%;
+
+
+
 
             &:active {
                 cursor: grabbing;
@@ -71,7 +78,13 @@
                 user-select: none;
                 -webkit-user-select: none;
                 -ms-user-select: none;
+                will-change: transform;
             }
+        }
+
+
+        .portfolio-cards.no-transition {
+            transition: none !important;
         }
 
         .portfolioCard {
@@ -90,6 +103,24 @@
             width: 350px;
             transition: transform 0.3s ease;
             z-index: 2;
+            flex-shrink: 0;
+
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: rgba(0, 0, 0, 0.15); // Couleur de l’ombre
+                filter: blur(20px); // Le flou proprement dit
+                z-index: -1; // Derrière la carte
+                border-radius: inherit; // Pour suivre les coins arrondis
+                transform: scale(1.05); // Légèrement plus grand pour bien dépasser
+            }
+
 
             h3 {
                 width: 95%;
@@ -101,10 +132,24 @@
             .imgContent {
                 width: 90%;
                 height: auto;
+                position: relative;
 
                 img {
                     width: 100%;
                     height: auto;
+                    clip-path: polygon(0 0,
+                            /* coin haut gauche */
+                            calc(100% - 20px) 0,
+                            /* biseau en haut à droite, 20px avant le coin */
+                            100% 20px,
+                            /* juste en dessous du coin haut droit */
+                            100% 100%,
+                            /* coin bas droit */
+                            20px 100%,
+                            /* biseau en bas à gauche, 20px après le coin */
+                            0 calc(100% - 20px)
+                            /* juste au-dessus du coin bas gauche */
+                        );
                 }
 
             }
