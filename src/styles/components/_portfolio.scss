@@ -1,159 +1,187 @@
 @use '../settings' as *;
 
-.portfolioContent {
-    margin: 20px 0;
-    padding: 20px 0;
-    width: 100%;
+.portfolioContainer {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 
 
-    .portfolio-container {
-        position: relative;
-        overflow: hidden;
-        width: calc(80% - 10px);
-        margin: 10px auto;
-        padding: 2rem auto;
+    .portfolioContent {
+        margin: 20px 0;
+        padding: 20px 0;
+        width: 100%;
         display: flex;
+        justify-content: center;
         align-items: center;
-
-        background-image: linear-gradient(to top left, $colorGrd2, $colorGrd1);
-
-
-        .nav-btn {
-            position: absolute;
-            background: #5fc0c7;
-            border: none;
-            color: white;
-            font-size: 2rem;
-            cursor: pointer;
-            user-select: none;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            margin: 0 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: background 0.3s ease;
-            z-index: 10;
-
-            &:hover {
-                background: #399ba7;
-            }
-        }
-
-        .left {
-            margin-right: 10px;
-            left: 10px;
-
-        }
-
-        .right {
-            right: 10px;
-            margin-left: 10px;
-        }
+        flex-direction: column;
 
 
-        .portfolio-wrapper {
-            overflow: hidden;
-            padding: 2rem;
-            flex-grow: 1;
-            cursor: grab;
-            background: #f9f9f9;
-            width: 100%;
-
-
-
-
-            &:active {
-                cursor: grabbing;
-            }
-
-            .portfolio-cards {
-                display: flex;
-                transition: transform 0.3s ease;
-                user-select: none;
-                -webkit-user-select: none;
-                -ms-user-select: none;
-                will-change: transform;
-            }
-        }
-
-
-        .portfolio-cards.no-transition {
-            transition: none !important;
-        }
-
-        .portfolioCard {
-            background: #fff;
-            margin: 0 10px;
-            box-shadow: $shadow1;
-            border-radius: 8px;
-            padding: 0.5rem;
-            flex-shrink: 0;
-            text-align: center;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-direction: column;
-            width: 350px;
-            transition: transform 0.3s ease;
-            z-index: 2;
-            flex-shrink: 0;
-
+        .portfolio-container {
             position: relative;
+            overflow: hidden;
+            width: calc(80% - 10px);
+            margin: 10px auto;
+            padding: 2rem auto;
+            background-image: linear-gradient(to top left, $colorGrd2, $colorGrd1);
 
-            &::before {
-                content: '';
+
+            .nav-btn {
                 position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: rgba(0, 0, 0, 0.15); // Couleur de l’ombre
-                filter: blur(20px); // Le flou proprement dit
-                z-index: -1; // Derrière la carte
-                border-radius: inherit; // Pour suivre les coins arrondis
-                transform: scale(1.05); // Légèrement plus grand pour bien dépasser
+                background: #5fc0c7;
+                border: none;
+                color: white;
+                font-size: 2rem;
+                cursor: pointer;
+                user-select: none;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin: 0 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: background 0.3s ease;
+                z-index: 10;
+
+                &:hover {
+                    background: #399ba7;
+                }
+            }
+
+            .left {
+                margin-right: 10px;
+                left: 10px;
+                bottom: 50%;
+
+            }
+
+            .right {
+                right: 10px;
+                margin-left: 10px;
+                bottom: 50%;
             }
 
 
-            h3 {
-                width: 95%;
-                margin-bottom: 0.5rem;
-                font-size: 1.5rem;
-                color: #333;
+            .portfolio-wrapper {
+                position: relative;
+                overflow: hidden;
+                padding: 2rem 0;
+                flex-grow: 1;
+                cursor: grab;
+                background: #f9f9f9;
+                width: 100%;
+
+
+                &::before {
+                    position: absolute;
+                    left: -4px;
+                    top: 0;
+                    height: 100%;
+                    width: 2%;
+                    content: " ";
+                    background: linear-gradient(90deg, rgba(249, 249, 249, 1) 50%, rgba(249, 249, 249, 0.01) 100%);
+                    z-index: 5;
+                    filter: blur(4px);
+                }
+
+                &::after {
+                    position: absolute;
+                    right: -4px;
+                    top: 0;
+                    height: 100%;
+                    width: 2%;
+                    content: " ";
+                    background: linear-gradient(90deg, rgba(249, 249, 249, 0.01)50%, rgba(249, 249, 249, 1) 100%);
+                    z-index: 5;
+                    filter: blur(4px);
+                }
+
+                .portfolio-cards {
+                    display: flex;
+                    transition: transform 0.3s ease;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -ms-user-select: none;
+                    will-change: transform;
+                }
             }
 
-            .imgContent {
-                width: 90%;
-                height: auto;
+
+            .portfolio-cards.no-transition {
+                transition: none !important;
+            }
+
+            .portfolioCard {
+                background: #fff;
+                margin: 0 10px;
+                box-shadow: $shadow1;
+                border-radius: 8px;
+                padding: 0.5rem;
+                flex-shrink: 0;
+                text-align: center;
+                border: 1px solid rgba(0, 0, 0, 0.1);
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-direction: column;
+                width: 350px;
+                transition: transform 0.3s ease;
+                z-index: 2;
+                flex-shrink: 0;
+
                 position: relative;
 
-                img {
-                    width: 100%;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 15px;
+                    left: 15px;
+                    right: 15px;
+                    bottom: 15px;
+
+                    background: rgba(0, 0, 0, 0.15); // Couleur de l’ombre
+                    filter: blur(20px); // Le flou proprement dit
+                    z-index: -1; // Derrière la carte
+                    border-radius: inherit; // Pour suivre les coins arrondis
+                    transform: scale(1.05); // Légèrement plus grand pour bien dépasser
+
+                }
+
+
+                h3 {
+                    width: 95%;
+                    margin-bottom: 0.5rem;
+                    font-size: 1.5rem;
+                    color: #333;
+                }
+
+                .imgContent {
+                    width: 90%;
                     height: auto;
-                    clip-path: polygon(0 0,
-                            /* coin haut gauche */
-                            calc(100% - 20px) 0,
-                            /* biseau en haut à droite, 20px avant le coin */
-                            100% 20px,
-                            /* juste en dessous du coin haut droit */
-                            100% 100%,
-                            /* coin bas droit */
-                            20px 100%,
-                            /* biseau en bas à gauche, 20px après le coin */
-                            0 calc(100% - 20px)
-                            /* juste au-dessus du coin bas gauche */
-                        );
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        clip-path: polygon(0 0,
+                                /* coin haut gauche */
+                                calc(100% - 20px) 0,
+                                /* biseau en haut à droite, 20px avant le coin */
+                                100% 20px,
+                                /* juste en dessous du coin haut droit */
+                                100% 100%,
+                                /* coin bas droit */
+                                20px 100%,
+                                /* biseau en bas à gauche, 20px après le coin */
+                                0 calc(100% - 20px)
+                                /* juste au-dessus du coin bas gauche */
+                            );
+                    }
+
                 }
 
             }
-
         }
     }
 }

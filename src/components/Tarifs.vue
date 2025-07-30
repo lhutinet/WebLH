@@ -97,7 +97,7 @@ const TarifList = ref([
         formation: 'Formation à la prise en main Wix',
         couleur: '#5fc0c7',
         couleurTrans: 'rgba(95, 192, 199, 0.3)',
-        caracteristiques: '✅ Plateforme tout-en-un très facile à utiliser<br>✅ Éditeur en glisser-déposer : vous placez vos éléments sans coder <br>✅ Mise en ligne rapide, idéale pour des projets urgents<br>✅ Hébergement, maintenance et sécurité inclus<br>✅ Design responsive adapté à tous les écrans<br>✅ Idéal pour les sites vitrines, portfolios ou petits projets <br>✅ Formation à la prise en main incluse<br> <br>⚠️ Moins de liberté sur le design ou les fonctionnalités avancées <br>⚠️ Fonctionnalités limitées pour des projets complexes ou très évolutifs<br>⚠️ Référencement (SEO) plus limité qu’avec du code ou WordPress<br>⚠️ Abonnement payant obligatoire (environ 17€ / mois) uniquement si vous souhaitez un nom de domaine personnalisé (.fr, .com, etc.)'
+        caracteristiques: '✅ Plateforme tout-en-un très facile à utiliser<br>✅ Éditeur en glisser-déposer : vous placez vos éléments sans coder <br>✅ Mise en ligne rapide, idéale pour des projets urgents<br>✅ Hébergement, maintenance et sécurité inclus<br>✅ Design responsive adapté à tous les écrans<br>✅ Idéal pour les sites vitrines, portfolios ou petits projets <br>✅ Formation à la prise en main incluse<br> <br>⚠️ Moins de liberté sur le design ou les fonctionnalités avancées <br>⚠️ Fonctionnalités limitées pour des projets complexes ou très évolutifs<br>⚠️ Référencement (SEO) plus limité quand code pur<br>⚠️ Abonnement payant obligatoire (environ 17€ / mois) uniquement si vous souhaitez un nom de domaine personnalisé (.fr, .com, etc.)'
     },
     {
         id: 5,
