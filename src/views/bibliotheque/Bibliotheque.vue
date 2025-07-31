@@ -27,6 +27,7 @@
             <BtnRond />
             <BtnBarreIncurve />
             <BtnRondBleu />
+            <BtnNeumorphic />
             <!-- <Btn3d /> -->
         </section>
     </div>
@@ -55,6 +56,7 @@ import Btn3d from './button/Btn3d.vue';
 import MenuNav01 from './Menu/MenuNav01.vue';
 import MenuNav02 from './Menu/MenuNav02.vue';
 import MenuNav03 from './Menu/MenuNav03.vue';
+import BtnNeumorphic from './button/BtnNeumorphic.vue';
 
 // Stocke la section ouverte : 'fondEcran', 'button', etc.
 const openSection = ref(null);
