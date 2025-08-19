@@ -5,42 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <button class="custom-button">Aperçu</button>
-
     <style>
-      .custom-button {
-        width: 316px;
-        height: 99px;
-        border-radius: 0px;
-        background-color: #3498db;
-        color: #ffffff;
-        border: none;
-        font-size: 29px;
-        font-family: Arial;
-        font-weight: normal;
-        text-shadow: 0px 0px 0px #000000;
-        box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.2);
-        transition: all 0.3s ease;
-        cursor: pointer;
+      .container {
+        display: flex;
+        overflow: auto;
+
+        scroll-snap-type: x mandatory;
+        width: 500px;
+        height: 250px;
       }
 
-      .custom-button:hover {
-        font-size: 33px;
-        font-family: Georgia;
-        transform: scale(0.71) translate(0px, 0px);
-        text-shadow: 3px 0px 0px #000000;
-        box-shadow:
-          3px 17px 16px 16px rgba(0, 0, 0, 0.43),
-          -16px -40px 29px 6px rgba(250, 250, 250, 1);
+      .container > .item {
+        min-width: 100%;
+        height: 100%;
+        scroll-snap-align: start;
       }
 
-      .custom-button:active {
-        font-size: 38px;
-        transform: scale(0.54) translate(0px, 0px);
+      #item1 {
+        background: red;
+      }
+      #item2 {
+        background: rgb(38, 0, 255);
+      }
+      #item3 {
+        background: rgb(0, 255, 106);
+      }
+      #item4 {
+        background: rgb(0, 255, 191);
+      }
+      #item5 {
+        background: red;
       }
     </style>
   </head>
   <body>
-    <p class="newtxt">test</p>
+    <div class="container">
+      <div class="item" id="item1">1</div>
+      <div class="item" id="item2">2</div>
+      <div class="item" id="item3">3</div>
+      <div class="item" id="item4">4</div>
+    </div>
   </body>
 </html>
