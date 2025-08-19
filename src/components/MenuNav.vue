@@ -31,6 +31,7 @@
                     <li><router-link to="/Amscss" @click="closeAll">Aide SCSS</router-link></li>
                     <li><router-link to="/Amjs" @click="closeAll">Aide JavaScript</router-link></li>
                     <li><router-link to="/Amvue" @click="closeAll">Aide Vue</router-link></li>
+                    <li><router-link to="/AmNuxt" @click="closeAll">Aide Nuxt</router-link></li>
                     <li><router-link to="/Amreact" @click="closeAll">Aide React</router-link></li>
                     <li><router-link to="/Amgithub" @click="closeAll">Aide GitHub</router-link></li>
                     <li><router-link to="/Amform" @click="closeAll">Aide form </router-link></li>

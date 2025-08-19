@@ -10,6 +10,7 @@ import AmScss from '@/views/aideMemoire/Am-scss.vue'
 import AmVue from '@/views/aideMemoire/Am-vue.vue'
 import AmGitHub from '@/views/aideMemoire/AmGitHub.vue'
 import Amform from '@/views/aideMemoire/Am-form.vue'
+import AmNuxt from '@/views/aideMemoire/Am-nuxt.vue'
 import bibliotheque from '@/views/bibliotheque/Bibliotheque.vue'
 import creaButton from '@/views/CreaButton.vue'
 
@@ -25,6 +26,7 @@ const routes = [
   { path: '/amvue', name: 'Amvue', component: AmVue },
   { path: '/amgithub', name: 'Amgithub', component: AmGitHub },
   { path: '/amform', name: 'Amform', component: Amform },
+  { path: '/amnuxt', name: 'Amnuxt', component: AmNuxt },
   { path: '/bibliotheque', name: 'bibliotheque', component: bibliotheque },
   { path: '/creaButton', name: 'creaButton', component: creaButton },
 
