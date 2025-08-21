@@ -98,3 +98,15 @@ https://www.youtube.com/@CodingNepal/playlists
 
 boutton design:
 https://fr.freepik.com/photos-vecteurs-libre/bouton-design
+
+dans am scss ou css ajout les reset
+/\* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+html, body {
+height: 100%;
+font-family: sans-serif;
+}
